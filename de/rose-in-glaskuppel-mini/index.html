@@ -1,0 +1,2113 @@
+
+<!DOCTYPE html>
+<html lang="de" prefix="og: http://ogp.me/ns#">
+<head>
+<link rel="preload" href="/template/fonts/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="49ec97f1b6c1f246de8aec1a-text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notta & Belle: Ewige Rose in der Glaskuppel 🌹die bis zu 5 Jahre lebt</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Möchten Sie, dass Ihr Geschenk seinen Empfänger verwundert und für viele Jahre im Gedächtnis bleibt? Die Rose in der Glaskuppel ist eine echte lebendige Rose, die in Handarbeit angefertigt wurde." />
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nottabelle.com/de/rose-in-glaskuppel-mini/" />
+<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="60x60" href="https://nottabelle.com/template/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://nottabelle.com/template/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nottabelle.com/template/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://nottabelle.com/template/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nottabelle.com/template/img/favicon/favicon-32x32.png">
+<meta name="msapplication-TileImage" content="https://nottabelle.com/template/img/favicon/ms-icon-144x144.png">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/bootstrap-grid.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/style_new.css?20190130">
+<script src="https://nottabelle.com/template/js/jquery.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/owl.carousel.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/lazysizes.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<style> @font-face {font-family: proximal; src: url(/template/fonts/ProximaNova-Light.eot); src: url(/template/fonts/ProximaNova-Light.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Light.woff2) format('woff2'),url(/template/fonts/ProximaNova-Light.woff) format('woff'),url(/template/fonts/ProximaNova-Light.ttf) format('truetype'),url(/template/fonts/ProximaNova-Light.svg#ProximaNova-Light) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximab; src: url(/template/fonts/ProximaNova-Bold.eot); src: url(/template/fonts/ProximaNova-Bold.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Bold.woff2) format('woff2'),url(/template/fonts/ProximaNova-Bold.woff) format('woff'),url(/template/fonts/ProximaNova-Bold.ttf) format('truetype'),url(/template/fonts/ProximaNova-Bold.svg#ProximaNova-Bold) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximar; src: url(/template/fonts/ProximaNova-Regular.eot); src: url(/template/fonts/ProximaNova-Regular.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Regular.woff2) format('woff2'),url(/template/fonts/ProximaNova-Regular.woff) format('woff'),url(/template/fonts/ProximaNova-Regular.ttf) format('truetype'),url(/template/fonts/ProximaNova-Regular.svg#ProximaNova-Regular) format('svg'); font-weight: 400; font-style: normal; font-display:swap} </style>
+
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFVD3PH');</script>
+
+<script src="https://www.artfut.com/static/tagtag.min.js?campaign_code=ba5f83a22d" async onerror='var self = this;window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers=ADMITAD.Helpers||{},ADMITAD.Helpers.generateDomains=function(){for(var e=new Date,n=Math.floor(new Date(2020,e.getMonth(),e.getDate()).setUTCHours(0,0,0,0)/1e3),t=parseInt(1e12*(Math.sin(n)+1)).toString(30),i=["de"],o=[],a=0;a<i.length;++a)o.push({domain:t+"."+i[a],name:t});return o},ADMITAD.Helpers.findTodaysDomain=function(e){function n(){var o=new XMLHttpRequest,a=i[t].domain,D="https://"+a+"/";o.open("HEAD",D,!0),o.onload=function(){setTimeout(e,0,i[t])},o.onerror=function(){++t<i.length?setTimeout(n,0):setTimeout(e,0,void 0)},o.send()}var t=0,i=ADMITAD.Helpers.generateDomains();n()},window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers.findTodaysDomain(function(e){if(window.ADMITAD.dynamic=e,window.ADMITAD.dynamic){var n=function(){return function(){return self.src?self:""}}(),t=n(),i=(/campaign_code=([^&]+)/.exec(t.src)||[])[1]||"";t.parentNode.removeChild(t);var o=document.getElementsByTagName("head")[0],a=document.createElement("script");a.src="https://www."+window.ADMITAD.dynamic.domain+"/static/"+window.ADMITAD.dynamic.name.slice(1)+window.ADMITAD.dynamic.name.slice(0,1)+".min.js?campaign_code="+i,o.appendChild(a)}});' type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Notta & Belle",
+    "brand": "Notta & Belle",
+    "email": "world@nottabelle.com",
+    "telephone": "+420732106875",
+	"logo": "https://nottabelle.com/template/img/logo-fooer.png",
+    	"url": "https://nottabelle.com/de/rose-in-glaskuppel-mini/"
+	
+}
+</script>
+</head><body>
+<div id="clientel"></div>
+<div class="wrapper">
+<div class="content">
+<header class="header">
+<div class="delivery_mob">
+<div class="delivery">
+Kostenloser Versand <div class="delivery__popup" style="display: none;">
+<p>Wir liefern Ihre Ware kostenlos in die meisten europäischen Länder. Paketdienst UPS wird Ihre Bestellung innerhalb von 5-6 Werktagen liefern.</p>
+</div>
+</div>
+<div class="delivery_lang">
+<div class="lang">
+<div class="lang_current">
+Sprache:
+<span class="lang_switcher">de</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+ <li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/cz/"><div class="lang_img"><img src="/template/img/lang/cz.png" alt=""></div><div class="lang_name">CZ</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/it/"><div class="lang_img"><img src="/template/img/lang/it.png" alt=""></div><div class="lang_name">IT</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header_mob">
+<div class="header_mob_menu">
+<div class="header_mob_menu_hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="header_mob_logo">
+<a href="https://nottabelle.com/de/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+<div class="header_mob_cart">
+<a href="https://nottabelle.com/de/cart" class="cart_popup_href"><div class="site_cart_counter">0</div></a>
+</div>
+<div class="header_mob_ul">
+<ul class="header_mob_ul_navigator">
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/ewige-rose-im-glas/">
+<span class="menu_title">Ewige Rose im Glas</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Größe der Rosen:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-in-glaskuppel-mini/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-in-glasglocke-size-premium/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/longlife-rosen-size-premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-im-glas-king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">King</span>
+</a>
+
+</li>
+</ul>
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/geschenkbox/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Geschenkbox</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/individuelle-gravur/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Individuelle Gravur</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/baren-aus-den-rosen/">
+<span class="menu_title">Bären aus den Rosen </span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Größe der Bären:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/baren-25cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Bären - 25 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/baren-35cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Bären - 35 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/baren-55cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Bären - 55 сm</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/geschenkbox-baren/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Geschenkbox</span>
+</a>
+</li>
+
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/present/">
+<span class="menu_title">Die Schöne und das Biest</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">WUNDERBARE GESCHENKE</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/teeset-disney/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Teeset </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-die-schone-und-das-biest/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rose schöne und das biest</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/rosenbox/">
+<span class="menu_title">Rosenbox</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Größe der Rosenbox:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-forever/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Forever»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-romantic/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Romantic»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-love/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Love»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-princess/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Princess»</span>
+ </a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="/de/impressum/">Impressum </a></li>
+<li><a href="/de/bezahlung/">Bezahlung </a></li>
+<li><a href="/de/lieferung/">Lieferung</a></li>
+<li><a href="/de/ambassador/">Ambassador</a></li>
+<li><a href="/de/partners/">Partnerschaft</a></li>
+<li class="mob_lang">
+<div class="mob_lang_current">Sprache:</div>
+<div class="mob_lang_switch">
+<span>de</span>
+<a href="https://nottabelle.com/eu/">EU</a>
+<a href="https://nottabelle.com/uk/">UK</a>
+<a href="https://nottabelle.com/fr/">FR</a>
+<a href="https://nottabelle.com/us/">US</a>
+<a href="https://nottabelle.com/cz/">CZ</a>
+<a href="https://nottabelle.com/it/">IT</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="header_top">
+<div class="container delivery__container">
+<div class="row align-items-center justify-content-between">
+<div class="col nopadding hidden-xs hidden-sm">
+<div class="content-text">
+<span>
+<i class="fa fa-phone mgr10"></i><a class="mgr20 newfonts" href="tel:+420732106875">+420 732 106 875</a>
+</span>
+</div>
+</div>
+<div class="col-md-auto text-center nopadding delivery__col">
+<div class="content-text">
+<div class="earn">
+<span>Verdienen Sie mit Notta & Belle - <a href="/de/ambassador/">Erfahren Sie mehr</a></span>
+</div>
+<div class="delivery">
+Kostenloser Versand <div class="delivery__popup">
+<p>Wir liefern Ihre Ware kostenlos in die meisten europäischen Länder. Paketdienst UPS wird Ihre Bestellung innerhalb von 5-6 Werktagen liefern.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col text-right nopadding lang__col">
+<div class="content-text flex-link">
+<span class="top_link"><a href="/de/partners/">Partnerschaft</a></span>
+<div class="lang">
+<div class="lang_current">
+Sprache: <span class="lang_switcher">de</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/cz/"><div class="lang_img"><img src="/template/img/lang/cz.png" alt=""></div><div class="lang_name">CZ</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/it/"><div class="lang_img"><img src="/template/img/lang/it.png" alt=""></div><div class="lang_name">IT</div></a></li>
+</ul>
+</div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_middle">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-auto nopadding">
+<div class="content-logo">
+<a href="https://nottabelle.com/de/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_bottom">
+<div class="container">
+<div class="row align-items-center justify-content-center">
+<div class="col-12">
+
+<div role="navigation">
+<div class="site_navigator_outer">
+<div class="site_navigator_inner">
+<ul class="site_navigator" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/ewige-rose-im-glas/">
+<span class="menu_title" itemprop=name>Ewige Rose im Glas</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Größe der Rosen:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-in-glaskuppel-mini/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-in-glasglocke-size-premium/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/longlife-rosen-size-premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-im-glas-king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">King</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/geschenkbox/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Geschenkbox</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/individuelle-gravur/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Individuelle Gravur</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/ewige-rose-im-glas/" data-img="https://nottabelle.com/data/img/menu/610213618131442fe8c6f99d7e09e272.png">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/610213618131442fe8c6f99d7e09e272.png" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/baren-aus-den-rosen/">
+<span class="menu_title" itemprop=name>Bären aus den Rosen </span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Größe der Bären:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/baren-25cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Bären - 25 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/baren-35cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Bären - 35 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/baren-55cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Bären - 55 сm</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/geschenkbox-baren/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Geschenkbox</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/baren-aus-den-rosen/" data-img="https://nottabelle.com/data/img/menu/d2147b33e70bd6e71d7f011d255048c2.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/d2147b33e70bd6e71d7f011d255048c2.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/present/">
+<span class="menu_title" itemprop=name>Die Schöne und das Biest</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">WUNDERBARE GESCHENKE</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/teeset-disney/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Teeset </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-die-schone-und-das-biest/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rose schöne und das biest</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/present/" data-img="https://nottabelle.com/data/img/menu/bcef6ae4ac8060d6f60d5bea84d89de1.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/bcef6ae4ac8060d6f60d5bea84d89de1.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/rosenbox/">
+<span class="menu_title" itemprop=name>Rosenbox</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Größe der Rosenbox:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-forever/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Forever»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-romantic/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Romantic»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-love/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Love»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-princess/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Princess»</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/rosenbox/" data-img="https://nottabelle.com/data/img/menu/d4af11f9a320fcdfeb1b743665f6645b.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/d4af11f9a320fcdfeb1b743665f6645b.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="site_cart_outer">
+<div class="site_cart_inner"><a class="cart_popup_href" href="#">Warenkorb</a></div>
+<div class="site_cart_counter"></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="category">
+<div class="container category_info" style="background-image: url(/template/img/c1.jpg);">
+<div class="category_title">
+<h1>Rose in der Glaskuppel<span>Mini</span></h1>
+</div>
+</div>
+<div class="container category_help">
+<div class="row align-items-center justify-content-between">
+<div class="col-md-3 col-12 hidden-xs">
+<div class="category_back">
+<a href="javascript:window.history.back();" class="back_home"><i class="fa fa-angle-left"></i>Zurück</a>
+</div>
+</div>
+<div class="col-md-9 col-12 category__quickfilter-wrapper">
+<span class="category__quickfilter-title hidden-xs">Andere Größen:</span>
+<ul class="category__quickfilter">
+<li class="show-xs"><span class="category__quickfilter-title">Andere Größen:</span></li>
+<li class=" active"><a href="https://nottabelle.com/de/rose-in-glaskuppel-mini/">Rose Mini</a></li>
+<li class=""><a href="https://nottabelle.com/de/rose-in-glasglocke-size-premium/">Rose Premium</a></li>
+<li class=""><a href="https://nottabelle.com/de/longlife-rosen-size-premium-x/">Rose Premium X</a></li>
+<li class=""><a href="https://nottabelle.com/de/rose-im-glas-king/">Rose King</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container_big catalog" id="catalog_href">
+<div class="row">
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image751" data-src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" alt="" data-img="751" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image751" src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" alt="" data-img="751"></noscript>
+<div class="imgHover" data-img="751"></div>
+<img class="imageOutput lazyload blink image1173" data-src="https://nottabelle.com/data/img/big/8a4a2ddbefbcddfdbac3b33d9f2449ed.jpg" alt="" data-img="1173" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1173" src="https://nottabelle.com/data/img/big/8a4a2ddbefbcddfdbac3b33d9f2449ed.jpg" alt="" data-img="1173"></noscript>
+<div class="imgHover" data-img="1173"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">108 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/">Mini rot Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="502" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-zart-rosa/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-zart-rosa/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/0409baff78afad726f086b75173ceaa4.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/0409baff78afad726f086b75173ceaa4.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image752" data-src="https://nottabelle.com/data/img/big/0409baff78afad726f086b75173ceaa4.jpg" alt="" data-img="752" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image752" src="https://nottabelle.com/data/img/big/0409baff78afad726f086b75173ceaa4.jpg" alt="" data-img="752"></noscript>
+<div class="imgHover" data-img="752"></div>
+<img class="imageOutput lazyload blink image1174" data-src="https://nottabelle.com/data/img/big/76936a073c2a0bfc57497fed1c3cb3ea.jpg" alt="" data-img="1174" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1174" src="https://nottabelle.com/data/img/big/76936a073c2a0bfc57497fed1c3cb3ea.jpg" alt="" data-img="1174"></noscript>
+<div class="imgHover" data-img="1174"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">108 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-zart-rosa/">Mini zart rosa Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="503" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-champagner/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-champagner/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/4d0395ce1079874340c4931fab202e8d.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/4d0395ce1079874340c4931fab202e8d.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image753" data-src="https://nottabelle.com/data/img/big/4d0395ce1079874340c4931fab202e8d.jpg" alt="" data-img="753" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image753" src="https://nottabelle.com/data/img/big/4d0395ce1079874340c4931fab202e8d.jpg" alt="" data-img="753"></noscript>
+<div class="imgHover" data-img="753"></div>
+<img class="imageOutput lazyload blink image1175" data-src="https://nottabelle.com/data/img/big/49415ad65517ec2b297aeae3315c5667.jpg" alt="" data-img="1175" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1175" src="https://nottabelle.com/data/img/big/49415ad65517ec2b297aeae3315c5667.jpg" alt="" data-img="1175"></noscript>
+<div class="imgHover" data-img="1175"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">96 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-champagner/">Mini champagner Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="504" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-dunkelblau/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-dunkelblau/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/052d685570251cb026d2f37c1592860d.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/052d685570251cb026d2f37c1592860d.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image754" data-src="https://nottabelle.com/data/img/big/052d685570251cb026d2f37c1592860d.jpg" alt="" data-img="754" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image754" src="https://nottabelle.com/data/img/big/052d685570251cb026d2f37c1592860d.jpg" alt="" data-img="754"></noscript>
+<div class="imgHover" data-img="754"></div>
+<img class="imageOutput lazyload blink image1176" data-src="https://nottabelle.com/data/img/big/06dec32ab01dabdb31379855daf1d4a7.jpg" alt="" data-img="1176" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1176" src="https://nottabelle.com/data/img/big/06dec32ab01dabdb31379855daf1d4a7.jpg" alt="" data-img="1176"></noscript>
+<div class="imgHover" data-img="1176"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-dunkelblau/">Mini dunkelblau Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="505" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-turkis/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-turkis/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/b2ff0ad5d9d0d17214cd4043a101f6cb.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/b2ff0ad5d9d0d17214cd4043a101f6cb.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image755" data-src="https://nottabelle.com/data/img/big/b2ff0ad5d9d0d17214cd4043a101f6cb.jpg" alt="" data-img="755" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image755" src="https://nottabelle.com/data/img/big/b2ff0ad5d9d0d17214cd4043a101f6cb.jpg" alt="" data-img="755"></noscript>
+<div class="imgHover" data-img="755"></div>
+<img class="imageOutput lazyload blink image1177" data-src="https://nottabelle.com/data/img/big/0b946a408fdb90add73f3ccc3d44e049.jpg" alt="" data-img="1177" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1177" src="https://nottabelle.com/data/img/big/0b946a408fdb90add73f3ccc3d44e049.jpg" alt="" data-img="1177"></noscript>
+<div class="imgHover" data-img="1177"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">108 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-turkis/">Mini türkis Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="506" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-grell-rosa/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-grell-rosa/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/5223897b9b143530cfcc496ed0966a62.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/5223897b9b143530cfcc496ed0966a62.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image756" data-src="https://nottabelle.com/data/img/big/5223897b9b143530cfcc496ed0966a62.jpg" alt="" data-img="756" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image756" src="https://nottabelle.com/data/img/big/5223897b9b143530cfcc496ed0966a62.jpg" alt="" data-img="756"></noscript>
+<div class="imgHover" data-img="756"></div>
+<img class="imageOutput lazyload blink image1178" data-src="https://nottabelle.com/data/img/big/c6d604a54cd0635a46c26f9a45860e86.jpg" alt="" data-img="1178" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1178" src="https://nottabelle.com/data/img/big/c6d604a54cd0635a46c26f9a45860e86.jpg" alt="" data-img="1178"></noscript>
+<div class="imgHover" data-img="1178"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-grell-rosa/">Mini grellrosa Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="507" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-orange/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-orange/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/22a02adf8bc3a622d45386dea8136f56.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/22a02adf8bc3a622d45386dea8136f56.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image757" data-src="https://nottabelle.com/data/img/big/22a02adf8bc3a622d45386dea8136f56.jpg" alt="" data-img="757" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image757" src="https://nottabelle.com/data/img/big/22a02adf8bc3a622d45386dea8136f56.jpg" alt="" data-img="757"></noscript>
+<div class="imgHover" data-img="757"></div>
+<img class="imageOutput lazyload blink image1179" data-src="https://nottabelle.com/data/img/big/3ad2453626c5199427239be512a1a2cd.jpg" alt="" data-img="1179" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1179" src="https://nottabelle.com/data/img/big/3ad2453626c5199427239be512a1a2cd.jpg" alt="" data-img="1179"></noscript>
+<div class="imgHover" data-img="1179"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">96 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-orange/">Mini orange Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="508" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-lavendel/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-lavendel/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image763" data-src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg" alt="" data-img="763" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image763" src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg" alt="" data-img="763"></noscript>
+<div class="imgHover" data-img="763"></div>
+<img class="imageOutput lazyload blink image1180" data-src="https://nottabelle.com/data/img/big/e635d8f793f98323be9f81f47a0b6cac.jpg" alt="" data-img="1180" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1180" src="https://nottabelle.com/data/img/big/e635d8f793f98323be9f81f47a0b6cac.jpg" alt="" data-img="1180"></noscript>
+<div class="imgHover" data-img="1180"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-lavendel/">Mini lavendel Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="515" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-blau/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-blau/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/ba960ea19f1128097279baa22c4c2512.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/ba960ea19f1128097279baa22c4c2512.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image764" data-src="https://nottabelle.com/data/img/big/ba960ea19f1128097279baa22c4c2512.jpg" alt="" data-img="764" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image764" src="https://nottabelle.com/data/img/big/ba960ea19f1128097279baa22c4c2512.jpg" alt="" data-img="764"></noscript>
+<div class="imgHover" data-img="764"></div>
+<img class="imageOutput lazyload blink image1181" data-src="https://nottabelle.com/data/img/big/4c33473e3c62840b125e4e27b5b0838d.jpg" alt="" data-img="1181" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1181" src="https://nottabelle.com/data/img/big/4c33473e3c62840b125e4e27b5b0838d.jpg" alt="" data-img="1181"></noscript>
+<div class="imgHover" data-img="1181"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">96 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-blau/">Mini blau Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="516" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-pfirsich/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-pfirsich/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/268c1e2092e24a3c2ed775e96b47f547.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/268c1e2092e24a3c2ed775e96b47f547.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image765" data-src="https://nottabelle.com/data/img/big/268c1e2092e24a3c2ed775e96b47f547.jpg" alt="" data-img="765" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image765" src="https://nottabelle.com/data/img/big/268c1e2092e24a3c2ed775e96b47f547.jpg" alt="" data-img="765"></noscript>
+<div class="imgHover" data-img="765"></div>
+<img class="imageOutput lazyload blink image1182" data-src="https://nottabelle.com/data/img/big/c09b868d7c5b05ab099cf3321ec32df8.jpg" alt="" data-img="1182" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1182" src="https://nottabelle.com/data/img/big/c09b868d7c5b05ab099cf3321ec32df8.jpg" alt="" data-img="1182"></noscript>
+<div class="imgHover" data-img="1182"></div>
+</div>
+</div>
+</a>
+ </div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">96 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-pfirsich/">Mini pfirsich Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="517" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-violett/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-violett/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/99fa5450add85f0f083296b78e53e8f7.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/99fa5450add85f0f083296b78e53e8f7.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image766" data-src="https://nottabelle.com/data/img/big/99fa5450add85f0f083296b78e53e8f7.jpg" alt="" data-img="766" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image766" src="https://nottabelle.com/data/img/big/99fa5450add85f0f083296b78e53e8f7.jpg" alt="" data-img="766"></noscript>
+<div class="imgHover" data-img="766"></div>
+<img class="imageOutput lazyload blink image1183" data-src="https://nottabelle.com/data/img/big/19805e48b8f3d51bb4ba1c7339412a10.jpg" alt="" data-img="1183" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1183" src="https://nottabelle.com/data/img/big/19805e48b8f3d51bb4ba1c7339412a10.jpg" alt="" data-img="1183"></noscript>
+<div class="imgHover" data-img="1183"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-violett/">Mini violett Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="518" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-bordeaux/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-bordeaux/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/77650459c09303a0f1a3ac1a5244410e.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/77650459c09303a0f1a3ac1a5244410e.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image768" data-src="https://nottabelle.com/data/img/big/77650459c09303a0f1a3ac1a5244410e.jpg" alt="" data-img="768" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image768" src="https://nottabelle.com/data/img/big/77650459c09303a0f1a3ac1a5244410e.jpg" alt="" data-img="768"></noscript>
+<div class="imgHover" data-img="768"></div>
+<img class="imageOutput lazyload blink image1185" data-src="https://nottabelle.com/data/img/big/23f9c45f8eca4f64693684f4dcd151e2.jpg" alt="" data-img="1185" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1185" src="https://nottabelle.com/data/img/big/23f9c45f8eca4f64693684f4dcd151e2.jpg" alt="" data-img="1185"></noscript>
+<div class="imgHover" data-img="1185"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">108 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-bordeaux/">Mini bordeaux Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="520" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-gelb/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-gelb/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/292c31d15a9fd678d66a8caaeb208fb5.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/292c31d15a9fd678d66a8caaeb208fb5.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image769" data-src="https://nottabelle.com/data/img/big/292c31d15a9fd678d66a8caaeb208fb5.jpg" alt="" data-img="769" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image769" src="https://nottabelle.com/data/img/big/292c31d15a9fd678d66a8caaeb208fb5.jpg" alt="" data-img="769"></noscript>
+<div class="imgHover" data-img="769"></div>
+<img class="imageOutput lazyload blink image1186" data-src="https://nottabelle.com/data/img/big/4bc3b0392c44cbb51c12b063ffbdaefc.jpg" alt="" data-img="1186" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1186" src="https://nottabelle.com/data/img/big/4bc3b0392c44cbb51c12b063ffbdaefc.jpg" alt="" data-img="1186"></noscript>
+<div class="imgHover" data-img="1186"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">96 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-gelb/">Mini gelb Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="521" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-schwarz/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-schwarz/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/016252a64686c1a5b3e49b627eba3001.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/016252a64686c1a5b3e49b627eba3001.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image770" data-src="https://nottabelle.com/data/img/big/016252a64686c1a5b3e49b627eba3001.jpg" alt="" data-img="770" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image770" src="https://nottabelle.com/data/img/big/016252a64686c1a5b3e49b627eba3001.jpg" alt="" data-img="770"></noscript>
+<div class="imgHover" data-img="770"></div>
+<img class="imageOutput lazyload blink image1187" data-src="https://nottabelle.com/data/img/big/62b93e3a97bc43272c4441e2a4d8829f.jpg" alt="" data-img="1187" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1187" src="https://nottabelle.com/data/img/big/62b93e3a97bc43272c4441e2a4d8829f.jpg" alt="" data-img="1187"></noscript>
+<div class="imgHover" data-img="1187"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-schwarz/">Mini schwarz Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="522" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-fuchsia/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-fuchsia/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/836298092b355683282c5cca3bc888ad.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/836298092b355683282c5cca3bc888ad.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image771" data-src="https://nottabelle.com/data/img/big/836298092b355683282c5cca3bc888ad.jpg" alt="" data-img="771" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image771" src="https://nottabelle.com/data/img/big/836298092b355683282c5cca3bc888ad.jpg" alt="" data-img="771"></noscript>
+<div class="imgHover" data-img="771"></div>
+<img class="imageOutput lazyload blink image1188" data-src="https://nottabelle.com/data/img/big/710c830e204d55ae54a57813d74473a7.jpg" alt="" data-img="1188" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1188" src="https://nottabelle.com/data/img/big/710c830e204d55ae54a57813d74473a7.jpg" alt="" data-img="1188"></noscript>
+<div class="imgHover" data-img="1188"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-fuchsia/">Mini fuchsia Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="523" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-6">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-weib/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-weib/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/61562d22f99e79309530b45f66ecae00.jpg" alt="" data-img="1" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1 " src="https://nottabelle.com/data/img/big/61562d22f99e79309530b45f66ecae00.jpg" alt="" data-img="1"></noscript>
+<img class="imageOutput lazyload blink image772" data-src="https://nottabelle.com/data/img/big/61562d22f99e79309530b45f66ecae00.jpg" alt="" data-img="772" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image772" src="https://nottabelle.com/data/img/big/61562d22f99e79309530b45f66ecae00.jpg" alt="" data-img="772"></noscript>
+<div class="imgHover" data-img="772"></div>
+<img class="imageOutput lazyload blink image1189" data-src="https://nottabelle.com/data/img/big/96b7f43ae9f5e36e6e4c5dd0addfd9df.jpg" alt="" data-img="1189" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1189" src="https://nottabelle.com/data/img/big/96b7f43ae9f5e36e6e4c5dd0addfd9df.jpg" alt="" data-img="1189"></noscript>
+<div class="imgHover" data-img="1189"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">96 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-weib/">Mini weiß Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a href="#" class="btn not_in_cart" id="524" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="ins_slider">
+<div class="ins_slider_ajax"> <div class="ins_slider_outer owl-carousel owl-theme owl-loaded owl-drag"> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BssmMK8lGgv/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8966199a2039faff7b59fc6a99227123/5CC0719C/t51.2885-15/sh0.08/e35/s640x640/47691554_586300675168838_7309958742781916613_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>261</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsgIVoFFy9P/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/ae0d3ec663c1d927ee6b18b8a53a64c5/5CCFCAB8/t51.2885-15/sh0.08/e35/s640x640/47692583_376457746234122_5727284949422679652_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>91</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsCzaJulDWC/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/c7fb9f48b2c8098ac25d1c869a2a5a4c/5CBC3231/t51.2885-15/sh0.08/e35/s640x640/47692970_2264599137140390_4880586076165398740_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>113</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BryOG3FlLW-/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2c47d471f05afbc50c20b7af6dc736f7/5CC30F59/t51.2885-15/sh0.08/e35/p640x640/47585173_202816140662752_8592131353444826941_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>166</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrkxoM6FXAr/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e9d8e861bdff2129e558a98a44f3baa6/5CFFF9B6/t51.2885-15/sh0.08/e35/s640x640/46194908_2045624135519482_8077894382289460532_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>139</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Brf0-k8F_Fi/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/4ebc1346378a67428cf768955f358d7d/5D00C64B/t51.2885-15/sh0.08/e35/s640x640/47023143_2298096653803734_7631874680431091353_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>155</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrTDe5OF2wx/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a42cf3197a86f787a2284946cbf81a02/5CC0AD48/t51.2885-15/sh0.08/e35/s640x640/47137609_371315913437484_1280623401876432137_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>175</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrQbjl6Fdbn/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/5b03ef3e14fa768c526082943531e480/5CFA0741/t51.2885-15/sh0.08/e35/s640x640/45932764_313069439539552_4465489449896819141_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>151</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrCtKZaF7Vl/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2d84da38ffde6e138791e4be24471f6b/5CFC160E/t51.2885-15/sh0.08/e35/s640x640/46799336_724020061311099_2309859475885835944_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>361</span><span><i class="fa fa-comments-o"></i>486</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bqubj6klR0X/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/d2eb742618fee38e0a9cb24e042561cf/5CF9600C/t51.2885-15/sh0.08/e35/s640x640/44585913_297299114238684_5018540414245072218_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>192</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqhLtGylxH7/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/9204523fce261024d16d0899d9123859/5D010B9F/t51.2885-15/sh0.08/e35/p640x640/44751386_120612545609661_7599332269045901642_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>34</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqaBsloF86O/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8ca4a7a7e0f446d4f23772d6dbb2d608/5CC34CF6/t51.2885-15/sh0.08/e35/s640x640/46401246_2159326307661358_1950508059172271053_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>235</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqIBo1qlYyq/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/19a05abe1477e6b241b6b61ef53243be/5D00CF0A/t51.2885-15/sh0.08/e35/s640x640/44779365_1094186514075192_4479276707098296786_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>281</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bp4K1tyFwSk/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e780ac1958c304c1ee539b208b8ed2c7/5CC4AAEC/t51.2885-15/sh0.08/e35/s640x640/43985043_1931446880485529_7518661978951291557_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>160</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BpkCsj2lfV0/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a859992f4f01d07d3324307d09c4a6a5/5CC5C4FB/t51.2885-15/sh0.08/e35/s640x640/44860755_1972414189513049_960754608430554106_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>126</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> </div> </div>
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+        jQuery(function($) { 
+            $(".ins_slider_outer").owlCarousel({
+
+                autoplay: true,
+                loop:true,
+                nav:false,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:false,
+                        autoplayTimeout: 2000
+                    },
+                    568:{
+                        items:5,
+                        nav:false,
+                        autoplayTimeout: 3000
+                    },
+                    1024:{
+                        items:12,
+                        nav:false,
+                        autoplayTimeout: 5000
+                    }
+                }   
+                
+              });                
+
+        });
+    </script>
+<div class="ins_slider_inner">
+<div class="ins_slider_title">
+<a href="https://www.instagram.com/nottabelle/" target="_blank">
+<i class="fa fa-instagram"></i>
+<span>Follow @nottabelle</span>
+</a> </div>
+</div>
+</div>
+<input type="hidden" name="lang" value="de">
+<input type="hidden" name="cur" value="€">
+<div class="cart_bottom" style="display:none;">
+<div class="container_big">
+<div class="row justify-content-between align-items-center">
+<div class="col-12 col-md-6 cart_bottom_gift_wrap">
+</div>
+<div class="col-12 col-md-6 cart_bottom_links">
+<div class="cart_bottom_href">
+<a>Warenkorb</a>
+<span class="cart_bottom_item">0</span>
+</div>
+<div class="cart_bottom_price">
+<span id="total_val_footer"></span> € </div>
+<div class="cart_bottom_checkout">
+<a class="cart_popup_href" href="/de/cart">Bestellung aufgeben</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cart_right"></div>
+</div>
+<footer id="footer" class="footer">
+<div class="footer_top">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-6 col-12">
+<div class="footer_textwidget">
+<img src="https://nottabelle.com/template/img/logo-fooer.png" alt="Notta & Belle" srcset="https://nottabelle.com/template/img/logo-fooer.png 1x, https://nottabelle.com/template/img/logo_footer2x.png 2x">
+<div class="footer_contact">
+<p>
+<i class="fa fa-phone mgr10"></i>
+<a href="tel:+420732106875">+420 732 106 875</a>
+</p>
+<p>
+<i class="tc fa fa-envelope-o mgr10"></i>
+<a href="/cdn-cgi/l/email-protection#a5d2cad7c9c1e5cbcad1d1c4c7c0c9c9c08bc6cac8"><span class="__cf_email__" data-cfemail="b4c3dbc6d8d0f4dadbc0c0d5d6d1d8d8d19ad7dbd9">[email&#160;protected]</span></a>
+</p>
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>Instagram</a></li>
+<li><a href="https://www.facebook.com/NottaBelle-525828327761640/" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Katalog</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/de/ewige-rose-im-glas/">Rose im Glas</a></li>
+<li><a href="/de/baren-aus-den-rosen/">Bären aus den rosen</a></li>
+<li><a href="/de/teeset-disney/">Teeset</a></li>
+<li><a href="/de/rosenbox/">Rosenbox</a></li> </ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Information</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/de/impressum/">Impressum </a></li>
+<li><a href="/de/bezahlung/">Bezahlung </a></li>
+<li><a href="/de/lieferung/">Lieferung</a></li>
+<li><a href="/de/ambassador/">Ambassador</a></li>
+<li><a href="/de/partners/">Partnerschaft</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Wir sind im Internet</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>Instagram</a></li>
+<li><a href="https://www.facebook.com/NottaBelle-525828327761640/" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-12">
+<h3 class="footer_title">Zahlungsart </h3>
+<div class="footer_textwidget" style="margin-bottom: 50px;">
+<img src="/template/img/paytype/da_pay2x.png" srcset="/template/img/da_pay2x.png 2x" alt="" style="max-width: 169px;">
+</div>
+<style>.footer_bottom  .col-md-auto img {display: none; }</style>
+<h3 class="footer_title">Partnerschaft</h3>
+<div class="footer_textwidget">
+Möchtest Du unser offizieller Partner werden<br>Notta & Belle, Eine Anfrage hinterlassen.
+<a class="footer_btn" data-fancybox data-src="#partners" href="javascript:;">Bitte senden Sie Ihre Angaben</a> </div>
+<div id="partners" style="display: none;">
+<form action="/de/cart/partners" method="POST" id="partners_form" novalidate>
+<input type="hidden" name="language" value="de">
+<input type="hidden" name="uri" value="nottabelle.com/de/rose-in-glaskuppel-mini/">
+<input type="hidden" name="ref" value="">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+Möchten Sie ein Partner von<br>Notta & Belle werden, hinterlassen Sie dann eine Anfrage. </div>
+<div class="form_line">
+<div class="form_title">
+Vorname Familienname </div>
+<div class="form_input">
+<input type="text" id="partners_form_name" class="partners_form_input" name="partners_form_name" required="">
+<div class="error-block" id="error_partners_form_name">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+E-mail </div>
+<div class="form_input">
+<input type="text" id="partners_form_mail" class="partners_form_input" name="partners_form_mail" required="">
+<div class="error-block" id="error_partners_form_mail">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Telefonnummer </div>
+<div class="form_input">
+<input type="text" id="partners_form_phone" class="partners_form_input" name="partners_form_phone" required="">
+<div class="error-block" id="error_partners_form_phone">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="partners_form_submit btn" value="Senden">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Mit dem Ausfüllen des Formulars stimmen Sie den<br><a href="/de/policy/" target="_blank" style="pointer-events: none">Datenschutzrichtlinien zu</a> </div>
+</div>
+</div>
+</div>
+</form>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+
+jQuery(function($) { 
+
+	$("#partners_form .form_submit").click(function() {
+
+		if($("input[name='partners_form_name']").val()==''){
+			$('#error_partners_form_name').show();
+			$("input[name='partners_form_name']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_name').hide();
+			$("input[name='partners_form_name']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_mail']").val()==''){
+			$('#error_partners_form_mail').show();
+			$("input[name='partners_form_mail']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_mail').hide();
+			$("input[name='partners_form_mail']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_phone']").val()==''){
+			$('#error_partners_form_phone').show();
+			$("input[name='partners_form_phone']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_phone').hide();
+			$("input[name='partners_form_phone']").closest('.form_input').removeClass('has-error');
+		};	
+
+	    if(formresult != 'error'){
+	        $("#partners_form").submit();
+			$(this).hide();	        
+	    }	
+
+	    return false;
+	});
+
+ 
+						
+
+	$("#partners_form_phone").intlTelInput({
+		separateDialCode:true,
+		autoHideDialCode:false,
+		preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+								initialCountry: 'de',
+		hiddenInput: "partners_form_phone_full",
+		excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+		utilsScript: "/template/js/utils.js"
+	});									
+
+});									
+</script>
+<div id="quick_buy" style="display: none;">
+<form action="#" method="POST">
+<input type="hidden" name="language" value="de">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+<p>Wir schätzen Ihre Zeit</p>
+<p>Um zu bestellen, hinterlassen Sie einfach eine Telefonnummer und der Manager wird Sie in naher Zukunft kontaktieren.</p> </div>
+<div class="form_line">
+<div class="form_title">Vorname Familienname</div>
+<div class="form_input">
+<input type="text" id="quick_buy_name" class="partners_form_input" name="quick_buy_name" required="">
+<div class="error-block" id="error_quick_buy_name">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">E-mail</div>
+<div class="form_input">
+<input type="text" id="quick_buy_mail" class="partners_form_input" name="quick_buy_mail" required="">
+<div class="error-block" id="error_quick_buy_mail">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Telefonnummer </div>
+<div class="form_input">
+<input type="text" id="quick_buy_phone" class="quick_buy_input" name="quick_buy_phone">
+<div class="error-block" id="error_quick_buy_phone">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="quick_buy_submit btn" value="Bestellung aufgeben">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Mit dem Ausfüllen des Formulars stimmen Sie den <br><a href="/ru/policy" target="_blank">Datenschutzrichtlinien zu</a>  </div>
+</div>
+</div>
+</div>
+</form>
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+								jQuery(function($) { 
+
+									$("#quick_buy_phone").intlTelInput({
+										separateDialCode:true,
+										autoHideDialCode:false,
+										preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+																				                                        initialCountry: 'de',
+  										hiddenInput: "who_phonenumber_full",
+  										excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+  										utilsScript: "/template/js/utils.js"
+									});	
+
+									$("#quick_buy form input[type='submit']").click(function() {
+
+										if($("input[name='quick_buy_name']").val()==''){
+											$('#error_quick_buy_name').show();
+											$("input[name='quick_buy_name']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_name').hide();
+											$("input[name='quick_buy_name']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_mail']").val()==''){
+											$('#error_quick_buy_mail').show();
+											$("input[name='quick_buy_mail']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_mail').hide();
+											$("input[name='quick_buy_mail']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_phone']").val()==''){
+											$('#error_quick_buy_phone').show();
+											$("input[name='quick_buy_phone']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_phone').hide();
+											$("input[name='quick_buy_phone']").closest('.form_input').removeClass('has-error');
+										};										
+										if(quick_buy_error != 'error'){
+										    $("#amb_form").submit();
+										    $(this).hide();
+										}				
+									});																		
+
+								});									
+							</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer_bottom">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-md-6">
+<p>© 2015-2019 Notta & Belle.<br>Patentrechtlich geschützte Marke. Alle Rechte vorbehalten ♥</p> </div>
+<div class="col-md-auto">
+<img src="https://nottabelle.com/template/img/payment.svg" alt="Payment method">
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="cookie_footer" style="display: none;">
+<div class="container-fluid">
+<div class="row align-items-center justify-content-between">
+<div class="col-9">
+<div class="cookie_footer_text">
+Durch die Nutzung unserer Website erklärst du dich mit der Verwendung von Cookies einverstanden. <a href="https://policies.google.com/technologies/cookies?hl=de">Informace.</a>
+</div>
+</div>
+<div class="col-3">
+<div class="cookie_footer_close">
+<a>Schließen</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/jquery.fancybox.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/intlTelInput.css">
+<script src="https://nottabelle.com/template/js/imagesloaded.pkgd.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/isotope.pkgd.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.fancybox.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.nice-select.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/waypoints.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.counterup.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/intlTelInput.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.cookie.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/common.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/webpjs-0.0.2.min.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<div class="gift_remember" style="display: none;">
+<div class="gift_remember_item gift_remember_item_open">
+<div class="gift_remember_text">
+Für Sie ist ein Geschenk verfügbar! <div class="gift_remember_item_close"></div>
+</div>
+</div>
+</div>
+
+<div id="gift" style="display: none;">
+<div class="form_close" data-fancybox-close></div>
+<div class="gift_wrapper">
+<div class="gift_left"><img src="/template/img/gift.png" alt="gift"><img src="/template/img/gift_mob.jpg" alt="gift" class="gift_left_mob" style="display:none;"></div>
+<div class="gift_right">
+<form id="gift_form">
+<div class="gift_section0 gift_section3 gift_section5">
+<div class="gift_title">Hallo :)<br><br><br class="mob_br"><br class="mob_br">Erhalte 10 Euro Rabatt<br class="mob_br"><br>auf den ersten Einkauf!</b></div>
+
+<div class="gift_input_wrapper">
+<input type="text" name="gift_name" id="gift_name" placeholder="Namen" required>
+<div class="error-block" id="error_gift_name">Gib bitte einen Namen ein!</div>
+</div>
+
+<div class="gift_input_wrapper">
+<input type="email" name="gift_email" id="gift_email" placeholder="email@gmail.com" required>
+<div class="error-block" id="error_gift_email">Fülle das Feld aus!</div>
+</div>
+<span class="gift_btn_blue btn" id="to_gift_section5">Ein Geschenk erhalten</span>
+</div>
+<input type="hidden" id="gift_update" name="update" value="1">
+<input type="hidden" id="gift_product" name="gift_product" value="">
+<input type="hidden" id="gift_roistat" name="gift_roistat" value="">
+<input type="hidden" id="gift_promocode" name="gift_promocode" value="">
+</form>
+<div class="gift_section6" style="display: none;">
+<div class="gift_title">Super!</div>
+<div class="gift_text">Überprüfe Deine E-Mail</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Gut, Danke sehr!</span>
+</div>
+<div class="gift_section7" style="display: none;">
+<div class="gift_title">Super!</div>
+<div class="gift_text">Wird Sie gleich zur<br> WhatsApp-Seite weiterleiten.</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Gut, Danke sehr!</span>
+</div>
+<div class="gift_section8" style="display: none;">
+<div class="gift_title">Super!</div>
+<div class="gift_text">Ihre Adresse ist bereits registriert</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Gut, Danke sehr!</span>
+</div>
+</div>
+</div>
+</div> 
+<link rel="stylesheet" type="text/css" href="/template/css/classic.date.css">
+<link rel="stylesheet" type="text/css" href="/template/css/classic.css">
+<script src="/template/js/picker.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="/template/js/picker.date.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script src="/template/js/pickadate/de_DE.js" type="49ec97f1b6c1f246de8aec1a-text/javascript"></script>
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+					
+																													
+						jQuery(function($) {
+                            function validateEmail($email) {
+                                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                                return emailReg.test( $email );
+                            }
+
+
+
+                            $('#set_name_popup').click(function(){
+
+                                if($("#gift_name").val()==''){
+                                    $('#error_gift_name').show();
+                                    $('#gift_name').addClass('has-error');
+                                    var result='error';
+                                } else {
+                                    $('#error_gift_name').hide();
+                                    $('#gift_name').removeClass('has-error');
+                                    Cookies.set('gift_name', $("#gift_name").val(), { expires: 7, path: '/'  });
+                                    $('.gift_section0').hide();
+                                    $('.gift_section3').show();
+                                }
+                            });
+                            $('#type_whatsapp').click(function(){
+                               //  $('.gift_section3').hide();
+                               //  $('.gift_section7').show();
+                               // var name=$("#gift_name").val();
+                               //  setTimeout(function () {
+                                    location="https://nottabelle.com/de/whatsapp?referrer=https://nottabelle.com/de/whatsapp2&name="+name+"/";
+                                // }, 2000); // время в мс
+
+                            });
+
+                            $('#type_email').click(function(){
+                                $('.gift_section3').hide();
+                                $('.gift_section5').show();
+                            });
+
+							$('#to_gift_section1').click(function(){
+								$('.gift_section0').hide();
+								$('.gift_section1').show();
+							});	
+							$('.gift_section1 .btn').click(function(){
+								$('.gift_section1').hide();
+								$('.gift_section2').show();
+								Cookies.set('after_gift_addcart2', '1', { expires: 7, path: '/'  });
+							});	
+							// $('.gift_section3').click(function(){
+							// 	$('.gift_section3').hide();
+							// 	$('.gift_section5').show();
+							// });
+							// $('.gift_section0 .btn').click(function(){
+							// 	$('.gift_section0').hide();
+							// 	$('.gift_section3').show();
+							// });
+							$('#to_gift_section5').click(function(){
+
+								if($("#gift_name").val()==''){
+									$('#error_gift_name').show();
+									$('#gift_name').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_name').hide();
+									$('#gift_name').removeClass('has-error');
+								}
+
+
+							    var email= $("#gift_email").val();
+								if(email=='' || validateEmail(email)==false){
+									$('#error_gift_email').show();
+									$('#gift_email').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_email').hide();
+									$('#gift_email').removeClass('has-error');
+									// $('.gift_section4').hide();
+									// $('.gift_section6').show();
+								}
+									if(result != 'error'){
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/de/whatsapp2/email",
+                                        data: { language: 'de',mail:$("#gift_email").val(),name:$("#gift_name").val() },
+                                        success: function(result){
+                                            $('.gift_section5').hide();
+                                            if (result=='duble') {
+                                                $('.gift_section8').show();
+                                            }
+                                            else{
+                                                $('.gift_section6').show();
+                                            }
+
+                                            console.log(result);
+                                        },
+                                        error: function (result) {
+                                            console.log(result);
+                                        }
+                                    });
+								}
+
+								// if($("#gift_name").val()==''){
+								// 	$('#error_gift_name').show();
+								// 	$('#gift_name').addClass('has-error');
+								// 	var result='error';
+								// } else {
+								// 	$('#error_gift_name').hide();
+								// 	$('#gift_name').removeClass('has-error');
+								// }
+								// if($("#gift_city").val()==''){
+								// 	$('#error_gift_city').show();
+								// 	$('#gift_city').addClass('has-error');
+								// 	var result='error';
+								// } else {
+								// 	$('#error_gift_city').hide();
+								// 	$('#gift_city').removeClass('has-error');
+								// }
+								//
+								// if(result != 'error'){
+								// 	$('#gift_email').removeClass('has-error');
+								// 	$('.gift_section4').hide();
+								// 	// $('.gift_section6').show()
+								// }
+
+
+
+
+
+
+
+							});	
+							$('#to_gift_section6').click(function(){
+								if($("#gift_phone").val()==''){
+									$('#error_gift_phone').show();
+									$('#gift_phone').addClass('has-error');
+									var result='error';
+								} else {
+									$("#gift_phonefull").val($("#gift_phone").intlTelInput("getNumber"));
+									$('#error_gift_phone').hide();
+									$('#gift_phone').removeClass('has-error');
+								}
+/*								if($("#gift_name").val()==''){
+									$('#error_gift_name').show();
+									$('#gift_name').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_name').hide();
+									$('#gift_name').removeClass('has-error');
+								}*/								
+/*								if($("#gift_city").val()==''){
+									$('#error_gift_city').show();
+									$('#gift_city').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_city').hide();
+									$('#gift_city').removeClass('has-error');
+								}*/								
+								if($("#gift_date").val()==''){
+									$('#error_gift_date').show();
+									$('#gift_date').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_date').hide();
+									$('#gift_date').removeClass('has-error');
+								}	
+								
+								if(result != 'error'){
+									Cookies.set('after_gift_addcart2', '1', { expires: 7, path: '/'  });
+									$('.gift_section5').hide();
+									$('.gift_section4').show();
+								}	            	            	
+							});										
+				
+							
+							$('.gift_section3 .gift_btn_full_grey').click(function(){
+								var gift_product = $(this).attr('value');
+								var gift_product_podarokid = $(this).attr('podarokid');
+								
+								if(typeof gift_product == "undefined" && !gift_product){
+									
+								} else {
+									$('#gift_product').val(gift_product);
+								}
+								
+								if(typeof gift_product_podarokid == "undefined" && !gift_product_podarokid){
+									
+								} else {
+									Cookies.set('gift_product_podarokid2', gift_product_podarokid, { expires: 7, path: '/'  });
+								}
+								
+								
+							});
+							
+							$('#gift_form .gift_btn_full_grey').click(function(){
+								sendBooking();
+							});										
+				
+							$('.gift_section6 .gift_btn_full_red, .gift_section2 .gift_btn_full_red').click(function(){
+							//data = 'de';
+							//	$('#gift').click(function(){
+								$.ajax({
+									type: "POST",
+									url: "/cart/addpodarok",
+									data: { language: 'de' },
+									success: function(result){
+										$('.gift_section6 .gift_btn_full_red').hide();
+										location.reload();
+										return false;
+										//console.log(result);
+									}
+								});
+							//	sendBooking();
+							});	
+							
+							 	
+							function sendBooking() {
+								/* $('#gift_roistat').val('');
+								$('#gift_promocode').val(''); */
+								
+								if($("#gift_phone").val() !==''){
+									Cookies.set('gift_phone', $("#gift_phone").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_email").val() !==''){
+									Cookies.set('gift_email', $("#gift_email").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_name").val() !==''){
+									Cookies.set('gift_name', $("#gift_name").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_city").val() !==''){
+									Cookies.set('gift_city', $("#gift_city").val(), { expires: 7, path: '/'  });
+								}
+								
+								var windowWidth = screen.width;
+								var windowHeight = screen.height;
+
+
+								data = $('#gift form').serialize()+'&language=' + 'de' + '&windowWidth=' + windowWidth + '&windowHeight=' + windowHeight + '&request_uri=' + '/de/rose-in-glaskuppel-mini/';
+							
+								/* alert(data);
+								console.log(data);
+								return false; */
+								
+								 $.ajax({
+									type: "POST",
+									url: "/booking/update",
+									data:data,
+									success: function(result){
+										console.log(result);
+									}
+								});
+								
+							}			
+
+							$("#gift_phone").intlTelInput({
+								separateDialCode:true,
+								autoHideDialCode:false,
+																	                            initialCountry: 'de',
+								preferredCountries: ["us", "gb", "fr", "de", "ru", "cz"],
+								// hiddenInput: "gift_phonefull",
+								excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+								utilsScript: "/template/js/utils.js"
+							});	
+
+							$('#gift_date').pickadate({
+						    firstDay: 1,
+						    format: 'd mmmm yyyy г.',
+						    formatSubmit: 'yyyy/mm/dd',								
+							  today: '',
+							  clear: '',
+							  close: '',
+							  min: true
+							})               								
+						});
+					</script>
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+			jQuery(function($) { 
+
+													setTimeout(function () {
+						if (Cookies.get('viewed_cookie_gift2') != '1') {
+						$.fancybox.open({
+							src  : '#gift',
+							type : 'inline',
+							touch: false,
+							afterClose: function () {
+								if (Cookies.get('after_gift_addcart2') == '1') {
+								$.ajax({
+									type: "POST",
+									url: "/cart/addpodarok",
+									success: function(result){
+										$('.gift_section6 .gift_btn_full_red').hide();
+										Cookies.set('viewed_cookie_gift_success2', '1', { expires: 7, path: '/'  });
+										location.reload();
+										return false;
+										//console.log(result);
+									}
+								});
+								}
+								}
+						});
+						Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+						}
+					}, 12000);
+									
+				
+				$('.form_close').click(function(){
+					$.fancybox.close();
+				});
+
+				$('.gift_section6 .btn,.gift_section2 .btn').click(function(){
+					Cookies.set('viewed_cookie_gift_success2', '1', { expires: 7, path: '/'  });
+				});
+
+				if (Cookies.get('viewed_cookie_gift_success2') != '1') {
+					$('.gift_remember').click(function(){
+						if ($(window).width() > 767) { $('.gift_remember_item').addClass('gift_remember_item_open'); }
+						$('.gift_remember').removeClass('gift_remember_item_viewed_close');
+						setTimeout(function () {
+							$.fancybox.open({
+								src  : '#gift',
+								type : 'inline',
+								touch: false
+							});
+						}, 400);
+						Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+					});
+					$('.gift_remember').addClass('gift_remember_active');						
+				} else {
+					$('.gift_remember').hide();
+				};
+
+				$('.gift_remember_item_close').click(function(e){
+					Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+					$('.gift_remember_item').removeClass('gift_remember_item_open');
+					// $('.gift_remember').addClass('gift_remember_item_viewed_close').delay(2000).queue(function(){
+    	// 				$('.gift_remember').removeClass("gift_remember_item_viewed_close").dequeue();
+					// });					
+					$('.gift_remember').addClass('gift_remember_item_viewed_close');
+					Cookies.set('gift_remember_item_viewed2', '1', { expires: 7, path: '/'  });
+					e.stopPropagation();
+
+				});
+
+				if (Cookies.get('gift_remember_item_viewed2') == '1') {
+					$('.gift_remember_item').removeClass('gift_remember_item_open');
+				};
+
+			});				
+			</script>
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">(function(){var WebP=new Image();
+        WebP.onload=WebP.onerror=function(){ if(WebP.height!=2)
+        {var sc=document.createElement('script');sc.type='text/javascript';sc.async=true;
+            var s=document.getElementsByTagName('script')[0];sc.src='js/webpjs-0.0.2.min.js';
+            s.parentNode.insertBefore(sc,s);}};
+        WebP.src='data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';})();
+</script>
+</div>
+<div class="hidden-xs hidden-sm">
+
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+
+var isMobile = false;
+// проверка на размер экрана 
+$(document).ready( function() {
+    if ($('body').width() <= 598) {
+        isMobile = true;
+    }
+    // или для десктопа
+   if (!isMobile) {
+(function(){ var widget_id = 'MFXlr4R1km';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();	
+ }
+} );
+
+</script>
+</div>
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+
+	//ЗАПУСКАЕМ ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		updateorderminiline();
+	
+	// ПОВТОРЫ С ИНТЕРВАЛОМ 1 СЕК
+		/* var timerId = setInterval(function() {
+			updateorderminiline();
+		}, 1000); */
+
+	//****************************************************************************************************
+	
+	
+	//ФУНКЦИЯ ЗАПУСКА ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		function updateorderminiline(){
+			
+			dataType: 'json',
+            $.ajax({
+                type: "POST",
+                url: "/cart/updateorderminilinenew",
+                //data:data,
+                data:{
+					language:'de',
+				},
+                success: function(result){
+					res = JSON.parse(result);
+                    delivery = res.delivery;
+                    itogo = res.itogo;
+                    goods = res.goods;
+                    goodsCount = res.goodsCount;
+					$('.site_cart_counter').html(goodsCount);
+					$('.cart_bottom_item').html(goodsCount);
+                    $('.cart_bottom_price #total_val_footer').html(itogo);
+
+					if(goodsCount > 0){
+						$('.cart_bottom').show();
+						$('.footer_bottom').addClass('cart_bottom_visible');
+						$('.gift_remember').addClass('gift_remember_withline');
+
+					} else {
+						$('.cart_bottom').hide();
+						$('.footer_bottom').removeClass('cart_bottom_visible');
+						$('.gift_remember').removeClass('gift_remember_withline');
+					}
+                }
+            });
+		}
+
+
+	//****************************************************************************************************
+	
+
+	//ДОБАВЛЕНИЕ ТОВАРОВ В КОРЗИНУ ЗАПУСК КОРЗИНЫ СПРАВА
+
+        $(".catalog_content_btn a:not(.notavailability,.availability_text_form )").on('click',function(){
+			if ($(this).attr('status')==1){
+				prodid = $(this).attr('id');
+				$(this).removeClass('in_cart');
+
+			}
+			if ($(this).attr('status')==0){
+				$.ajax({
+					type: "POST",
+					url: "/de/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header").css({"display":"none"});
+				}
+				return false;
+				/* prodid = 0; */
+			}
+			$(this).addClass('in_cart');
+
+			$(this).attr('status', 0);
+			//prodid = $(this).attr('id');
+			$(this).html('<span class="hidden-xs"> In den Warenkorb gehen</span><span class="show-xs">cart</span>');
+
+            $.ajax({
+                type: "POST",
+                url: "/de/cart/add",
+                data:{
+                    prodid:prodid,
+                },
+                success: function(result){
+					$('.cart_right').html(result); //асинхронное добавление
+                    //location.reload(); // с перезагрузкой
+					updateorderminiline();
+                }
+            });
+
+			$(".cart_right").addClass("active-cart");
+
+				$("body").addClass("fixed-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+                $("body").css({"overflow":"hidden"});
+                $("header ").css({"display":"none"});
+            }
+			updateorderminiline();
+            return false;
+            event.preventDefault();
+
+
+        });
+		
+	//****************************************************************************************************
+	
+	
+	//ОТКРЫТИЕ КОРЗИНЫ ОТПРАВЛЯЕМ ЗАПРОС ТАК КАК НУЖНА ИНИЦИАЛИЗАЦИЯ JS ЗАНОВО
+		$(".cart_bottom_href").click(function(){			
+				$.ajax({
+					type: "POST",
+					url: "/de/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header ").css({"display":"none"});
+				}
+		});
+	//****************************************************************************************************
+		
+		
+	//КЛИК ПО КОЛИЧЕСТВУ ТОВАРОВ В ШАПКЕ ЗАПУСКАЕТ КЛИК ПО ПОЛОСКЕ ВНИЗУ
+		$(".cart_popup_href").click(function(){
+			$(".cart_bottom_item").click();
+			return false;
+        });
+	//****************************************************************************************************
+
+		
+</script>
+
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter40113260 = new Ya.Metrika2({
+                    id:40113260,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/40113260" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+    (function() {
+        var d = document, w = window;
+        w.MgSensorData = w.MgSensorData || [];
+        w.MgSensorData.push({
+            cid:362890,
+            lng:"ru",
+            nosafari:true,
+            project: "a.marketgid.com"
+        });
+        var l = "a.marketgid.com";
+        var n = d.getElementsByTagName("script")[0];
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var dt = !Date.now?new Date().valueOf():Date.now();
+        s.src = "//" + l + "/mgsensor.js?d=" + dt;
+        n.parentNode.insertBefore(s, n);
+    })();
+</script>
+
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">(function (w, d) {w.amo_pixel_token = 'p1Ip4iB8yqaEyXU9HPmcTFDXCbXyjWVjsFXnz2xKSUtoEVh22OGcP0uthUvKBG/r';var s = document.createElement('script'), f = d.getElementsByTagName('script')[0];s.id = 'amo_pixel_js';s.type = 'text/javascript';s.async = true;s.src = 'https://piper.amocrm.ru/pixel/js/tracker/pixel.js?token=' + w.amo_pixel_token;f.parentNode.insertBefore(s, f);})(window, document);</script>
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">
+(function(w, d, s, h, id) {
+w.roistatProjectId = id; w.roistatHost = h;
+var p = d.location.protocol == "https:" ? "https://" : "http://";
+var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', '555354ccb14585c2707c3a3ea3355359');
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFVD3PH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="49ec97f1b6c1f246de8aec1a-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5db58a519a","applicationID":"176161339","transactionName":"bgRQMkNSD0BXUhVaW1dOcwVFWg5dGXIAR1FeDkAfHloPV1NJ","queueTime":0,"applicationTime":106,"atts":"QkNTRAtIHE4=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="49ec97f1b6c1f246de8aec1a-" defer=""></script></body>
+</html>

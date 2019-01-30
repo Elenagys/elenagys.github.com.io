@@ -1,0 +1,3724 @@
+
+<!DOCTYPE html>
+<html lang="de" prefix="og: http://ogp.me/ns#">
+<head>
+<link rel="preload" href="/template/fonts/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="469c1078c0f415e0d0dcc76b-text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notta & Belle: Infinity Rosen - einzigartige Geschenke aus Rosen</title>
+<meta name="keywords" content="Infinity rosen" />
+<meta name="description" content="Infinity Rosen - einzigartige Geschenke von hoher Qualität aus natürlichen lebenden Rosen. Die Lebensdauer einer Rose beträgt bis zu 5 Jahre. Schnelle und sichere Lieferung innerhalb von Deutschland in 1-2 Tagen." />
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nottabelle.com/de/" />
+<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="60x60" href="https://nottabelle.com/template/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://nottabelle.com/template/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nottabelle.com/template/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://nottabelle.com/template/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nottabelle.com/template/img/favicon/favicon-32x32.png">
+<meta name="msapplication-TileImage" content="https://nottabelle.com/template/img/favicon/ms-icon-144x144.png">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/bootstrap-grid.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/style_new.css?20190130">
+<script src="https://nottabelle.com/template/js/jquery.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/owl.carousel.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/lazysizes.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<style> @font-face {font-family: proximal; src: url(/template/fonts/ProximaNova-Light.eot); src: url(/template/fonts/ProximaNova-Light.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Light.woff2) format('woff2'),url(/template/fonts/ProximaNova-Light.woff) format('woff'),url(/template/fonts/ProximaNova-Light.ttf) format('truetype'),url(/template/fonts/ProximaNova-Light.svg#ProximaNova-Light) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximab; src: url(/template/fonts/ProximaNova-Bold.eot); src: url(/template/fonts/ProximaNova-Bold.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Bold.woff2) format('woff2'),url(/template/fonts/ProximaNova-Bold.woff) format('woff'),url(/template/fonts/ProximaNova-Bold.ttf) format('truetype'),url(/template/fonts/ProximaNova-Bold.svg#ProximaNova-Bold) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximar; src: url(/template/fonts/ProximaNova-Regular.eot); src: url(/template/fonts/ProximaNova-Regular.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Regular.woff2) format('woff2'),url(/template/fonts/ProximaNova-Regular.woff) format('woff'),url(/template/fonts/ProximaNova-Regular.ttf) format('truetype'),url(/template/fonts/ProximaNova-Regular.svg#ProximaNova-Regular) format('svg'); font-weight: 400; font-style: normal; font-display:swap} </style>
+
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFVD3PH');</script>
+
+<script src="https://www.artfut.com/static/tagtag.min.js?campaign_code=ba5f83a22d" async onerror='var self = this;window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers=ADMITAD.Helpers||{},ADMITAD.Helpers.generateDomains=function(){for(var e=new Date,n=Math.floor(new Date(2020,e.getMonth(),e.getDate()).setUTCHours(0,0,0,0)/1e3),t=parseInt(1e12*(Math.sin(n)+1)).toString(30),i=["de"],o=[],a=0;a<i.length;++a)o.push({domain:t+"."+i[a],name:t});return o},ADMITAD.Helpers.findTodaysDomain=function(e){function n(){var o=new XMLHttpRequest,a=i[t].domain,D="https://"+a+"/";o.open("HEAD",D,!0),o.onload=function(){setTimeout(e,0,i[t])},o.onerror=function(){++t<i.length?setTimeout(n,0):setTimeout(e,0,void 0)},o.send()}var t=0,i=ADMITAD.Helpers.generateDomains();n()},window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers.findTodaysDomain(function(e){if(window.ADMITAD.dynamic=e,window.ADMITAD.dynamic){var n=function(){return function(){return self.src?self:""}}(),t=n(),i=(/campaign_code=([^&]+)/.exec(t.src)||[])[1]||"";t.parentNode.removeChild(t);var o=document.getElementsByTagName("head")[0],a=document.createElement("script");a.src="https://www."+window.ADMITAD.dynamic.domain+"/static/"+window.ADMITAD.dynamic.name.slice(1)+window.ADMITAD.dynamic.name.slice(0,1)+".min.js?campaign_code="+i,o.appendChild(a)}});' type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Notta & Belle",
+    "brand": "Notta & Belle",
+    "email": "world@nottabelle.com",
+    "telephone": "+420732106875",
+	"logo": "https://nottabelle.com/template/img/logo-fooer.png",
+    	"url": "https://nottabelle.com/de/"
+	
+}
+</script>
+</head><body>
+<div id="clientel"></div>
+<div class="wrapper">
+<div class="content">
+<header class="header">
+<div class="delivery_mob">
+<div class="delivery">
+Kostenloser Versand <div class="delivery__popup" style="display: none;">
+<p>Wir liefern Ihre Ware kostenlos in die meisten europäischen Länder. Paketdienst UPS wird Ihre Bestellung innerhalb von 5-6 Werktagen liefern.</p>
+</div>
+</div>
+<div class="delivery_lang">
+<div class="lang">
+<div class="lang_current">
+Sprache:
+<span class="lang_switcher">de</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/cz/"><div class="lang_img"><img src="/template/img/lang/cz.png" alt=""></div><div class="lang_name">CZ</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/it/"><div class="lang_img"><img src="/template/img/lang/it.png" alt=""></div><div class="lang_name">IT</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header_mob">
+<div class="header_mob_menu">
+<div class="header_mob_menu_hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="header_mob_logo">
+<a href="https://nottabelle.com/de/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+<div class="header_mob_cart">
+<a href="https://nottabelle.com/de/cart" class="cart_popup_href"><div class="site_cart_counter">0</div></a>
+</div>
+<div class="header_mob_ul">
+<ul class="header_mob_ul_navigator">
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/ewige-rose-im-glas/">
+<span class="menu_title">Ewige Rose im Glas</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Größe der Rosen:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-in-glaskuppel-mini/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-in-glasglocke-size-premium/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/longlife-rosen-size-premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-im-glas-king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">King</span>
+</a>
+ </li>
+</ul>
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/geschenkbox/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Geschenkbox</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/individuelle-gravur/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Individuelle Gravur</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/baren-aus-den-rosen/">
+<span class="menu_title">Bären aus den Rosen </span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Größe der Bären:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/baren-25cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Bären - 25 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/baren-35cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Bären - 35 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/baren-55cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Bären - 55 сm</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/geschenkbox-baren/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Geschenkbox</span>
+</a>
+</li>
+ </ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/present/">
+<span class="menu_title">Die Schöne und das Biest</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">WUNDERBARE GESCHENKE</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/teeset-disney/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Teeset </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rose-die-schone-und-das-biest/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rose schöne und das biest</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/de/rosenbox/">
+<span class="menu_title">Rosenbox</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">Größe der Rosenbox:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-forever/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Forever»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-romantic/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Romantic»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-love/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Love»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/de/rosenbox-princess/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rosenbox «Princess»</span>
+</a>
+
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="/de/impressum/">Impressum </a></li>
+<li><a href="/de/bezahlung/">Bezahlung </a></li>
+<li><a href="/de/lieferung/">Lieferung</a></li>
+<li><a href="/de/ambassador/">Ambassador</a></li>
+<li><a href="/de/partners/">Partnerschaft</a></li>
+<li class="mob_lang">
+<div class="mob_lang_current">Sprache:</div>
+<div class="mob_lang_switch">
+<span>de</span>
+<a href="https://nottabelle.com/eu/">EU</a>
+<a href="https://nottabelle.com/uk/">UK</a>
+<a href="https://nottabelle.com/fr/">FR</a>
+<a href="https://nottabelle.com/us/">US</a>
+<a href="https://nottabelle.com/cz/">CZ</a>
+<a href="https://nottabelle.com/it/">IT</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="header_top">
+<div class="container delivery__container">
+<div class="row align-items-center justify-content-between">
+<div class="col nopadding hidden-xs hidden-sm">
+<div class="content-text">
+<span>
+<i class="fa fa-phone mgr10"></i><a class="mgr20 newfonts" href="tel:+420732106875">+420 732 106 875</a>
+</span>
+</div>
+</div>
+<div class="col-md-auto text-center nopadding delivery__col">
+<div class="content-text">
+<div class="earn">
+<span>Verdienen Sie mit Notta & Belle - <a href="/de/ambassador/">Erfahren Sie mehr</a></span>
+</div>
+<div class="delivery">
+Kostenloser Versand <div class="delivery__popup">
+<p>Wir liefern Ihre Ware kostenlos in die meisten europäischen Länder. Paketdienst UPS wird Ihre Bestellung innerhalb von 5-6 Werktagen liefern.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col text-right nopadding lang__col">
+<div class="content-text flex-link">
+<span class="top_link"><a href="/de/partners/">Partnerschaft</a></span>
+<div class="lang">
+<div class="lang_current">
+Sprache: <span class="lang_switcher">de</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/cz/"><div class="lang_img"><img src="/template/img/lang/cz.png" alt=""></div><div class="lang_name">CZ</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/it/"><div class="lang_img"><img src="/template/img/lang/it.png" alt=""></div><div class="lang_name">IT</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_middle">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-auto nopadding">
+<div class="content-logo">
+<a href="https://nottabelle.com/de/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_bottom">
+<div class="container">
+<div class="row align-items-center justify-content-center">
+<div class="col-12">
+
+<div role="navigation">
+<div class="site_navigator_outer">
+<div class="site_navigator_inner">
+<ul class="site_navigator" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/ewige-rose-im-glas/">
+<span class="menu_title" itemprop=name>Ewige Rose im Glas</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Größe der Rosen:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-in-glaskuppel-mini/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-in-glasglocke-size-premium/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/longlife-rosen-size-premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-im-glas-king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">King</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/geschenkbox/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Geschenkbox</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/individuelle-gravur/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Individuelle Gravur</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/ewige-rose-im-glas/" data-img="https://nottabelle.com/data/img/menu/610213618131442fe8c6f99d7e09e272.png">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/610213618131442fe8c6f99d7e09e272.png" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/baren-aus-den-rosen/">
+<span class="menu_title" itemprop=name>Bären aus den Rosen </span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Größe der Bären:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/baren-25cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Bären - 25 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/baren-35cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Bären - 35 сm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/baren-55cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Bären - 55 сm</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Zusätzliche Waren</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/geschenkbox-baren/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Geschenkbox</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/baren-aus-den-rosen/" data-img="https://nottabelle.com/data/img/menu/d2147b33e70bd6e71d7f011d255048c2.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/d2147b33e70bd6e71d7f011d255048c2.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/present/">
+<span class="menu_title" itemprop=name>Die Schöne und das Biest</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">WUNDERBARE GESCHENKE</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/teeset-disney/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Teeset </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rose-die-schone-und-das-biest/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rose schöne und das biest</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/present/" data-img="https://nottabelle.com/data/img/menu/bcef6ae4ac8060d6f60d5bea84d89de1.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/bcef6ae4ac8060d6f60d5bea84d89de1.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/de/rosenbox/">
+<span class="menu_title" itemprop=name>Rosenbox</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">Größe der Rosenbox:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-forever/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Forever»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-romantic/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Romantic»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-love/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Love»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/de/rosenbox-princess/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rosenbox «Princess»</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/de/rosenbox/" data-img="https://nottabelle.com/data/img/menu/d4af11f9a320fcdfeb1b743665f6645b.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/d4af11f9a320fcdfeb1b743665f6645b.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="site_cart_outer">
+<div class="site_cart_inner"><a class="cart_popup_href" href="#">Warenkorb</a></div>
+<div class="site_cart_counter"></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="slider slider_view_new">
+<div class="container nopadding">
+<div class="slider_inner owl-carousel">
+<div class="slider_item">
+<a href="/de">
+<div class="slider_img">
+<img data-src="/template/img/slider1.jpg" alt="Infinity Rosen" class="lazyload" src="/template/img/nofoto-slider.jpg">
+<noscript><img src="/template/img/slider1.jpg"  alt="Infinity Rosen" /></noscript>
+<img data-src="/template/img/slider1_m.jpg" alt="" class="lazyload show-xs" style="display:none;" src="/template/img/nofoto-slider_m.jpg">
+<noscript><img src="/template/img/slider1_m.jpg"  alt="Infinity Rosen" /></noscript>
+</div>
+</a>
+<div class="slider_content">
+<div class="slider_content_line1 mob_br"><h1 class="mob_small">Valentinstag </h1></div>
+<div class="slider_content_line2">30% Rabatt</div>
+<div class="slider_content_line3">Wir garantieren eine Lieferung nach ganz
+Europa innerhalb von 3 Tagen.</div>
+<div class="slider_content_line1_mob" style="display: none;">Valentinstag </div>
+<div class="slider_content_line2_mob" style="display: none;">30% Rabatt</div>
+<div class="slider_content_line3_mob" style="display: none;">Lieferung nach ganz<br>
+Europa von 3 Tagen.</div>
+<div class="slider_content_line4"><a href="/de/valentines-day/" class="slider_content_btn">Wähle ein Geschenk</a></div>
+</div>
+</div>
+<div class="slider_item">
+<a href="/de/ewige-rose-im-glas/">
+<div class="slider_img">
+<img src="/template/img/slider4.jpg" alt="Infinity Rosen">
+<img src="/template/img/slider4_m.jpg" alt="Infinity Rosen" style="display: none;">
+</div>
+</a>
+<div class="slider_content">
+<div class="slider_content_line1">Infinity Rosen</div>
+<div class="slider_content_line2">ECHTE LEBENDE ROSE</div>
+<div class="slider_content_line3">Die Rose wird Dich 5 Jahre erfreuen.</div>
+<div class="slider_content_line1_mob" style="display: none;">Infinity Rosen</div>
+<div class="slider_content_line2_mob" style="display: none;">ECHTE LEBENDE ROSE</div>
+<div class="slider_content_line4"><a href="/de/ewige-rose-im-glas/" class="slider_content_btn">kaufen</a></div>
+</div>
+</div>
+<div class="slider_item">
+<a href="/de/baren-aus-den-rosen/" aria-label="Bären ">
+<div class="slider_img">
+<img src="/template/img/slider3.jpg" alt="Bären">
+<img src="/template/img/slider3_m.jpg" alt="Bären  " style="display: none;">
+</div>
+</a>
+<div class="slider_content">
+<div class="slider_content_line1">Bären</div>
+<div class="slider_content_line2 mob_br">3D Rosen</div>
+<div class="slider_content_line3">handgemacht aus mehr als 500 Rosen,<br>sehr angenehm zu berühren.</div>
+<div class="slider_content_line1_mob" style="display: none;">Bären</div>
+<div class="slider_content_line2_mob" style="display: none;">3D Rosen</div>
+<div class="slider_content_line4"><a href="/de/baren-aus-den-rosen/" class="slider_content_btn">kaufen</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="home_blocks"> <div class="banners banners_style_new">
+<div class="container ">
+<div class="row">
+<div class="col-md-4 col-12 nopadding">
+<a href="/de/ewige-rose-im-glas/"><div class="banners_img">
+<img src="/template/img/content1_new.jpg" alt="Infinity Rosen">
+<img src="/template/img/content1_new_m.jpg" alt="Infinity Rosen" style="display: none;">
+</div>
+<div class="banners_content cat_home1">
+<div class="banners_price">ab 110 <span>€</span></div>
+<div class="banners_title">Infinity Rosen Im Glas </div>
+<div class="banners_line"></div>
+<div class="banners_more"><span>erfahren sie mehr</span><i class="fa fa-angle-right"></i></div>
+</div>
+</a>
+</div>
+<div class="col-md-4 col-12 nopadding">
+<a href="/de/rosenbox/"><div class="banners_img">
+<img src="/template/img/content2_new.jpg" alt="ROSENBOX">
+<img src="/template/img/content2_new_m.jpg" alt="ROSENBOX" style="display: none;">
+</div>
+<div class="banners_content cat_home2">
+<div class="banners_price">ab 120 <span>€</span></div>
+<div class="banners_title">Infinity ROSENBOX</div>
+<div class="banners_line"></div>
+<div class="banners_more"><span>erfahren sie mehr</span><i class="fa fa-angle-right"></i></div>
+</div>
+</a>
+</div>
+<div class="col-md-4 col-12 nopadding">
+<a href="/de/baren-aus-den-rosen/"><div class="banners_img">
+<img src="/template/img/content3_new.jpg" alt="Bären aus den Rosen">
+<img src="/template/img/content3_new_m.jpg" alt="Bären aus den Rosen" style="display: none;">
+</div>
+<div class="banners_content cat_home3">
+<div class="banners_price">ab 140 <span>€</span></div>
+<div class="banners_title">Bären aus den Rosen</div>
+<div class="banners_line"></div>
+<div class="banners_more"><span>erfahren sie mehr</span><i class="fa fa-angle-right"></i></div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div> <div class="triggers">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-4">
+<div class="triggers_inner">
+<div class="triggers_icon">
+<img src="/template/img/triggers1.png" alt="">
+</div>
+<div class="triggers_content">
+<h4>Mehr als 100 000 junge Frauen</h4>
+<p>Sind von den Geschenken von Notta&Belle beeindruckt!</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-4">
+<div class="triggers_inner">
+<div class="triggers_icon">
+<img src="/template/img/triggers2.png" alt="">
+ </div>
+<div class="triggers_content">
+<h4>Schnelle Lieferung</h4>
+<p>Lieferung auf der ganzen Europe in 2-3 Tagen</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-4">
+<div class="triggers_inner">
+<div class="triggers_icon">
+<img src="/template/img/triggers3.png" alt="">
+</div>
+<div class="triggers_content">
+<h4>Garantie</h4>
+<p>Tausch oder Rücknahme der Bestellung</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="catalog" id="catalog_href">
+<div class="container_big">
+<div class="row justify-content-center">
+<div class="col-12">
+<div class="catalog_title">
+<h2>Katalog</h2>
+</div>
+</div>
+<div class="col-12">
+<div class="catalog_cat">
+<ul class="catalog_cat_change">
+<li>
+<a class="catId" data-filter=".catId73" data-href="https://nottabelle.com/de/beliebt/">Beliebt</a>
+</li>
+<li>
+<a class="catId" data-filter=".catId39" data-href="https://nottabelle.com/de/ewige-rose-im-glas/">Infinity im Glas</a>
+</li>
+<li>
+<a class="catId" data-filter=".catId82" data-href="https://nottabelle.com/de/baren-aus-den-rosen/">Bären aus den Rosen</a>
+</li>
+<li>
+<a class="catId" data-filter=".catId365" data-href="https://nottabelle.com/de/rosenbox/">Infinity Rosenbox</a>
+</li>
+<li>
+<a class="catId" data-filter=".catId126" data-href="https://nottabelle.com/de/teeset-disney/">Teeset </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row products_wrapper">
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/'" class="imgContainer" aria-label="Mini rot Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image751-73" data-src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="751-73">
+<noscript><img src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg"  /></noscript>
+<div class="imgHover" data-img="751-73"></div>
+<img class="imageOutput blink lazyload image1173-73" data-src="https://nottabelle.com/data/img/big/8a4a2ddbefbcddfdbac3b33d9f2449ed.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1173-73">
+<noscript><img src="https://nottabelle.com/data/img/big/8a4a2ddbefbcddfdbac3b33d9f2449ed.jpg"  /></noscript>
+<div class="imgHover" data-img="1173-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">108 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/">Mini rot Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="502" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-rote-rose/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-rote-rose/'" class="imgContainer" aria-label="Premium rote Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image592-73" data-src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="592-73">
+<noscript><img src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg"  /></noscript>
+<div class="imgHover" data-img="592-73"></div>
+<img class="imageOutput blink lazyload image1157-73" data-src="https://nottabelle.com/data/img/big/33b4792e11376552ea4ca5cda89fd10b.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1157-73">
+<noscript><img src="https://nottabelle.com/data/img/big/33b4792e11376552ea4ca5cda89fd10b.jpg"  /></noscript>
+<div class="imgHover" data-img="1157-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">140 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-22%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-rote-rose/">Premium rote Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="415" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-blue/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-x-blue/'" class="imgContainer" aria-label="Premium X dunkelblau Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1526473443_premium-x-blue.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1526473443_premium-x-blue.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2175-73" data-src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Синяя роза в фигурной колбе - Premium X" data-img="2175-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg"  /></noscript>
+<div class="imgHover" data-img="2175-73"></div>
+<img class="imageOutput blink lazyload image2176-73" data-src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Бутон синей розы в фигурной колбе - Premium X" data-img="2176-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue-1.jpg"  /></noscript>
+<div class="imgHover" data-img="2176-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">200 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-blue/">Premium X dunkelblau Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1298" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/romantic-311/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/romantic-311/'" class="imgContainer" aria-label="Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4572-73" data-src="https://nottabelle.com/data/img/big/9da111387ef31cf3fc244a334a2b161f.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück " data-img="4572-73">
+<noscript><img src="https://nottabelle.com/data/img/big/9da111387ef31cf3fc244a334a2b161f.png"  /></noscript>
+<div class="imgHover" data-img="4572-73"></div>
+<img class="imageOutput blink lazyload image4573-73" data-src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück " data-img="4573-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png"  /></noscript>
+<div class="imgHover" data-img="4573-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">120 €</span>
+<span class="old_price">150 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/romantic-311/">Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1843" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/forever-112/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/forever-112/'" class="imgContainer" aria-label="Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4494-73" data-src="https://nottabelle.com/data/img/big/c5df325d0cf3809a58c4950fb855555f.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück " data-img="4494-73">
+<noscript><img src="https://nottabelle.com/data/img/big/c5df325d0cf3809a58c4950fb855555f.png"  /></noscript>
+<div class="imgHover" data-img="4494-73"></div>
+<img class="imageOutput blink lazyload image4495-73" data-src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück " data-img="4495-73">
+<noscript><img src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png"  /></noscript>
+<div class="imgHover" data-img="4495-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">120 €</span>
+<span class="old_price">150 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/forever-112/">Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1817" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/grau-baren-35-rotem-herzen/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/grau-baren-35-rotem-herzen/'" class="imgContainer" aria-label="Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4832-73" data-src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4832-73">
+<noscript><img src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png"  /></noscript>
+<div class="imgHover" data-img="4832-73"></div>
+<img class="imageOutput blink lazyload image4833-73" data-src="https://nottabelle.com/data/img/big/9819bdb4b1f239b56bda2c6145e87226.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4833-73">
+<noscript><img src="https://nottabelle.com/data/img/big/9819bdb4b1f239b56bda2c6145e87226.png"  /></noscript>
+<div class="imgHover" data-img="4833-73"></div>
+</div>
+ </div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/grau-baren-35-rotem-herzen/">Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="615" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/rot-baren-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/rot-baren-35/'" class="imgContainer" aria-label="Rot Bären aus den Rosen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4826-73" data-src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rot Bären aus den Rosen - 35 сm" data-img="4826-73">
+<noscript><img src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png"  /></noscript>
+<div class="imgHover" data-img="4826-73"></div>
+<img class="imageOutput blink lazyload image4827-73" data-src="https://nottabelle.com/data/img/big/de67a0d2e1ddf1ef9c63c8019ff6d447.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rot Bären aus den Rosen - 35 сm" data-img="4827-73">
+<noscript><img src="https://nottabelle.com/data/img/big/de67a0d2e1ddf1ef9c63c8019ff6d447.png"  /></noscript>
+<div class="imgHover" data-img="4827-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">140 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/rot-baren-35/">Rot Bären aus den Rosen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="652" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/rosa-baren-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/rosa-baren-35/'" class="imgContainer" aria-label="Rosa Bären aus den Rosen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4822-73" data-src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rosa Bären aus den Rosen - 35 сm" data-img="4822-73">
+<noscript><img src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png"  /></noscript>
+<div class="imgHover" data-img="4822-73"></div>
+<img class="imageOutput blink lazyload image4823-73" data-src="https://nottabelle.com/data/img/big/c1eb069508d8ce000ec2471b06ab4f4e.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rosa Bären aus den Rosen - 35 сm" data-img="4823-73">
+<noscript><img src="https://nottabelle.com/data/img/big/c1eb069508d8ce000ec2471b06ab4f4e.png"  /></noscript>
+<div class="imgHover" data-img="4823-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">133 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-5%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/rosa-baren-35/">Rosa Bären aus den Rosen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="650" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/stab-buket-red-bigbleck/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/stab-buket-red-bigbleck/'" class="imgContainer" aria-label="Roter Rosenstrauß «Princess» in einer schwarzen Box – 15 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image3339-73" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Princess» - Big Black " data-img="3339-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png"  /></noscript>
+<div class="imgHover" data-img="3339-73"></div>
+<img class="imageOutput blink lazyload image3340-73" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck1.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Princess» - Big Black " data-img="3340-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck1.png"  /></noscript>
+<div class="imgHover" data-img="3340-73"></div>
+<img class="imageOutput blink lazyload image3341-73" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck2.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Princess» - Big Black " data-img="3341-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck2.png"  /></noscript>
+<div class="imgHover" data-img="3341-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">166 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/stab-buket-red-bigbleck/">Roter Rosenstrauß «Princess» in einer schwarzen Box – 15 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1916" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/turkis-baren-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/turkis-baren-35/'" class="imgContainer" aria-label="Türkis Bären aus den Rosen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4828-73" data-src="https://nottabelle.com/data/img/big/ca8efd33c313312eb07c9b199c831765.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bären aus den Rosen - 35 сm" data-img="4828-73">
+<noscript><img src="https://nottabelle.com/data/img/big/ca8efd33c313312eb07c9b199c831765.png"  /></noscript>
+<div class="imgHover" data-img="4828-73"></div>
+<img class="imageOutput blink lazyload image4829-73" data-src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bären aus den Rosen - 35 сm" data-img="4829-73">
+<noscript><img src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png"  /></noscript>
+<div class="imgHover" data-img="4829-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">126 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/turkis-baren-35/">Türkis Bären aus den Rosen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="654" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/love-841/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/love-841/'" class="imgContainer" aria-label="Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6060-73" data-src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück " data-img="6060-73">
+<noscript><img src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png"  /></noscript>
+<div class="imgHover" data-img="6060-73"></div>
+<img class="imageOutput blink lazyload image4676-73" data-src="https://nottabelle.com/data/img/big/214ffa366591319b96c0429bb501a034.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück " data-img="4676-73">
+<noscript><img src="https://nottabelle.com/data/img/big/214ffa366591319b96c0429bb501a034.png"  /></noscript>
+<div class="imgHover" data-img="4676-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">166 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/love-841/">Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1903" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId73">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-gently-pink/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-x-gently-pink/'" class="imgContainer" aria-label="Premium X zart rosa Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2173-73" data-src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Нежно Розовая роза в фигурной колбе - Premium X" data-img="2173-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg"  /></noscript>
+<div class="imgHover" data-img="2173-73"></div>
+<img class="imageOutput blink lazyload image2174-73" data-src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Бутон нежно розовой розы в фигурной колбе - Premium X" data-img="2174-73">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink-1.jpg"  /></noscript>
+<div class="imgHover" data-img="2174-73"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">200 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-gently-pink/">Premium X zart rosa Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1297" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-lavendel/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-lavendel/'" class="imgContainer" aria-label="Mini lavendel Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image763-39" data-src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="763-39">
+<noscript><img src="https://nottabelle.com/data/img/big/8205eb9134c3cf6bec0a429b605e8c8b.jpg"  /></noscript>
+<div class="imgHover" data-img="763-39"></div>
+<img class="imageOutput blink lazyload image1180-39" data-src="https://nottabelle.com/data/img/big/e635d8f793f98323be9f81f47a0b6cac.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1180-39">
+<noscript><img src="https://nottabelle.com/data/img/big/e635d8f793f98323be9f81f47a0b6cac.jpg"  /></noscript>
+<div class="imgHover" data-img="1180-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-lavendel/">Mini lavendel Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="515" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-turkis/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-turkis/'" class="imgContainer" aria-label="Premium turkis Rose ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/31f504bd49df3c3816bcbc1fe16e5e18.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/31f504bd49df3c3816bcbc1fe16e5e18.jpg>
+
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/31f504bd49df3c3816bcbc1fe16e5e18.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/31f504bd49df3c3816bcbc1fe16e5e18.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/31f504bd49df3c3816bcbc1fe16e5e18.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image712-39" data-src="https://nottabelle.com/data/img/big/31f504bd49df3c3816bcbc1fe16e5e18.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="712-39">
+<noscript><img src="https://nottabelle.com/data/img/big/31f504bd49df3c3816bcbc1fe16e5e18.jpg"  /></noscript>
+<div class="imgHover" data-img="712-39"></div>
+<img class="imageOutput blink lazyload image1161-39" data-src="https://nottabelle.com/data/img/big/861210cb4735a654e720e991a83e2896.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1161-39">
+<noscript><img src="https://nottabelle.com/data/img/big/861210cb4735a654e720e991a83e2896.jpg"  /></noscript>
+<div class="imgHover" data-img="1161-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">140 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-22%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-turkis/">Premium turkis Rose </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="463" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-grellrosa/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-grellrosa/'" class="imgContainer" aria-label="Premium grellrosa Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/9cb13a96f2f558a2cc5d164ae825c5c2.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/9cb13a96f2f558a2cc5d164ae825c5c2.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/9cb13a96f2f558a2cc5d164ae825c5c2.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/9cb13a96f2f558a2cc5d164ae825c5c2.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/9cb13a96f2f558a2cc5d164ae825c5c2.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image713-39" data-src="https://nottabelle.com/data/img/big/9cb13a96f2f558a2cc5d164ae825c5c2.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="713-39">
+<noscript><img src="https://nottabelle.com/data/img/big/9cb13a96f2f558a2cc5d164ae825c5c2.jpg"  /></noscript>
+<div class="imgHover" data-img="713-39"></div>
+<img class="imageOutput blink lazyload image1162-39" data-src="https://nottabelle.com/data/img/big/b450b06b99fe4bff0e111b3d46289327.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1162-39">
+<noscript><img src="https://nottabelle.com/data/img/big/b450b06b99fe4bff0e111b3d46289327.jpg"  /></noscript>
+<div class="imgHover" data-img="1162-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">135 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-grellrosa/">Premium grellrosa Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="464" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-grellrosa/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-x-grellrosa/'" class="imgContainer" aria-label="Premium X grellrosa Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image3630-39" data-src="https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Ярко розовая роза в фигурной колбе - Premium X" data-img="3630-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink.jpg"  /></noscript>
+<div class="imgHover" data-img="3630-39"></div>
+<img class="imageOutput blink lazyload image3631-39" data-src="https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Бутон ярко розовой розы в фигурной колбе - Premium X" data-img="3631-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1542812972_premium-x-bright-pink-1.jpg"  /></noscript>
+<div class="imgHover" data-img="3631-39"></div>
+
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">200 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-grellrosa/">Premium X grellrosa Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2136" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/'" class="imgContainer" aria-label="Mini rot Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image751-39" data-src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="751-39">
+<noscript><img src="https://nottabelle.com/data/img/big/47bc789cd938f695c0853c3576871400.jpg"  /></noscript>
+<div class="imgHover" data-img="751-39"></div>
+<img class="imageOutput blink lazyload image1173-39" data-src="https://nottabelle.com/data/img/big/8a4a2ddbefbcddfdbac3b33d9f2449ed.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1173-39">
+<noscript><img src="https://nottabelle.com/data/img/big/8a4a2ddbefbcddfdbac3b33d9f2449ed.jpg"  /></noscript>
+<div class="imgHover" data-img="1173-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">108 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/mini-rot-rose/">Mini rot Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="502" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/red-box-x/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/red-box-x/'" class="imgContainer" aria-label="Geschenkbox X Rote  für eine Rose im Glas">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-1.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-1.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-1.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-1.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image3203-39" data-src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Geschenkboxen Rote" data-img="3203-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box.jpg"  /></noscript>
+<div class="imgHover" data-img="3203-39"></div>
+<img class="imageOutput blink lazyload image3204-39" data-src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Geschenkboxen Rote" data-img="3204-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-1.jpg"  /></noscript>
+<div class="imgHover" data-img="3204-39"></div>
+<img class="imageOutput blink lazyload image3205-39" data-src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-2.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Geschenkboxen Rote" data-img="3205-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1539542828_1526474134_1526474128_red-box-2.jpg"  /></noscript>
+<div class="imgHover" data-img="3205-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">25 €</span>
+<span class="old_price">36 €</span>
+<div class="skidka_percent">-31%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/red-box-x/">Geschenkbox X Rote für eine Rose im Glas</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1811" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/box-black-x/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/box-black-x/'" class="imgContainer" aria-label="Geschenkbox X schwarz für eine Rose im Glas">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_d578bce0b28df55823b9a74609f37459.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_d578bce0b28df55823b9a74609f37459.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_d578bce0b28df55823b9a74609f37459.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_d578bce0b28df55823b9a74609f37459.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image3212-39" data-src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_d578bce0b28df55823b9a74609f37459.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Geschenkboxen schwarz" data-img="3212-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_d578bce0b28df55823b9a74609f37459.jpg"  /></noscript>
+<div class="imgHover" data-img="3212-39"></div>
+<img class="imageOutput blink lazyload image3213-39" data-src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_abca49385dc86ab34854054845ac5d92.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="3213-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_abca49385dc86ab34854054845ac5d92.jpg"  /></noscript>
+<div class="imgHover" data-img="3213-39"></div>
+<img class="imageOutput blink lazyload image3214-39" data-src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_1b61559769769094736d5b2a3cd4c9f7.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="3214-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1539543042_1529682638_1529681002_1b61559769769094736d5b2a3cd4c9f7.jpg"  /></noscript>
+<div class="imgHover" data-img="3214-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">25 €</span>
+<span class="old_price">36 €</span>
+<div class="skidka_percent">-31%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/box-black-x/">Geschenkbox X schwarz für eine Rose im Glas</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1814" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-rote-rose/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-rote-rose/'" class="imgContainer" aria-label="Premium rote Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image592-39" data-src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="592-39">
+<noscript><img src="https://nottabelle.com/data/img/big/7dba4b03a76619fbd9bdd778325b77ba.jpg"  /></noscript>
+<div class="imgHover" data-img="592-39"></div>
+<img class="imageOutput blink lazyload image1157-39" data-src="https://nottabelle.com/data/img/big/33b4792e11376552ea4ca5cda89fd10b.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1157-39">
+<noscript><img src="https://nottabelle.com/data/img/big/33b4792e11376552ea4ca5cda89fd10b.jpg"  /></noscript>
+<div class="imgHover" data-img="1157-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">140 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-22%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-rote-rose/">Premium rote Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="415" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-blue/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-x-blue/'" class="imgContainer" aria-label="Premium X dunkelblau Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1526473443_premium-x-blue.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1526473443_premium-x-blue.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2175-39" data-src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Синяя роза в фигурной колбе - Premium X" data-img="2175-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue.jpg"  /></noscript>
+<div class="imgHover" data-img="2175-39"></div>
+<img class="imageOutput blink lazyload image2176-39" data-src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Бутон синей розы в фигурной колбе - Premium X" data-img="2176-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473443_premium-x-blue-1.jpg"  /></noscript>
+<div class="imgHover" data-img="2176-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">200 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-blue/">Premium X dunkelblau Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1298" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId39">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-gently-pink/" onclick="window.location.href = 'https://nottabelle.com/de/ewige-rose-im-glas/premium-x-gently-pink/'" class="imgContainer" aria-label="Premium X zart rosa Rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2173-39" data-src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Нежно Розовая роза в фигурной колбе - Premium X" data-img="2173-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink.jpg"  /></noscript>
+<div class="imgHover" data-img="2173-39"></div>
+<img class="imageOutput blink lazyload image2174-39" data-src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Бутон нежно розовой розы в фигурной колбе - Premium X" data-img="2174-39">
+<noscript><img src="https://nottabelle.com/data/img/big/1526473431_premium-x-gently-pink-1.jpg"  /></noscript>
+<div class="imgHover" data-img="2174-39"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">200 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/ewige-rose-im-glas/premium-x-gently-pink/">Premium X zart rosa Rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1297" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-pink-25/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/bear-pink-25/'" class="imgContainer" aria-label="Rosa Bären aus den Rosen - 25 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1547542916_1d5001cd94a2f3519f35ef2ef82d4820.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1547542916_1d5001cd94a2f3519f35ef2ef82d4820.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1547542916_1d5001cd94a2f3519f35ef2ef82d4820.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image5548-82" data-src="https://nottabelle.com/data/img/big/1547542916_2de57b30a2c3ddb29a504d494904de4e.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rozovyy mishka iz roz - 25 sm" data-img="5548-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1547542916_2de57b30a2c3ddb29a504d494904de4e.png"  /></noscript>
+<div class="imgHover" data-img="5548-82"></div>
+<img class="imageOutput blink lazyload image5547-82" data-src="https://nottabelle.com/data/img/big/1547542916_1d5001cd94a2f3519f35ef2ef82d4820.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rozovyy mishka iz roz - 25 sm" data-img="5547-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1547542916_1d5001cd94a2f3519f35ef2ef82d4820.png"  /></noscript>
+<div class="imgHover" data-img="5547-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">80 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-pink-25/">Rosa Bären aus den Rosen - 25 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2529" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-turquoise-25/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/bear-turquoise-25/'" class="imgContainer" aria-label="Türkis Bären aus den Rosen - 25 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1548355996_7e60bfa21e3d95cef3475b3e1bbb12ae.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548355996_7e60bfa21e3d95cef3475b3e1bbb12ae.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1548355996_7e60bfa21e3d95cef3475b3e1bbb12ae.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6131-82" data-src="https://nottabelle.com/data/img/big/1548355996_7e60bfa21e3d95cef3475b3e1bbb12ae.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bären aus den Rosen - 25 сm" data-img="6131-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1548355996_7e60bfa21e3d95cef3475b3e1bbb12ae.png"  /></noscript>
+<div class="imgHover" data-img="6131-82"></div>
+<img class="imageOutput blink lazyload image6132-82" data-src="https://nottabelle.com/data/img/big/1548355996_c627e59a98e068f93c71cfd065b9ed51.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bären aus den Rosen - 25 сm" data-img="6132-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1548355996_c627e59a98e068f93c71cfd065b9ed51.png"  /></noscript>
+<div class="imgHover" data-img="6132-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">80 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-turquoise-25/">Türkis Bären aus den Rosen - 25 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2734" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-grey-25/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/bear-grey-25/'" class="imgContainer" aria-label="Grau Bären aus den Rosen - 25 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1548356036_065c94ba2b797ba6c495a62a0594b753.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548356036_065c94ba2b797ba6c495a62a0594b753.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1548356036_065c94ba2b797ba6c495a62a0594b753.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6135-82" data-src="https://nottabelle.com/data/img/big/1548356036_a4ee38dc76a513e1717a2551e0c2b41d.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Grau Bären aus den Rosen - 25 сm" data-img="6135-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1548356036_a4ee38dc76a513e1717a2551e0c2b41d.png"  /></noscript>
+<div class="imgHover" data-img="6135-82"></div>
+<img class="imageOutput blink lazyload image6136-82" data-src="https://nottabelle.com/data/img/big/1548356036_065c94ba2b797ba6c495a62a0594b753.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Grau Bären aus den Rosen - 25 сm" data-img="6136-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1548356036_065c94ba2b797ba6c495a62a0594b753.png"  /></noscript>
+<div class="imgHover" data-img="6136-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">80 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-grey-25/">Grau Bären aus den Rosen - 25 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2736" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/weib-baren-35-rotem-herzen/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/weib-baren-35-rotem-herzen/'" class="imgContainer" aria-label="Weiß Bär aus künstlichen Rosen mit einem Herzchen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/7aab7c277324f0195a8747410c9c47e5.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/7aab7c277324f0195a8747410c9c47e5.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/7aab7c277324f0195a8747410c9c47e5.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4836-82" data-src="https://nottabelle.com/data/img/big/7aab7c277324f0195a8747410c9c47e5.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Weiß Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4836-82">
+<noscript><img src="https://nottabelle.com/data/img/big/7aab7c277324f0195a8747410c9c47e5.png"  /></noscript>
+<div class="imgHover" data-img="4836-82"></div>
+<img class="imageOutput blink lazyload image4837-82" data-src="https://nottabelle.com/data/img/big/6bb64cfaccf7c8b3ab25a5d8c8f5963e.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Weiß Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4837-82">
+<noscript><img src="https://nottabelle.com/data/img/big/6bb64cfaccf7c8b3ab25a5d8c8f5963e.png"  /></noscript>
+<div class="imgHover" data-img="4837-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/weib-baren-35-rotem-herzen/">Weiß Bär aus künstlichen Rosen mit einem Herzchen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="655" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-purple-hart-wite-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/bear-purple-hart-wite-35/'" class="imgContainer" aria-label="Violett Bär aus künstlichen Rosen mit einem Herzchen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/641c307163810fe12fbb1d84db1e88d0.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/641c307163810fe12fbb1d84db1e88d0.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/641c307163810fe12fbb1d84db1e88d0.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4840-82" data-src="https://nottabelle.com/data/img/big/641c307163810fe12fbb1d84db1e88d0.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Violett Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4840-82">
+<noscript><img src="https://nottabelle.com/data/img/big/641c307163810fe12fbb1d84db1e88d0.png"  /></noscript>
+<div class="imgHover" data-img="4840-82"></div>
+<img class="imageOutput blink lazyload image4841-82" data-src="https://nottabelle.com/data/img/big/8ca851234cc0393310c12c81306cde52.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Violett Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4841-82">
+<noscript><img src="https://nottabelle.com/data/img/big/8ca851234cc0393310c12c81306cde52.png"  /></noscript>
+<div class="imgHover" data-img="4841-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-purple-hart-wite-35/">Violett Bär aus künstlichen Rosen mit einem Herzchen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1413" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-tiffany-hart-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/bear-tiffany-hart-35/'" class="imgContainer" aria-label="Türkis Bär aus künstlichen Rosen mit einem Herzchen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1544252184_1a02f33119f29660dd54af686d41f5ca.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1544252184_1a02f33119f29660dd54af686d41f5ca.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1544252184_1a02f33119f29660dd54af686d41f5ca.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4844-82" data-src="https://nottabelle.com/data/img/big/1544252184_99a637022093bdb47b02bbd25450a311.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4844-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1544252184_99a637022093bdb47b02bbd25450a311.png"  /></noscript>
+<div class="imgHover" data-img="4844-82"></div>
+<img class="imageOutput blink lazyload image4845-82" data-src="https://nottabelle.com/data/img/big/1544252184_1a02f33119f29660dd54af686d41f5ca.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4845-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1544252184_1a02f33119f29660dd54af686d41f5ca.png"  /></noscript>
+<div class="imgHover" data-img="4845-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-tiffany-hart-35/">Türkis Bär aus künstlichen Rosen mit einem Herzchen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2338" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-pink-hart-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/bear-pink-hart-35/'" class="imgContainer" aria-label="Rosa Bär aus künstlichen Rosen mit einem Herzchen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1548356081_4ceb28ba63c7dd1affc2c00ce5cde1e9.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548356081_4ceb28ba63c7dd1affc2c00ce5cde1e9.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1548356081_4ceb28ba63c7dd1affc2c00ce5cde1e9.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6139-82" data-src="https://nottabelle.com/data/img/big/1548356080_c2663c06e19969eececf2296dabca3a4.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rosa Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="6139-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1548356080_c2663c06e19969eececf2296dabca3a4.png"  /></noscript>
+<div class="imgHover" data-img="6139-82"></div>
+<img class="imageOutput blink lazyload image6140-82" data-src="https://nottabelle.com/data/img/big/1548356081_4ceb28ba63c7dd1affc2c00ce5cde1e9.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rosa Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="6140-82">
+<noscript><img src="https://nottabelle.com/data/img/big/1548356081_4ceb28ba63c7dd1affc2c00ce5cde1e9.png"  /></noscript>
+<div class="imgHover" data-img="6140-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/bear-pink-hart-35/">Rosa Bär aus künstlichen Rosen mit einem Herzchen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2738" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/grau-baren-35-rotem-herzen/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/grau-baren-35-rotem-herzen/'" class="imgContainer" aria-label="Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4832-82" data-src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4832-82">
+<noscript><img src="https://nottabelle.com/data/img/big/da97e5f48b09388a71298377e7679661.png"  /></noscript>
+<div class="imgHover" data-img="4832-82"></div>
+<img class="imageOutput blink lazyload image4833-82" data-src="https://nottabelle.com/data/img/big/9819bdb4b1f239b56bda2c6145e87226.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm" data-img="4833-82">
+<noscript><img src="https://nottabelle.com/data/img/big/9819bdb4b1f239b56bda2c6145e87226.png"  /></noscript>
+<div class="imgHover" data-img="4833-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/grau-baren-35-rotem-herzen/">Grau Bär aus künstlichen Rosen mit einem Herzchen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="615" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/rot-baren-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/rot-baren-35/'" class="imgContainer" aria-label="Rot Bären aus den Rosen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4826-82" data-src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rot Bären aus den Rosen - 35 сm" data-img="4826-82">
+<noscript><img src="https://nottabelle.com/data/img/big/de5a1861fd94920f0dce40bb00294779.png"  /></noscript>
+<div class="imgHover" data-img="4826-82"></div>
+<img class="imageOutput blink lazyload image4827-82" data-src="https://nottabelle.com/data/img/big/de67a0d2e1ddf1ef9c63c8019ff6d447.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rot Bären aus den Rosen - 35 сm" data-img="4827-82">
+<noscript><img src="https://nottabelle.com/data/img/big/de67a0d2e1ddf1ef9c63c8019ff6d447.png"  /></noscript>
+<div class="imgHover" data-img="4827-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">140 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/rot-baren-35/">Rot Bären aus den Rosen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="652" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/rosa-baren-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/rosa-baren-35/'" class="imgContainer" aria-label="Rosa Bären aus den Rosen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4822-82" data-src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rosa Bären aus den Rosen - 35 сm" data-img="4822-82">
+<noscript><img src="https://nottabelle.com/data/img/big/7c18a81c7c0ad72fe02f1e25d204821d.png"  /></noscript>
+<div class="imgHover" data-img="4822-82"></div>
+<img class="imageOutput blink lazyload image4823-82" data-src="https://nottabelle.com/data/img/big/c1eb069508d8ce000ec2471b06ab4f4e.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rosa Bären aus den Rosen - 35 сm" data-img="4823-82">
+<noscript><img src="https://nottabelle.com/data/img/big/c1eb069508d8ce000ec2471b06ab4f4e.png"  /></noscript>
+<div class="imgHover" data-img="4823-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">133 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-5%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/rosa-baren-35/">Rosa Bären aus den Rosen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="650" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId82">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/baren-aus-den-rosen/turkis-baren-35/" onclick="window.location.href = 'https://nottabelle.com/de/baren-aus-den-rosen/turkis-baren-35/'" class="imgContainer" aria-label="Türkis Bären aus den Rosen - 35 сm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4828-82" data-src="https://nottabelle.com/data/img/big/ca8efd33c313312eb07c9b199c831765.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bären aus den Rosen - 35 сm" data-img="4828-82">
+<noscript><img src="https://nottabelle.com/data/img/big/ca8efd33c313312eb07c9b199c831765.png"  /></noscript>
+<div class="imgHover" data-img="4828-82"></div>
+<img class="imageOutput blink lazyload image4829-82" data-src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkis Bären aus den Rosen - 35 сm" data-img="4829-82">
+<noscript><img src="https://nottabelle.com/data/img/big/f96cfb6a42cc2524177d7ed0df52723f.png"  /></noscript>
+<div class="imgHover" data-img="4829-82"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">126 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/baren-aus-den-rosen/turkis-baren-35/">Türkis Bären aus den Rosen - 35 сm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="654" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/romantic-412/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/romantic-412/'" class="imgContainer" aria-label="Roter Rosenstrauß «Romantic» in einer schwarzen Box – 17 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/77165dd884fe04dd275a84eb539d1f7c.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/77165dd884fe04dd275a84eb539d1f7c.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/77165dd884fe04dd275a84eb539d1f7c.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4625-365" data-src="https://nottabelle.com/data/img/big/77165dd884fe04dd275a84eb539d1f7c.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Romantic» in einer schwarzen Box – 17 Stück " data-img="4625-365">
+<noscript><img src="https://nottabelle.com/data/img/big/77165dd884fe04dd275a84eb539d1f7c.png"  /></noscript>
+<div class="imgHover" data-img="4625-365"></div>
+<img class="imageOutput blink lazyload image4627-365" data-src="https://nottabelle.com/data/img/big/7f134241aae8e831c077462506a1743c.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Romantic» in einer schwarzen Box – 17 Stück " data-img="4627-365">
+<noscript><img src="https://nottabelle.com/data/img/big/7f134241aae8e831c077462506a1743c.png"  /></noscript>
+<div class="imgHover" data-img="4627-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">166 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/romantic-412/">Roter Rosenstrauß «Romantic» in einer schwarzen Box – 17 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1856" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/romantic-621/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/romantic-621/'" class="imgContainer" aria-label="Rosa Rosenstrauß «Romantic» in einer weissen Box – 35 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1540041968_romantic-621.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1540041968_romantic-621.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1540041968_romantic-621.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image3292-365" data-src="https://nottabelle.com/data/img/big/1540041968_romantic-621.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Rosa Rosenstrauß «Romantic» in einer weissen Box – 35 Stück " data-img="3292-365">
+<noscript><img src="https://nottabelle.com/data/img/big/1540041968_romantic-621.png"  /></noscript>
+<div class="imgHover" data-img="3292-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">297 €</span>
+<span class="old_price">330 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/romantic-621/">Rosa Rosenstrauß «Romantic» in einer weissen Box – 35 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1880" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/love-852/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/love-852/'" class="imgContainer" aria-label="Violetter Rosenstrauß «Love» in einer schwarzen Box – 15 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1547818387_f7e78954df70c360191ba7b4216cd3af.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1547818387_f7e78954df70c360191ba7b4216cd3af.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1547818387_f7e78954df70c360191ba7b4216cd3af.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image5803-365" data-src="https://nottabelle.com/data/img/big/1547818387_f7e78954df70c360191ba7b4216cd3af.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Violetter Rosenstrauß «Love» in einer schwarzen Box – 15 Stück " data-img="5803-365">
+<noscript><img src="https://nottabelle.com/data/img/big/1547818387_f7e78954df70c360191ba7b4216cd3af.png"  /></noscript>
+<div class="imgHover" data-img="5803-365"></div>
+<img class="imageOutput blink lazyload image5804-365" data-src="https://nottabelle.com/data/img/big/1547818387_0901b417d9e45016c351769665ab9c14.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Violetter Rosenstrauß «Love» in einer schwarzen Box – 15 Stück " data-img="5804-365">
+<noscript><img src="https://nottabelle.com/data/img/big/1547818387_0901b417d9e45016c351769665ab9c14.png"  /></noscript>
+<div class="imgHover" data-img="5804-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">166 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/love-852/">Violetter Rosenstrauß «Love» in einer schwarzen Box – 15 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a data-fancybox data-src="#quick_buy" href="javascript:;" class="btn notavailability">Bald wieder erhältlich.</a>
+
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/romantic-311/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/romantic-311/'" class="imgContainer" aria-label="Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4572-365" data-src="https://nottabelle.com/data/img/big/9da111387ef31cf3fc244a334a2b161f.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück " data-img="4572-365">
+<noscript><img src="https://nottabelle.com/data/img/big/9da111387ef31cf3fc244a334a2b161f.png"  /></noscript>
+<div class="imgHover" data-img="4572-365"></div>
+<img class="imageOutput blink lazyload image4573-365" data-src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück " data-img="4573-365">
+<noscript><img src="https://nottabelle.com/data/img/big/1fec037e3ad230c87ba4fa1f29d7c193.png"  /></noscript>
+<div class="imgHover" data-img="4573-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">120 €</span>
+<span class="old_price">150 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/romantic-311/">Roter Rosenstrauß «Romantic» in einer weissen Box – 9 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1843" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/forever-112/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/forever-112/'" class="imgContainer" aria-label="Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4494-365" data-src="https://nottabelle.com/data/img/big/c5df325d0cf3809a58c4950fb855555f.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück " data-img="4494-365">
+<noscript><img src="https://nottabelle.com/data/img/big/c5df325d0cf3809a58c4950fb855555f.png"  /></noscript>
+<div class="imgHover" data-img="4494-365"></div>
+<img class="imageOutput blink lazyload image4495-365" data-src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück " data-img="4495-365">
+<noscript><img src="https://nottabelle.com/data/img/big/580d9a54d98af6b6a65c97c26cb3e606.png"  /></noscript>
+<div class="imgHover" data-img="4495-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">120 €</span>
+<span class="old_price">150 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/forever-112/">Roter Rosenstrauß «Forever» in einer schwarzen Box – 9 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1817" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/stab-buket-red-bigbleck/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/stab-buket-red-bigbleck/'" class="imgContainer" aria-label="Roter Rosenstrauß «Princess» in einer schwarzen Box – 15 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image3339-365" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Princess» - Big Black " data-img="3339-365">
+<noscript><img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck0.png"  /></noscript>
+<div class="imgHover" data-img="3339-365"></div>
+<img class="imageOutput blink lazyload image3340-365" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck1.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Princess» - Big Black " data-img="3340-365">
+<noscript><img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck1.png"  /></noscript>
+<div class="imgHover" data-img="3340-365"></div>
+<img class="imageOutput blink lazyload image3341-365" data-src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck2.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Roter Rosenstrauß «Princess» - Big Black " data-img="3341-365">
+<noscript><img src="https://nottabelle.com/data/img/big/1540222267_stab-buket-red-bigbleck2.png"  /></noscript>
+<div class="imgHover" data-img="3341-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">166 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/stab-buket-red-bigbleck/">Roter Rosenstrauß «Princess» in einer schwarzen Box – 15 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1916" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/love-841/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/love-841/'" class="imgContainer" aria-label="Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6060-365" data-src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück " data-img="6060-365">
+<noscript><img src="https://nottabelle.com/data/img/big/8364839e9d5caad8c02c32d6f91ead88.png"  /></noscript>
+<div class="imgHover" data-img="6060-365"></div>
+<img class="imageOutput blink lazyload image4676-365" data-src="https://nottabelle.com/data/img/big/214ffa366591319b96c0429bb501a034.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück " data-img="4676-365">
+<noscript><img src="https://nottabelle.com/data/img/big/214ffa366591319b96c0429bb501a034.png"  /></noscript>
+<div class="imgHover" data-img="4676-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">166 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/love-841/">Türkisfarbener Rosenstrauß «Love» in einer weissen Box – 15 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1903" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId365">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/rosenbox/forever-252/" onclick="window.location.href = 'https://nottabelle.com/de/rosenbox/forever-252/'" class="imgContainer" aria-label="Violetter Rosenstrauß «Forever» in einer schwarzen Box – 17 Stück ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/a58e1dcef968109530fa6e44f5b56d70.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/a58e1dcef968109530fa6e44f5b56d70.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/a58e1dcef968109530fa6e44f5b56d70.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image4554-365" data-src="https://nottabelle.com/data/img/big/a58e1dcef968109530fa6e44f5b56d70.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Violetter Rosenstrauß «Forever» in einer schwarzen Box – 17 Stück " data-img="4554-365">
+<noscript><img src="https://nottabelle.com/data/img/big/a58e1dcef968109530fa6e44f5b56d70.png"  /></noscript>
+<div class="imgHover" data-img="4554-365"></div>
+<img class="imageOutput blink lazyload image4555-365" data-src="https://nottabelle.com/data/img/big/977e34890b2948f43ff4dea3bc25a276.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Violetter Rosenstrauß «Forever» in einer schwarzen Box – 17 Stück " data-img="4555-365">
+<noscript><img src="https://nottabelle.com/data/img/big/977e34890b2948f43ff4dea3bc25a276.png"  /></noscript>
+<div class="imgHover" data-img="4555-365"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">150 €</span>
+<span class="old_price">166 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/rosenbox/forever-252/">Violetter Rosenstrauß «Forever» in einer schwarzen Box – 17 Stück </a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a data-fancybox data-src="#quick_buy" href="javascript:;" class="btn notavailability">Bald wieder erhältlich.</a>
+
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId126">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/present/chip-cup/" onclick="window.location.href = 'https://nottabelle.com/de/present/chip-cup/'" class="imgContainer" aria-label="Cup Chip">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1a615bf60df3678dd88b693daf69f1c2.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1a615bf60df3678dd88b693daf69f1c2.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1a615bf60df3678dd88b693daf69f1c2.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1a615bf60df3678dd88b693daf69f1c2.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1a615bf60df3678dd88b693daf69f1c2.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image1236-126" data-src="https://nottabelle.com/data/img/big/1a615bf60df3678dd88b693daf69f1c2.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Cup Chip Die Schöne und das Biest" data-img="1236-126">
+<noscript><img src="https://nottabelle.com/data/img/big/1a615bf60df3678dd88b693daf69f1c2.jpg"  /></noscript>
+<div class="imgHover" data-img="1236-126"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">35 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/present/chip-cup/">Cup Chip</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="694" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId126">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/present/teeservice/" onclick="window.location.href = 'https://nottabelle.com/de/present/teeservice/'" class="imgContainer" aria-label="Teeservice">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/b46daeb9b2671e083371e6da39566c7f.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/b46daeb9b2671e083371e6da39566c7f.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/b46daeb9b2671e083371e6da39566c7f.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/b46daeb9b2671e083371e6da39566c7f.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/b46daeb9b2671e083371e6da39566c7f.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image1238-126" data-src="https://nottabelle.com/data/img/big/b46daeb9b2671e083371e6da39566c7f.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Teeservice Die Schöne und das Biest" data-img="1238-126">
+<noscript><img src="https://nottabelle.com/data/img/big/b46daeb9b2671e083371e6da39566c7f.jpg"  /></noscript>
+<div class="imgHover" data-img="1238-126"></div>
+<img class="imageOutput blink lazyload image1239-126" data-src="https://nottabelle.com/data/img/big/25a0bede64d33a27ca42031447245870.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="1239-126">
+<noscript><img src="https://nottabelle.com/data/img/big/25a0bede64d33a27ca42031447245870.jpg"  /></noscript>
+<div class="imgHover" data-img="1239-126"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+<span class="regular_price">100 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/present/teeservice/">Teeservice</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="696" status="1">
+kaufen </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId126">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/de/present/mutter-teekanne/" onclick="window.location.href = 'https://nottabelle.com/de/present/mutter-teekanne/'" class="imgContainer" aria-label="Mutter Teekanne">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1bc4c292443ba17426ca16edfd010b22.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1bc4c292443ba17426ca16edfd010b22.jpg>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1bc4c292443ba17426ca16edfd010b22.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1bc4c292443ba17426ca16edfd010b22.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1bc4c292443ba17426ca16edfd010b22.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image1237-126" data-src="https://nottabelle.com/data/img/big/1bc4c292443ba17426ca16edfd010b22.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Mutter Teekanne Die Schöne und das Biest" data-img="1237-126">
+<noscript><img src="https://nottabelle.com/data/img/big/1bc4c292443ba17426ca16edfd010b22.jpg"  /></noscript>
+<div class="imgHover" data-img="1237-126"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Preis</span>
+
+<span class="regular_price">65 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/de/present/mutter-teekanne/">Mutter Teekanne</a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a data-fancybox data-src="#quick_buy" href="javascript:;" class="btn notavailability">Bald wieder erhältlich.</a>
+
+</div>
+</div>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-12">
+<div class="catalog_all">
+<a href="" class="btn2x">Alle anschauen</a>
+</div>
+<div class="catalog_all_mob">
+<a href="">Alle anschauen</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="category_first_seo home_seo">
+<div class="container_big">
+<div class="row">
+<div class="col-md-6 col-12"><h2>Infinity Rose - Geschenk statt 1000 Worte</h2>
+<p>Eine infinity Rose unter dem Glaskolben ist eine erstaunliche Idee für ein Geschenk, sowohl für ein grandioses Ereignis, als auch ohne einen Grund für einen geliebten Menschen. Ein exzellent hergestelltes, hochwertiges Geschenk passt zu jeder Altersgruppe von Frauen und sogar zu einem ernsthaften Mann. Für solch ein Geschenk braucht man nicht unbedingt einen guten Grund, es ist genug, um nur zärtliche Gefühle gegenüber einer Person zu empfinden. </p>
+<h2>Das ist eine natürliche Rose</h2>
+<p>Die Komposition verwendet eine natürliche Rose, die sich absolut nicht von der frisch geschnittenen Blume unterscheidet. Die Blumenkönigin unter dem Glas lebt, Sie können sie sanft berühren und selbst sehen. Die Rose bleibt so lange am Leben, dank einem speziellen Stabilisierungsverfahren.</p>
+<h2>Qualität, an der kein Zweifel besteht</h2>
+<p>Das Geschenk unseres Unternehmens ist von ausgezeichneter Qualität, darauf achten wir besonders. Elite-Rosen für das Geschenk werden auf eigenen Plantagen in Ecuador und Spanien angebaut. Deshalb bevorzugen die Menschen die Rosen von Nota & Belle, einem Unternehmen, das sich bestens bewährt hat und immer für die Qualität seiner Produkte verantwortlich ist. Das Hauptziel des Unternehmens ist es, dass die Kunden mit der Wahl ihres Geschenks zufrieden sind.</p>
+<h2>Pflege der infinity Rose</h2>
+Die Pflege der Rose unter dem Kolben erfordert keine besondere Pflege. Einige Empfehlungen sollten dennoch befolgt werden:<br />
+1. Dass die Blüte keinen starken Temperaturschwankungen ausgesetzt ist, <br />
+2. Nicht in direktem Sonnenlicht stehen <br />
+3. Wässere sie nicht.
+<br />
+Die Lebensdauer der infinity Rose wird sich auch ohne Glaskolben nicht ändern.
+</div><div class="col-md-6 col-12">
+<h2>Die Lebenszeit der infinity Rose</h2>
+<p>Von 3 bis 5 Jahren kann die Lebenszeit der infinity Rose sein. Sie können absolut ruhig wegen der Sicherheit des Geschenks sein, dies wird durch die ausgezeichnete Qualität belegt.</p>
+<h2>Die Bedeutung der infinity Rose</h2>
+<p>Aufgrund der Tatsache, dass das Leben der Rose bis zu 5 Jahren dauert, erhielt sie ihren Namen "Infinity Rose". Die Anmut des Geschenks erinnert an ein fabelhaftes Abenteuer, über reine und aufrichtige Gefühle.</p>
+<h2>Lieferung von infinity Rosen</h2>
+<p>In unserer Firma gibt es den Expressversand oder die normale Lieferung. Die normale Lieferung dauert 2-3 Werktage. Die Expresslieferung hingegen erfolgt in 1-2 Werktagen in jede Stadt in Frankreich oder Europa.
+Wir garantieren Sicherheit und Integrität.
+Machen Sie sich keine Sorgen über die Integrität des Geschenks bei Lieferung, es wird zu dir in völlig unbeschädigt kommen. Wir sind sehr vorsichtig mit dem, was wir schaffen, also verpacken wir das Paket sehr gut. In der Geschichte unseres Unternehmens gab es keinen Fall, in dem die Produkte während der Lieferung litten.</p>
+<p><span>Notta & Belle - weil wir lieben das, was wir erschaffen!</span></p></div>
+</div>
+</div>
+</section>
+<section class="seo_map">
+<div class="container">
+<div class="row">
+<div class="col-md-5 col-12"><img src="/template/img/delivery_map.png" alt=""></div>
+<div class="col-md-7 col-12">
+<h3>Wir liefern infinity rosen innerhalb Deutschlands:</h3>
+<div class="seo_map-city">
+<ul>
+<li>Berlin</li>
+<li>Hannover</li>
+<li>München</li>
+<li>Stuttgart</li>
+<li>Mainz</li>
+<li>Köln</li>
+<li>Erfurt</li>
+<li>Dresden</li>
+<li>Potsdam</li>
+<li>Hamburg</li>
+<li>Wiesbaden</li>
+<li>Bremen</li>
+</ul>
+<ul>
+<li>Saarbrücken</li>
+<li>Aachen</li>
+<li>Augsburg</li>
+<li>Baden-Baden</li>
+<li>Bielefeld</li>
+<li>Bonn</li>
+<li>Bochum</li>
+<li> Dortmund</li>
+<li>Magdeburg</li>
+<li>Kiel</li>
+<li>Schwerin</li>
+<li>Düsseldorf</li>
+</ul>
+<ul>
+<li>Essen</li>
+<li>Frankfurt am Main</li>
+<li>Jena</li>
+<li>Kaiserslautern</li>
+<li>Leverkusen</li>
+<li>Leipzig</li>
+<li>Mannheim</li>
+<li>Nürnberg</li>
+<li>Osnabrück</li>
+<li>Wolfsburg</li>
+<li>und andere Städte <br>von Deutschland.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="ins_slider">
+<div class="ins_slider_ajax"> <div class="ins_slider_outer owl-carousel owl-theme owl-loaded owl-drag"> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BssmMK8lGgv/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8966199a2039faff7b59fc6a99227123/5CC0719C/t51.2885-15/sh0.08/e35/s640x640/47691554_586300675168838_7309958742781916613_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>261</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsgIVoFFy9P/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/ae0d3ec663c1d927ee6b18b8a53a64c5/5CCFCAB8/t51.2885-15/sh0.08/e35/s640x640/47692583_376457746234122_5727284949422679652_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>91</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsCzaJulDWC/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/c7fb9f48b2c8098ac25d1c869a2a5a4c/5CBC3231/t51.2885-15/sh0.08/e35/s640x640/47692970_2264599137140390_4880586076165398740_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>113</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BryOG3FlLW-/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2c47d471f05afbc50c20b7af6dc736f7/5CC30F59/t51.2885-15/sh0.08/e35/p640x640/47585173_202816140662752_8592131353444826941_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>166</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrkxoM6FXAr/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e9d8e861bdff2129e558a98a44f3baa6/5CFFF9B6/t51.2885-15/sh0.08/e35/s640x640/46194908_2045624135519482_8077894382289460532_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>139</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Brf0-k8F_Fi/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/4ebc1346378a67428cf768955f358d7d/5D00C64B/t51.2885-15/sh0.08/e35/s640x640/47023143_2298096653803734_7631874680431091353_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>155</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrTDe5OF2wx/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a42cf3197a86f787a2284946cbf81a02/5CC0AD48/t51.2885-15/sh0.08/e35/s640x640/47137609_371315913437484_1280623401876432137_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>175</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrQbjl6Fdbn/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/5b03ef3e14fa768c526082943531e480/5CFA0741/t51.2885-15/sh0.08/e35/s640x640/45932764_313069439539552_4465489449896819141_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>151</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrCtKZaF7Vl/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2d84da38ffde6e138791e4be24471f6b/5CFC160E/t51.2885-15/sh0.08/e35/s640x640/46799336_724020061311099_2309859475885835944_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>361</span><span><i class="fa fa-comments-o"></i>486</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bqubj6klR0X/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/d2eb742618fee38e0a9cb24e042561cf/5CF9600C/t51.2885-15/sh0.08/e35/s640x640/44585913_297299114238684_5018540414245072218_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>192</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqhLtGylxH7/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/9204523fce261024d16d0899d9123859/5D010B9F/t51.2885-15/sh0.08/e35/p640x640/44751386_120612545609661_7599332269045901642_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>34</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqaBsloF86O/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8ca4a7a7e0f446d4f23772d6dbb2d608/5CC34CF6/t51.2885-15/sh0.08/e35/s640x640/46401246_2159326307661358_1950508059172271053_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>235</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqIBo1qlYyq/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/19a05abe1477e6b241b6b61ef53243be/5D00CF0A/t51.2885-15/sh0.08/e35/s640x640/44779365_1094186514075192_4479276707098296786_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>281</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bp4K1tyFwSk/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e780ac1958c304c1ee539b208b8ed2c7/5CC4AAEC/t51.2885-15/sh0.08/e35/s640x640/43985043_1931446880485529_7518661978951291557_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>160</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BpkCsj2lfV0/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a859992f4f01d07d3324307d09c4a6a5/5CC5C4FB/t51.2885-15/sh0.08/e35/s640x640/44860755_1972414189513049_960754608430554106_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>126</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> </div> </div>
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+        jQuery(function($) { 
+            $(".ins_slider_outer").owlCarousel({
+
+                autoplay: true,
+                loop:true,
+                nav:false,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:false,
+                        autoplayTimeout: 2000
+                    },
+                    568:{
+                        items:5,
+                        nav:false,
+                        autoplayTimeout: 3000
+                    },
+                    1024:{
+                        items:12,
+                        nav:false,
+                        autoplayTimeout: 5000
+                    }
+                }   
+                
+              });                
+
+        });
+    </script>
+<div class="ins_slider_inner">
+<div class="ins_slider_title">
+<a href="https://www.instagram.com/nottabelle/" target="_blank">
+<i class="fa fa-instagram"></i>
+<span>Follow @nottabelle</span>
+</a> </div>
+</div>
+</div>
+<input type="hidden" name="lang" value="de">
+<input type="hidden" name="cur" value="€">
+<div class="cart_bottom" style="display:none;">
+<div class="container_big">
+<div class="row justify-content-between align-items-center">
+<div class="col-12 col-md-6 cart_bottom_gift_wrap">
+</div>
+<div class="col-12 col-md-6 cart_bottom_links">
+<div class="cart_bottom_href">
+<a>Warenkorb</a>
+<span class="cart_bottom_item">0</span>
+</div>
+<div class="cart_bottom_price">
+<span id="total_val_footer"></span> € </div>
+<div class="cart_bottom_checkout">
+<a class="cart_popup_href" href="/de/cart">Bestellung aufgeben</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cart_right"></div>
+</div>
+<footer id="footer" class="footer">
+<div class="footer_top">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-6 col-12">
+<div class="footer_textwidget">
+<img src="https://nottabelle.com/template/img/logo-fooer.png" alt="Notta & Belle" srcset="https://nottabelle.com/template/img/logo-fooer.png 1x, https://nottabelle.com/template/img/logo_footer2x.png 2x">
+<div class="footer_contact">
+<p>
+<i class="fa fa-phone mgr10"></i>
+<a href="tel:+420732106875">+420 732 106 875</a>
+</p>
+<p>
+<i class="tc fa fa-envelope-o mgr10"></i>
+<a href="/cdn-cgi/l/email-protection#9cebf3eef0f8dcf2f3e8e8fdfef9f0f0f9b2fff3f1"><span class="__cf_email__" data-cfemail="0f78607d636b4f61607b7b6e6d6a63636a216c6062">[email&#160;protected]</span></a>
+</p>
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>Instagram</a></li>
+<li><a href="https://www.facebook.com/NottaBelle-525828327761640/" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Katalog</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/de/ewige-rose-im-glas/">Rose im Glas</a></li>
+<li><a href="/de/baren-aus-den-rosen/">Bären aus den rosen</a></li>
+<li><a href="/de/teeset-disney/">Teeset</a></li>
+<li><a href="/de/rosenbox/">Rosenbox</a></li> </ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Information</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/de/impressum/">Impressum </a></li>
+<li><a href="/de/bezahlung/">Bezahlung </a></li>
+<li><a href="/de/lieferung/">Lieferung</a></li>
+<li><a href="/de/ambassador/">Ambassador</a></li>
+<li><a href="/de/partners/">Partnerschaft</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Wir sind im Internet</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>Instagram</a></li>
+<li><a href="https://www.facebook.com/NottaBelle-525828327761640/" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-12">
+<h3 class="footer_title">Zahlungsart </h3>
+<div class="footer_textwidget" style="margin-bottom: 50px;">
+<img src="/template/img/paytype/da_pay2x.png" srcset="/template/img/da_pay2x.png 2x" alt="" style="max-width: 169px;">
+</div>
+<style>.footer_bottom  .col-md-auto img {display: none; }</style>
+<h3 class="footer_title">Partnerschaft</h3>
+<div class="footer_textwidget">
+Möchtest Du unser offizieller Partner werden<br>Notta & Belle, Eine Anfrage hinterlassen.
+<a class="footer_btn" data-fancybox data-src="#partners" href="javascript:;">Bitte senden Sie Ihre Angaben</a> </div>
+<div id="partners" style="display: none;">
+<form action="/de/cart/partners" method="POST" id="partners_form" novalidate>
+<input type="hidden" name="language" value="de">
+<input type="hidden" name="uri" value="nottabelle.com/de/">
+<input type="hidden" name="ref" value="">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+Möchten Sie ein Partner von<br>Notta & Belle werden, hinterlassen Sie dann eine Anfrage. </div>
+<div class="form_line">
+<div class="form_title">
+ Vorname Familienname </div>
+<div class="form_input">
+<input type="text" id="partners_form_name" class="partners_form_input" name="partners_form_name" required="">
+<div class="error-block" id="error_partners_form_name">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+E-mail </div>
+<div class="form_input">
+<input type="text" id="partners_form_mail" class="partners_form_input" name="partners_form_mail" required="">
+<div class="error-block" id="error_partners_form_mail">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Telefonnummer </div>
+<div class="form_input">
+<input type="text" id="partners_form_phone" class="partners_form_input" name="partners_form_phone" required="">
+<div class="error-block" id="error_partners_form_phone">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="partners_form_submit btn" value="Senden">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Mit dem Ausfüllen des Formulars stimmen Sie den<br><a href="/de/policy/" target="_blank" style="pointer-events: none">Datenschutzrichtlinien zu</a> </div>
+</div>
+</div>
+</div>
+</form>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="469c1078c0f415e0d0dcc76b-text/javascript">
+
+jQuery(function($) { 
+
+	$("#partners_form .form_submit").click(function() {
+
+		if($("input[name='partners_form_name']").val()==''){
+			$('#error_partners_form_name').show();
+			$("input[name='partners_form_name']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_name').hide();
+			$("input[name='partners_form_name']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_mail']").val()==''){
+			$('#error_partners_form_mail').show();
+			$("input[name='partners_form_mail']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_mail').hide();
+			$("input[name='partners_form_mail']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_phone']").val()==''){
+			$('#error_partners_form_phone').show();
+			$("input[name='partners_form_phone']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_phone').hide();
+			$("input[name='partners_form_phone']").closest('.form_input').removeClass('has-error');
+		};	
+
+	    if(formresult != 'error'){
+	        $("#partners_form").submit();
+			$(this).hide();	        
+	    }	
+
+	    return false;
+	});
+
+ 
+						
+
+	$("#partners_form_phone").intlTelInput({
+		separateDialCode:true,
+		autoHideDialCode:false,
+		preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+								initialCountry: 'de',
+		hiddenInput: "partners_form_phone_full",
+		excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+		utilsScript: "/template/js/utils.js"
+	});									
+
+});									
+</script>
+<div id="quick_buy" style="display: none;">
+<form action="#" method="POST">
+<input type="hidden" name="language" value="de">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+<p>Wir schätzen Ihre Zeit</p>
+<p>Um zu bestellen, hinterlassen Sie einfach eine Telefonnummer und der Manager wird Sie in naher Zukunft kontaktieren.</p> </div>
+<div class="form_line">
+<div class="form_title">Vorname Familienname</div>
+<div class="form_input">
+<input type="text" id="quick_buy_name" class="partners_form_input" name="quick_buy_name" required="">
+<div class="error-block" id="error_quick_buy_name">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">E-mail</div>
+<div class="form_input">
+<input type="text" id="quick_buy_mail" class="partners_form_input" name="quick_buy_mail" required="">
+<div class="error-block" id="error_quick_buy_mail">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Telefonnummer </div>
+<div class="form_input">
+<input type="text" id="quick_buy_phone" class="quick_buy_input" name="quick_buy_phone">
+<div class="error-block" id="error_quick_buy_phone">Bitte füllen Sie das Feld aus!</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="quick_buy_submit btn" value="Bestellung aufgeben">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Mit dem Ausfüllen des Formulars stimmen Sie den <br><a href="/ru/policy" target="_blank">Datenschutzrichtlinien zu</a> </div>
+</div>
+</div>
+</div>
+</form>
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+								jQuery(function($) { 
+
+									$("#quick_buy_phone").intlTelInput({
+										separateDialCode:true,
+										autoHideDialCode:false,
+										preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+																				                                        initialCountry: 'de',
+  										hiddenInput: "who_phonenumber_full",
+  										excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+  										utilsScript: "/template/js/utils.js"
+									});	
+
+									$("#quick_buy form input[type='submit']").click(function() {
+
+										if($("input[name='quick_buy_name']").val()==''){
+											$('#error_quick_buy_name').show();
+											$("input[name='quick_buy_name']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_name').hide();
+											$("input[name='quick_buy_name']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_mail']").val()==''){
+											$('#error_quick_buy_mail').show();
+											$("input[name='quick_buy_mail']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_mail').hide();
+											$("input[name='quick_buy_mail']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_phone']").val()==''){
+											$('#error_quick_buy_phone').show();
+											$("input[name='quick_buy_phone']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_phone').hide();
+											$("input[name='quick_buy_phone']").closest('.form_input').removeClass('has-error');
+										};										
+										if(quick_buy_error != 'error'){
+										    $("#amb_form").submit();
+										    $(this).hide();
+										}				
+									});																		
+
+								});									
+							</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer_bottom">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-md-6">
+<p>© 2015-2019 Notta & Belle.<br>Patentrechtlich geschützte Marke. Alle Rechte vorbehalten ♥</p> </div>
+<div class="col-md-auto">
+<img src="https://nottabelle.com/template/img/payment.svg" alt="Payment method">
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="cookie_footer" style="display: none;">
+<div class="container-fluid">
+<div class="row align-items-center justify-content-between">
+<div class="col-9">
+<div class="cookie_footer_text">
+Durch die Nutzung unserer Website erklärst du dich mit der Verwendung von Cookies einverstanden. <a href="https://policies.google.com/technologies/cookies?hl=de">Informace.</a>
+</div>
+</div>
+<div class="col-3">
+<div class="cookie_footer_close">
+<a>Schließen</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/jquery.fancybox.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/intlTelInput.css">
+<script src="https://nottabelle.com/template/js/imagesloaded.pkgd.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/isotope.pkgd.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.fancybox.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.nice-select.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/waypoints.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.counterup.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/intlTelInput.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.cookie.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/common.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/webpjs-0.0.2.min.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<div class="gift_remember" style="display: none;">
+<div class="gift_remember_item gift_remember_item_open">
+<div class="gift_remember_text">
+Für Sie ist ein Geschenk verfügbar! <div class="gift_remember_item_close"></div>
+</div>
+</div>
+</div>
+
+<div id="gift" style="display: none;">
+<div class="form_close" data-fancybox-close></div>
+<div class="gift_wrapper">
+<div class="gift_left"><img src="/template/img/gift.png" alt="gift"><img src="/template/img/gift_mob.jpg" alt="gift" class="gift_left_mob" style="display:none;"></div>
+<div class="gift_right">
+<form id="gift_form">
+<div class="gift_section0 gift_section3 gift_section5">
+<div class="gift_title">Hallo :)<br><br><br class="mob_br"><br class="mob_br">Erhalte 10 Euro Rabatt<br class="mob_br"><br>auf den ersten Einkauf!</b></div>
+
+<div class="gift_input_wrapper">
+<input type="text" name="gift_name" id="gift_name" placeholder="Namen" required>
+<div class="error-block" id="error_gift_name">Gib bitte einen Namen ein!</div>
+</div>
+
+<div class="gift_input_wrapper">
+<input type="email" name="gift_email" id="gift_email" placeholder="email@gmail.com" required>
+<div class="error-block" id="error_gift_email">Fülle das Feld aus!</div>
+</div>
+<span class="gift_btn_blue btn" id="to_gift_section5">Ein Geschenk erhalten</span>
+</div>
+<input type="hidden" id="gift_update" name="update" value="1">
+<input type="hidden" id="gift_product" name="gift_product" value="">
+<input type="hidden" id="gift_roistat" name="gift_roistat" value="">
+<input type="hidden" id="gift_promocode" name="gift_promocode" value="">
+</form>
+<div class="gift_section6" style="display: none;">
+<div class="gift_title">Super!</div>
+<div class="gift_text">Überprüfe Deine E-Mail</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Gut, Danke sehr!</span>
+</div>
+<div class="gift_section7" style="display: none;">
+<div class="gift_title">Super!</div>
+<div class="gift_text">Wird Sie gleich zur<br> WhatsApp-Seite weiterleiten.</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Gut, Danke sehr!</span>
+</div>
+<div class="gift_section8" style="display: none;">
+<div class="gift_title">Super!</div>
+<div class="gift_text">Ihre Adresse ist bereits registriert</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Gut, Danke sehr!</span>
+</div>
+</div>
+</div>
+</div> 
+<link rel="stylesheet" type="text/css" href="/template/css/classic.date.css">
+<link rel="stylesheet" type="text/css" href="/template/css/classic.css">
+<script src="/template/js/picker.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="/template/js/picker.date.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script src="/template/js/pickadate/de_DE.js" type="469c1078c0f415e0d0dcc76b-text/javascript"></script>
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+					
+																													
+						jQuery(function($) {
+                            function validateEmail($email) {
+                                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                                return emailReg.test( $email );
+                            }
+
+
+
+                            $('#set_name_popup').click(function(){
+
+                                if($("#gift_name").val()==''){
+                                    $('#error_gift_name').show();
+                                    $('#gift_name').addClass('has-error');
+                                    var result='error';
+                                } else {
+                                    $('#error_gift_name').hide();
+                                    $('#gift_name').removeClass('has-error');
+                                    Cookies.set('gift_name', $("#gift_name").val(), { expires: 7, path: '/'  });
+                                    $('.gift_section0').hide();
+                                    $('.gift_section3').show();
+                                }
+                            });
+                            $('#type_whatsapp').click(function(){
+                               //  $('.gift_section3').hide();
+                               //  $('.gift_section7').show();
+                               // var name=$("#gift_name").val();
+                               //  setTimeout(function () {
+                                    location="https://nottabelle.com/de/whatsapp?referrer=https://nottabelle.com/de/whatsapp2&name="+name+"/";
+                                // }, 2000); // время в мс
+
+                            });
+
+                            $('#type_email').click(function(){
+                                $('.gift_section3').hide();
+                                $('.gift_section5').show();
+                            });
+
+							$('#to_gift_section1').click(function(){
+								$('.gift_section0').hide();
+								$('.gift_section1').show();
+							});	
+							$('.gift_section1 .btn').click(function(){
+								$('.gift_section1').hide();
+								$('.gift_section2').show();
+								Cookies.set('after_gift_addcart2', '1', { expires: 7, path: '/'  });
+							});	
+							// $('.gift_section3').click(function(){
+							// 	$('.gift_section3').hide();
+							// 	$('.gift_section5').show();
+							// });
+							// $('.gift_section0 .btn').click(function(){
+							// 	$('.gift_section0').hide();
+							// 	$('.gift_section3').show();
+							// });
+							$('#to_gift_section5').click(function(){
+
+								if($("#gift_name").val()==''){
+									$('#error_gift_name').show();
+									$('#gift_name').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_name').hide();
+									$('#gift_name').removeClass('has-error');
+								}
+
+
+							    var email= $("#gift_email").val();
+								if(email=='' || validateEmail(email)==false){
+									$('#error_gift_email').show();
+									$('#gift_email').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_email').hide();
+									$('#gift_email').removeClass('has-error');
+									// $('.gift_section4').hide();
+									// $('.gift_section6').show();
+								}
+									if(result != 'error'){
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/de/whatsapp2/email",
+                                        data: { language: 'de',mail:$("#gift_email").val(),name:$("#gift_name").val() },
+                                        success: function(result){
+                                            $('.gift_section5').hide();
+                                            if (result=='duble') {
+                                                $('.gift_section8').show();
+                                            }
+                                            else{
+                                                $('.gift_section6').show();
+                                            }
+
+                                            console.log(result);
+                                        },
+                                        error: function (result) {
+                                            console.log(result);
+                                        }
+                                    });
+								}
+
+								// if($("#gift_name").val()==''){
+								// 	$('#error_gift_name').show();
+								// 	$('#gift_name').addClass('has-error');
+								// 	var result='error';
+								// } else {
+								// 	$('#error_gift_name').hide();
+								// 	$('#gift_name').removeClass('has-error');
+								// }
+								// if($("#gift_city").val()==''){
+								// 	$('#error_gift_city').show();
+								// 	$('#gift_city').addClass('has-error');
+								// 	var result='error';
+								// } else {
+								// 	$('#error_gift_city').hide();
+								// 	$('#gift_city').removeClass('has-error');
+								// }
+								//
+								// if(result != 'error'){
+								// 	$('#gift_email').removeClass('has-error');
+								// 	$('.gift_section4').hide();
+								// 	// $('.gift_section6').show()
+								// }
+
+
+
+
+
+
+
+							});	
+							$('#to_gift_section6').click(function(){
+								if($("#gift_phone").val()==''){
+									$('#error_gift_phone').show();
+									$('#gift_phone').addClass('has-error');
+									var result='error';
+								} else {
+									$("#gift_phonefull").val($("#gift_phone").intlTelInput("getNumber"));
+									$('#error_gift_phone').hide();
+									$('#gift_phone').removeClass('has-error');
+								}
+/*								if($("#gift_name").val()==''){
+									$('#error_gift_name').show();
+									$('#gift_name').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_name').hide();
+									$('#gift_name').removeClass('has-error');
+								}*/								
+/*								if($("#gift_city").val()==''){
+									$('#error_gift_city').show();
+									$('#gift_city').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_city').hide();
+									$('#gift_city').removeClass('has-error');
+								}*/								
+								if($("#gift_date").val()==''){
+									$('#error_gift_date').show();
+									$('#gift_date').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_date').hide();
+									$('#gift_date').removeClass('has-error');
+								}	
+								
+								if(result != 'error'){
+									Cookies.set('after_gift_addcart2', '1', { expires: 7, path: '/'  });
+									$('.gift_section5').hide();
+									$('.gift_section4').show();
+								}	            	            	
+							});										
+				
+							
+							$('.gift_section3 .gift_btn_full_grey').click(function(){
+								var gift_product = $(this).attr('value');
+								var gift_product_podarokid = $(this).attr('podarokid');
+								
+								if(typeof gift_product == "undefined" && !gift_product){
+									
+								} else {
+									$('#gift_product').val(gift_product);
+								}
+								
+								if(typeof gift_product_podarokid == "undefined" && !gift_product_podarokid){
+									
+								} else {
+									Cookies.set('gift_product_podarokid2', gift_product_podarokid, { expires: 7, path: '/'  });
+								}
+								
+								
+							});
+							
+							$('#gift_form .gift_btn_full_grey').click(function(){
+								sendBooking();
+							});										
+				
+							$('.gift_section6 .gift_btn_full_red, .gift_section2 .gift_btn_full_red').click(function(){
+							//data = 'de';
+							//	$('#gift').click(function(){
+								$.ajax({
+									type: "POST",
+									url: "/cart/addpodarok",
+									data: { language: 'de' },
+									success: function(result){
+										$('.gift_section6 .gift_btn_full_red').hide();
+										location.reload();
+										return false;
+										//console.log(result);
+									}
+								});
+							//	sendBooking();
+							});	
+							
+							 	
+							function sendBooking() {
+								/* $('#gift_roistat').val('');
+								$('#gift_promocode').val(''); */
+								
+								if($("#gift_phone").val() !==''){
+									Cookies.set('gift_phone', $("#gift_phone").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_email").val() !==''){
+									Cookies.set('gift_email', $("#gift_email").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_name").val() !==''){
+									Cookies.set('gift_name', $("#gift_name").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_city").val() !==''){
+									Cookies.set('gift_city', $("#gift_city").val(), { expires: 7, path: '/'  });
+								}
+								
+								var windowWidth = screen.width;
+								var windowHeight = screen.height;
+
+
+								data = $('#gift form').serialize()+'&language=' + 'de' + '&windowWidth=' + windowWidth + '&windowHeight=' + windowHeight + '&request_uri=' + '/de/';
+							
+								/* alert(data);
+								console.log(data);
+								return false; */
+								
+								 $.ajax({
+									type: "POST",
+									url: "/booking/update",
+									data:data,
+									success: function(result){
+										console.log(result);
+									}
+								});
+								
+							}			
+
+							$("#gift_phone").intlTelInput({
+								separateDialCode:true,
+								autoHideDialCode:false,
+																	                            initialCountry: 'de',
+								preferredCountries: ["us", "gb", "fr", "de", "ru", "cz"],
+								// hiddenInput: "gift_phonefull",
+								excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+								utilsScript: "/template/js/utils.js"
+							});	
+
+							$('#gift_date').pickadate({
+						    firstDay: 1,
+						    format: 'd mmmm yyyy г.',
+						    formatSubmit: 'yyyy/mm/dd',								
+							  today: '',
+							  clear: '',
+							  close: '',
+							  min: true
+							})               								
+						});
+					</script>
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+			jQuery(function($) { 
+
+													setTimeout(function () {
+						if (Cookies.get('viewed_cookie_gift2') != '1') {
+						$.fancybox.open({
+							src  : '#gift',
+							type : 'inline',
+							touch: false,
+							afterClose: function () {
+								if (Cookies.get('after_gift_addcart2') == '1') {
+								$.ajax({
+									type: "POST",
+									url: "/cart/addpodarok",
+									success: function(result){
+										$('.gift_section6 .gift_btn_full_red').hide();
+										Cookies.set('viewed_cookie_gift_success2', '1', { expires: 7, path: '/'  });
+										location.reload();
+										return false;
+										//console.log(result);
+									}
+								});
+								}
+								}
+						});
+						Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+						}
+					}, 12000);
+									
+				
+				$('.form_close').click(function(){
+					$.fancybox.close();
+				});
+
+				$('.gift_section6 .btn,.gift_section2 .btn').click(function(){
+					Cookies.set('viewed_cookie_gift_success2', '1', { expires: 7, path: '/'  });
+				});
+
+				if (Cookies.get('viewed_cookie_gift_success2') != '1') {
+					$('.gift_remember').click(function(){
+						if ($(window).width() > 767) { $('.gift_remember_item').addClass('gift_remember_item_open'); }
+						$('.gift_remember').removeClass('gift_remember_item_viewed_close');
+						setTimeout(function () {
+							$.fancybox.open({
+								src  : '#gift',
+								type : 'inline',
+								touch: false
+							});
+						}, 400);
+						Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+					});
+					$('.gift_remember').addClass('gift_remember_active');						
+				} else {
+					$('.gift_remember').hide();
+				};
+
+				$('.gift_remember_item_close').click(function(e){
+					Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+					$('.gift_remember_item').removeClass('gift_remember_item_open');
+					// $('.gift_remember').addClass('gift_remember_item_viewed_close').delay(2000).queue(function(){
+    	// 				$('.gift_remember').removeClass("gift_remember_item_viewed_close").dequeue();
+					// });					
+					$('.gift_remember').addClass('gift_remember_item_viewed_close');
+					Cookies.set('gift_remember_item_viewed2', '1', { expires: 7, path: '/'  });
+					e.stopPropagation();
+
+				});
+
+				if (Cookies.get('gift_remember_item_viewed2') == '1') {
+					$('.gift_remember_item').removeClass('gift_remember_item_open');
+				};
+
+			});				
+			</script>
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">(function(){var WebP=new Image();
+        WebP.onload=WebP.onerror=function(){ if(WebP.height!=2)
+        {var sc=document.createElement('script');sc.type='text/javascript';sc.async=true;
+            var s=document.getElementsByTagName('script')[0];sc.src='js/webpjs-0.0.2.min.js';
+            s.parentNode.insertBefore(sc,s);}};
+        WebP.src='data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';})();
+</script>
+</div>
+<div class="hidden-xs hidden-sm">
+
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+
+var isMobile = false;
+// проверка на размер экрана 
+$(document).ready( function() {
+    if ($('body').width() <= 598) {
+        isMobile = true;
+    }
+    // или для десктопа
+   if (!isMobile) {
+(function(){ var widget_id = 'MFXlr4R1km';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();	
+ }
+} );
+
+</script>
+</div>
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+
+	//ЗАПУСКАЕМ ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		updateorderminiline();
+	
+	// ПОВТОРЫ С ИНТЕРВАЛОМ 1 СЕК
+		/* var timerId = setInterval(function() {
+			updateorderminiline();
+		}, 1000); */
+
+	//****************************************************************************************************
+	
+	
+	//ФУНКЦИЯ ЗАПУСКА ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		function updateorderminiline(){
+			
+			dataType: 'json',
+            $.ajax({
+                type: "POST",
+                url: "/cart/updateorderminilinenew",
+                //data:data,
+                data:{
+					language:'de',
+				},
+                success: function(result){
+					res = JSON.parse(result);
+                    delivery = res.delivery;
+                    itogo = res.itogo;
+                    goods = res.goods;
+                    goodsCount = res.goodsCount;
+					$('.site_cart_counter').html(goodsCount);
+					$('.cart_bottom_item').html(goodsCount);
+                    $('.cart_bottom_price #total_val_footer').html(itogo);
+
+					if(goodsCount > 0){
+						$('.cart_bottom').show();
+						$('.footer_bottom').addClass('cart_bottom_visible');
+						$('.gift_remember').addClass('gift_remember_withline');
+
+					} else {
+						$('.cart_bottom').hide();
+						$('.footer_bottom').removeClass('cart_bottom_visible');
+						$('.gift_remember').removeClass('gift_remember_withline');
+					}
+                }
+            });
+		}
+
+
+	//****************************************************************************************************
+	
+
+	//ДОБАВЛЕНИЕ ТОВАРОВ В КОРЗИНУ ЗАПУСК КОРЗИНЫ СПРАВА
+
+        $(".catalog_content_btn a:not(.notavailability,.availability_text_form )").on('click',function(){
+			if ($(this).attr('status')==1){
+				prodid = $(this).attr('id');
+				$(this).removeClass('in_cart');
+
+			}
+			if ($(this).attr('status')==0){
+				$.ajax({
+					type: "POST",
+					url: "/de/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header").css({"display":"none"});
+				}
+				return false;
+				/* prodid = 0; */
+			}
+			$(this).addClass('in_cart');
+
+			$(this).attr('status', 0);
+			//prodid = $(this).attr('id');
+			$(this).html('<span class="hidden-xs"> In den Warenkorb gehen</span><span class="show-xs">cart</span>');
+
+            $.ajax({
+                type: "POST",
+                url: "/de/cart/add",
+                data:{
+                    prodid:prodid,
+                },
+                success: function(result){
+					$('.cart_right').html(result); //асинхронное добавление
+                    //location.reload(); // с перезагрузкой
+					updateorderminiline();
+                }
+            });
+
+			$(".cart_right").addClass("active-cart");
+
+				$("body").addClass("fixed-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+                $("body").css({"overflow":"hidden"});
+                $("header ").css({"display":"none"});
+            }
+			updateorderminiline();
+            return false;
+            event.preventDefault();
+
+
+        });
+		
+	//****************************************************************************************************
+	
+	
+	//ОТКРЫТИЕ КОРЗИНЫ ОТПРАВЛЯЕМ ЗАПРОС ТАК КАК НУЖНА ИНИЦИАЛИЗАЦИЯ JS ЗАНОВО
+		$(".cart_bottom_href").click(function(){			
+				$.ajax({
+					type: "POST",
+					url: "/de/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header ").css({"display":"none"});
+				}
+		});
+	//****************************************************************************************************
+		
+		
+	//КЛИК ПО КОЛИЧЕСТВУ ТОВАРОВ В ШАПКЕ ЗАПУСКАЕТ КЛИК ПО ПОЛОСКЕ ВНИЗУ
+		$(".cart_popup_href").click(function(){
+			$(".cart_bottom_item").click();
+			return false;
+        });
+	//****************************************************************************************************
+
+		
+</script>
+
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter40113260 = new Ya.Metrika2({
+                    id:40113260,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/40113260" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+    (function() {
+        var d = document, w = window;
+        w.MgSensorData = w.MgSensorData || [];
+        w.MgSensorData.push({
+            cid:362890,
+            lng:"ru",
+            nosafari:true,
+            project: "a.marketgid.com"
+        });
+        var l = "a.marketgid.com";
+        var n = d.getElementsByTagName("script")[0];
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var dt = !Date.now?new Date().valueOf():Date.now();
+        s.src = "//" + l + "/mgsensor.js?d=" + dt;
+        n.parentNode.insertBefore(s, n);
+    })();
+</script>
+
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">(function (w, d) {w.amo_pixel_token = 'p1Ip4iB8yqaEyXU9HPmcTFDXCbXyjWVjsFXnz2xKSUtoEVh22OGcP0uthUvKBG/r';var s = document.createElement('script'), f = d.getElementsByTagName('script')[0];s.id = 'amo_pixel_js';s.type = 'text/javascript';s.async = true;s.src = 'https://piper.amocrm.ru/pixel/js/tracker/pixel.js?token=' + w.amo_pixel_token;f.parentNode.insertBefore(s, f);})(window, document);</script>
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">
+(function(w, d, s, h, id) {
+w.roistatProjectId = id; w.roistatHost = h;
+var p = d.location.protocol == "https:" ? "https://" : "http://";
+var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', '555354ccb14585c2707c3a3ea3355359');
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFVD3PH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="469c1078c0f415e0d0dcc76b-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5db58a519a","applicationID":"176161339","transactionName":"bgRQMkNSD0BXUhVaW1dOcwVFWg5dGXIAR1FeDkAfHloPV1NJ","queueTime":0,"applicationTime":204,"atts":"QkNTRAtIHE4=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="469c1078c0f415e0d0dcc76b-" defer=""></script></body>
+</html>

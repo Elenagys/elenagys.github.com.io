@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: */ok
+Disallow: /admin
+Disallow: */eu
+Disallow: *?coworker
+Sitemap: https://nottabelle.com/sitemap.xml
+
+User-agent: Yandex
+Disallow: */ok
+Disallow: /admin
+Disallow: *?coworker

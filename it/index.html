@@ -1,0 +1,2405 @@
+
+<!DOCTYPE html>
+<html lang="it" prefix="og: http://ogp.me/ns#">
+<head>
+<link rel="preload" href="/template/fonts/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="651614b2496e500e477e43d5-text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rose sotto la cupola | Notta & Belle</title>
+<meta name="keywords" content="keywords" />
+<meta name="description" content="La rosa sotto la cupola dal film di animazione La Bella e la Bestia | Notta & Belle" />
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nottabelle.com/it/" />
+<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="60x60" href="https://nottabelle.com/template/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://nottabelle.com/template/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nottabelle.com/template/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://nottabelle.com/template/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nottabelle.com/template/img/favicon/favicon-32x32.png">
+<meta name="msapplication-TileImage" content="https://nottabelle.com/template/img/favicon/ms-icon-144x144.png">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/bootstrap-grid.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/style_new.css?20190130">
+<script src="https://nottabelle.com/template/js/jquery.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/owl.carousel.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/lazysizes.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<style> @font-face {font-family: proximal; src: url(/template/fonts/ProximaNova-Light.eot); src: url(/template/fonts/ProximaNova-Light.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Light.woff2) format('woff2'),url(/template/fonts/ProximaNova-Light.woff) format('woff'),url(/template/fonts/ProximaNova-Light.ttf) format('truetype'),url(/template/fonts/ProximaNova-Light.svg#ProximaNova-Light) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximab; src: url(/template/fonts/ProximaNova-Bold.eot); src: url(/template/fonts/ProximaNova-Bold.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Bold.woff2) format('woff2'),url(/template/fonts/ProximaNova-Bold.woff) format('woff'),url(/template/fonts/ProximaNova-Bold.ttf) format('truetype'),url(/template/fonts/ProximaNova-Bold.svg#ProximaNova-Bold) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximar; src: url(/template/fonts/ProximaNova-Regular.eot); src: url(/template/fonts/ProximaNova-Regular.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Regular.woff2) format('woff2'),url(/template/fonts/ProximaNova-Regular.woff) format('woff'),url(/template/fonts/ProximaNova-Regular.ttf) format('truetype'),url(/template/fonts/ProximaNova-Regular.svg#ProximaNova-Regular) format('svg'); font-weight: 400; font-style: normal; font-display:swap} </style>
+
+<script type="651614b2496e500e477e43d5-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFVD3PH');</script>
+
+<script src="https://www.artfut.com/static/tagtag.min.js?campaign_code=ba5f83a22d" async onerror='var self = this;window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers=ADMITAD.Helpers||{},ADMITAD.Helpers.generateDomains=function(){for(var e=new Date,n=Math.floor(new Date(2020,e.getMonth(),e.getDate()).setUTCHours(0,0,0,0)/1e3),t=parseInt(1e12*(Math.sin(n)+1)).toString(30),i=["de"],o=[],a=0;a<i.length;++a)o.push({domain:t+"."+i[a],name:t});return o},ADMITAD.Helpers.findTodaysDomain=function(e){function n(){var o=new XMLHttpRequest,a=i[t].domain,D="https://"+a+"/";o.open("HEAD",D,!0),o.onload=function(){setTimeout(e,0,i[t])},o.onerror=function(){++t<i.length?setTimeout(n,0):setTimeout(e,0,void 0)},o.send()}var t=0,i=ADMITAD.Helpers.generateDomains();n()},window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers.findTodaysDomain(function(e){if(window.ADMITAD.dynamic=e,window.ADMITAD.dynamic){var n=function(){return function(){return self.src?self:""}}(),t=n(),i=(/campaign_code=([^&]+)/.exec(t.src)||[])[1]||"";t.parentNode.removeChild(t);var o=document.getElementsByTagName("head")[0],a=document.createElement("script");a.src="https://www."+window.ADMITAD.dynamic.domain+"/static/"+window.ADMITAD.dynamic.name.slice(1)+window.ADMITAD.dynamic.name.slice(0,1)+".min.js?campaign_code="+i,o.appendChild(a)}});' type="651614b2496e500e477e43d5-text/javascript"></script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Notta & Belle",
+    "brand": "Notta & Belle",
+    "email": "world@nottabelle.com",
+    "telephone": "+420732106875",
+	"logo": "https://nottabelle.com/template/img/logo-fooer.png",
+    	"url": "https://nottabelle.com/it/"
+	
+}
+</script>
+</head><body>
+<div id="clientel"></div>
+<div class="wrapper">
+<div class="content">
+<header class="header">
+<div class="delivery_mob">
+<div class="delivery">
+Consegna gratuita <div class="delivery__popup" style="display: none;">
+<p class="delivery__txt">Facciamo consegnare il Suo ordine in maggior citta` dell’Europa gratis. Il corriere UPS fa la consegna del Suo ordine entro 3-6 giorni lavorativi.</p>
+</div>
+</div>
+<div class="delivery_lang">
+<div class="lang">
+<div class="lang_current">
+Lingua:
+<span class="lang_switcher">it</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/de/"><div class="lang_img"><img src="/template/img/lang/de.png" alt=""></div><div class="lang_name">DE</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/cz/"><div class="lang_img"><img src="/template/img/lang/cz.png" alt=""></div><div class="lang_name">CZ</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header_mob">
+<div class="header_mob_menu">
+<div class="header_mob_menu_hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="header_mob_logo">
+<a href="https://nottabelle.com/it/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+<div class="header_mob_cart">
+<a href="https://nottabelle.com/it/cart" class="cart_popup_href"><div class="site_cart_counter">0</div></a>
+</div>
+<div class="header_mob_ul">
+<ul class="header_mob_ul_navigator">
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/it/rosa-sotto-la-cupola/">
+<span class="menu_title">Rose sotto la cupola</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">CATALOGO</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left has_img " href="https://nottabelle.com/it/mini/" data-img="https://nottabelle.com/data/img/menu/9a1eb8b72e6b1e365bfcf063536622bb.jpg">
+<span itemprop=name class="menu_title-mob">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left has_img " href="https://nottabelle.com/it/premium/" data-img="https://nottabelle.com/data/img/menu/7bf003e4190108adb0d010d09ea30f01.jpg">
+<span itemprop=name class="menu_title-mob">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">King</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu-mob">
+ <li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">COMPLEMENTI</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/scatola-per-rose/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Scatola da regalo</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/intaglio/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Intaglio</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/it/orsetti-di-rose/">
+<span class="menu_title">Orsetti di rose</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">DIMENSIONI DEGLI ORSETTI:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/orsetto-25/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Orsetto - 25 cm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/orsetto-35/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Orsetto - 35 cm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/orsetto-55/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Orsetto - 55 cm</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">COMPLEMENTI</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/bears-box/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Scatola da regalo per gli orsetti di rose</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/it/present/">
+<span class="menu_title">La Bella e la Bestia</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">CATALOGO</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/rose-la-bella-ela-bestia/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Rose sotto la cupola </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/it/servizio-da-te/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Servizio da te`</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li><a href="/it/pagamento/">Pagamento </a></li>
+<li><a href="/it/consegna/">Consegna</a></li>
+<li><a href="/it/contatti/">Contatti</a></li>
+<li><a href="/it/partners/">Ingrosso</a></li>
+<li><a href="/it/ambassador/">Ambassador</a></li>
+<li class="mob_lang">
+<div class="mob_lang_current">Lingua:</div>
+<div class="mob_lang_switch">
+<span>it</span>
+<a href="https://nottabelle.com/eu/">EU</a>
+<a href="https://nottabelle.com/uk/">UK</a>
+<a href="https://nottabelle.com/fr/">FR</a>
+<a href="https://nottabelle.com/de/">DE</a>
+<a href="https://nottabelle.com/us/">US</a>
+<a href="https://nottabelle.com/cz/">CZ</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="header_top">
+<div class="container delivery__container">
+<div class="row align-items-center justify-content-between">
+<div class="col nopadding hidden-xs hidden-sm">
+<div class="content-text">
+<span>
+<i class="fa fa-phone mgr10"></i><a class="mgr20 newfonts" href="tel:+420732106875">+420 732 106 875</a>
+</span>
+</div>
+</div>
+<div class="col-md-auto text-center nopadding delivery__col">
+<div class="content-text">
+<div class="earn">
+<span>Guadagna insieme alla Notta & Belle - <a href="/it/ambassador/">Conoscere i dettagli</a></span> </div>
+<div class="delivery">
+Consegna gratuita <div class="delivery__popup">
+<p class="delivery__txt">Facciamo consegnare il Suo ordine in maggior citta` dell’Europa gratis. Il corriere UPS fa la consegna del Suo ordine entro 3-6 giorni lavorativi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col text-right nopadding lang__col">
+<div class="content-text flex-link">
+<span class="top_link"><a href="/it/partners/">Ingrosso</a></span>
+<div class="lang">
+<div class="lang_current">
+Lingua: <span class="lang_switcher">it</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/de/"><div class="lang_img"><img src="/template/img/lang/de.png" alt=""></div><div class="lang_name">DE</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/cz/"><div class="lang_img"><img src="/template/img/lang/cz.png" alt=""></div><div class="lang_name">CZ</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_middle">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-auto nopadding">
+<div class="content-logo">
+<a href="https://nottabelle.com/it/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_bottom">
+<div class="container">
+<div class="row align-items-center justify-content-center">
+<div class="col-12">
+
+<div role="navigation">
+<div class="site_navigator_outer">
+<div class="site_navigator_inner">
+<ul class="site_navigator" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/it/rosa-sotto-la-cupola/">
+<span class="menu_title" itemprop=name>Rose sotto la cupola</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">CATALOGO</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left has_img " href="https://nottabelle.com/it/mini/" data-img="https://nottabelle.com/data/img/menu/9a1eb8b72e6b1e365bfcf063536622bb.jpg">
+<span itemprop=name class="menu_title">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left has_img " href="https://nottabelle.com/it/premium/" data-img="https://nottabelle.com/data/img/menu/7bf003e4190108adb0d010d09ea30f01.jpg">
+<span itemprop=name class="menu_title">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">King</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">COMPLEMENTI</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/scatola-per-rose/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Scatola da regalo</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/intaglio/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Intaglio</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/it/rosa-sotto-la-cupola/" data-img="https://nottabelle.com/data/img/menu/74cb365dce7e2b3e5fb96715e47ddd4a.png">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/74cb365dce7e2b3e5fb96715e47ddd4a.png" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/it/orsetti-di-rose/">
+<span class="menu_title" itemprop=name>Orsetti di rose</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">DIMENSIONI DEGLI ORSETTI:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/orsetto-25/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Orsetto - 25 cm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/orsetto-35/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Orsetto - 35 cm</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/orsetto-55/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Orsetto - 55 cm</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">COMPLEMENTI</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/bears-box/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Scatola da regalo per gli orsetti di rose</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/it/orsetti-di-rose/" data-img="https://nottabelle.com/data/img/menu/c837277ab1be99ac9b91edc3a8159905.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/c837277ab1be99ac9b91edc3a8159905.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/it/present/">
+<span class="menu_title" itemprop=name>La Bella e la Bestia</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">CATALOGO</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/rose-la-bella-ela-bestia/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Rose sotto la cupola </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/it/servizio-da-te/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Servizio da te`</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/it/present/" data-img="https://nottabelle.com/data/img/menu/fecd8a6e570eb5a97e552e2177b1428a.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/fecd8a6e570eb5a97e552e2177b1428a.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+
+</ul>
+</div>
+<div class="site_cart_outer">
+<div class="site_cart_inner"><a class="cart_popup_href" href="#">Carrello</a></div>
+<div class="site_cart_counter"></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="slider slider_view_new">
+<div class="container nopadding">
+<div class="slider_inner owl-carousel">
+<div class="slider_item">
+<a href="/it/rosa-sotto-la-cupola/">
+<div class="slider_img">
+<img src="/template/img/slider4.jpg" alt="Rosa naturale">
+<img src="/template/img/slider4_m.jpg" alt="Rosa naturale" style="display: none;">
+</div>
+</a>
+<div class="slider_content">
+<div class="slider_content_line1"><h1>Rosa naturale</h1></div>
+<div class="slider_content_line2">Sotto la cupola</div>
+<div class="slider_content_line3">La Rosa che fiorisce e La allieta per 5 anni.</div>
+<div class="slider_content_line1_mob" style="display: none;">Rosa naturale</div>
+<div class="slider_content_line2_mob" style="display: none;">Sotto la cupola</div>
+<div class="slider_content_line4"><a href="/it/rosa-sotto-la-cupola/" class="slider_content_btn">acquistare</a></div>
+</div>
+</div>
+<div class="slider_item">
+<a href="/it/orsetti-di-rose/" aria-label="Orsetti ">
+<div class="slider_img">
+<img src="/template/img/slider3.jpg" alt="Orsetti">
+<img src="/template/img/slider3_m.jpg" alt="Orsetti  " style="display: none;">
+</div>
+</a>
+<div class="slider_content">
+<div class="slider_content_line1">Orsetti</div>
+<div class="slider_content_line2 mob_br">di rose 3 D</div>
+<div class="slider_content_line3">Fatto a mano dalle piu` di 500 rose piccoline,<br> piacevole al tatto.</div>
+<div class="slider_content_line2_mob" style="display: none;">di rose 3 D</div>
+<div class="slider_content_line4"><a href="/it/orsetti-di-rose/" class="slider_content_btn">acquistare</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="home_blocks"> <div class="banners banners_style_new">
+<div class="container ">
+<div class="row">
+<div class="col-md-6 col-12 nopadding">
+<a href="/it/rosa-sotto-la-cupola/"><div class="banners_img">
+<img src="/template/img/banenr1.png" alt="Rose sotto la cupola">
+<img src="/template/img/content1_new_m.jpg" alt="Rose sotto la cupola" style="display: none;">
+</div>
+<div class="banners_content cat_home1">
+<div class="banners_price">Da 95 <span>€</span></div>
+<div class="banners_title">Rose sotto la cupola</div>
+<div class="banners_line"></div>
+<div class="banners_more"><span>dettagli</span><i class="fa fa-angle-right"></i></div>
+</div>
+</a>
+</div>
+<div class="col-md-6 col-12 nopadding">
+<a href="/it/orsetti-di-rose/"><div class="banners_img">
+<img src="/template/img/banenr2.png" alt="Orsetti di rose">
+<img src="/template/img/content3_new_m.jpg" alt="Orsetti di rose" style="display: none;">
+</div>
+<div class="banners_content cat_home3">
+<div class="banners_price">Da 110 <span>€</span></div>
+<div class="banners_title">Orsetti di rose</div>
+<div class="banners_line"></div>
+<div class="banners_more"><span>dettagli</span><i class="fa fa-angle-right"></i></div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div> <div class="triggers">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-4">
+<div class="triggers_inner">
+<div class="triggers_icon">
+<img src="/template/img/triggers1.png" alt="">
+</div>
+<div class="triggers_content">
+<h4>piu` di 100 000 ragazze</h4>
+<p>sono rimaste sorprese dai regali dalla Notta&Belle</p>
+ </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-4">
+<div class="triggers_inner">
+<div class="triggers_icon">
+<img src="/template/img/triggers2.png" alt="">
+</div>
+<div class="triggers_content">
+<h4>Consegna</h4>
+<p>Consegna in ogni punto del mondo!</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-4">
+<div class="triggers_inner">
+<div class="triggers_icon">
+<img src="/template/img/triggers3.png" alt="">
+</div>
+<div class="triggers_content">
+<h4>Garanzia</h4>
+<p>Sostituzione o restituzione dell'acquisto</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> <div class="categorys threeicon">
+<div class="container">
+<div class="row align-items-center">
+<div class="categorys_inner">
+<a href="/it/rosa-sotto-la-cupola/">
+<div class="categorys_icon">
+<img src="/template/img/threecat1.jpg" alt="">
+<img src="/template/img/cat1.png" alt="">
+</div>
+<div class="categorys_content">
+<h4>Rose sotto la cupola</h4>
+<p>Guardare</p>
+</div>
+</a>
+</div>
+<div class="categorys_inner">
+<a href="/it/servizio-da-te/">
+<div class="categorys_icon">
+<img src="/template/img/threecat2.jpg" alt="">
+<img src="/template/img/cat4.png" alt="">
+</div>
+<div class="categorys_content">
+<h4>Servizi da te`</h4>
+<p>Guardare</p>
+</div>
+</a>
+</div>
+<div class="categorys_inner">
+<a href="/it/orsetti-di-rose/">
+<div class="categorys_icon">
+<img src="/template/img/threecat3.jpg" alt="">
+<img src="/template/img/cat5.png" alt="">
+</div>
+<div class="categorys_content">
+<h4>Orsetti di rose</h4>
+<p>Guardare</p>
+</div>
+</a>
+</div>
+<div class="categorys_inner">
+<a class="scroll-to smoothscroll" href="#catalog_href">
+<div class="categorys_icon">
+<img src="/template/img/cat_grey.jpg" alt="">
+<img src="/template/img/cat_grey.png" alt="">
+</div>
+<div class="categorys_content">
+<h4>Popular</h4>
+<p>Guardare</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div> </div>
+<div class="catalog" id="catalog_href">
+<div class="container_big">
+<div class="row justify-content-center">
+<div class="col-12">
+<div class="catalog_title">
+<h2>Catalogo</h2>
+</div>
+</div>
+<div class="col-12">
+<div class="catalog_cat">
+<ul class="catalog_cat_change">
+<li>
+<a class="catId" data-filter=".catId244" data-href="https://nottabelle.com/it/popular/">Popolare</a>
+</li>
+<li>
+<a class="catId" data-filter=".catId243" data-href="https://nottabelle.com/it/premium/">Rose sotto la cupola</a>
+</li>
+<li>
+<a class="catId" data-filter=".catId241" data-href="https://nottabelle.com/it/orsetti-di-rose/">Orsetti di rose</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row products_wrapper">
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rossa/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rossa/'" class="imgContainer" aria-label="La rossa Premium Rosa ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg>
+
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2287-244" data-src="https://nottabelle.com/data/img/big/1529356152_80f8f30e36f705fade3d6a6ea412581f.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Krasnaya roza v kolbe Premium" data-img="2287-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529356152_80f8f30e36f705fade3d6a6ea412581f.jpg"  /></noscript>
+<div class="imgHover" data-img="2287-244"></div>
+<img class="imageOutput blink lazyload image2288-244" data-src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Krasnaya roza v kolbe Premium" data-img="2288-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg"  /></noscript>
+<div class="imgHover" data-img="2288-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">140 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-22%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rossa/">La rossa Premium Rosa </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1320" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-blu/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/premium-blu/'" class="imgContainer" aria-label="La blu Premium Rosa ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529357219_premium-blue.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2293-244" data-src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Синяя роза в колбе - Premium" data-img="2293-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg"  /></noscript>
+<div class="imgHover" data-img="2293-244"></div>
+<img class="imageOutput blink lazyload image2294-244" data-src="https://nottabelle.com/data/img/big/1529357219_premium-blue-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Бутон синей розы в колбе - Premium" data-img="2294-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529357219_premium-blue-1.jpg"  /></noscript>
+<div class="imgHover" data-img="2294-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">126 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-30%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-blu/">La blu Premium Rosa </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1323" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rosea-viva/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rosea-viva/'" class="imgContainer" aria-label="La rosea viva Premium Rosa">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2464-244" data-src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever bright pink rose in glass dome - premium" data-img="2464-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg"  /></noscript>
+<div class="imgHover" data-img="2464-244"></div>
+<img class="imageOutput blink lazyload image2465-244" data-src="https://nottabelle.com/data/img/big/1529677354_608ee7f65f7e947f6f1109307c12c6e4.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever bright pink rose - premium" data-img="2465-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677354_608ee7f65f7e947f6f1109307c12c6e4.jpg"  /></noscript>
+<div class="imgHover" data-img="2465-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">135 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rosea-viva/">La rosea viva Premium Rosa</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1419" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-rossa/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/mini-rossa/'" class="imgContainer" aria-label="La rossa Mini Rosa">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529677455_201ae9b834d587e4464ef19eadd2666f.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529677455_201ae9b834d587e4464ef19eadd2666f.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529677455_201ae9b834d587e4464ef19eadd2666f.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529677455_201ae9b834d587e4464ef19eadd2666f.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2488-244" data-src="https://nottabelle.com/data/img/big/1529677455_201ae9b834d587e4464ef19eadd2666f.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever red rose in glass dome - mini" data-img="2488-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677455_201ae9b834d587e4464ef19eadd2666f.jpg"  /></noscript>
+<div class="imgHover" data-img="2488-244"></div>
+<img class="imageOutput blink lazyload image2489-244" data-src="https://nottabelle.com/data/img/big/1529677455_b5175c1d77ba6e7bc6f2478c6c8642ac.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever red rose - mini" data-img="2489-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677455_b5175c1d77ba6e7bc6f2478c6c8642ac.jpg"  /></noscript>
+<div class="imgHover" data-img="2489-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">108 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-rossa/">La rossa Mini Rosa</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1431" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-blu/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/mini-blu/'" class="imgContainer" aria-label="La blu Mini Rosa">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529677467_62d0b05fb0cba8b1207e1799526c2d31.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529677467_62d0b05fb0cba8b1207e1799526c2d31.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529677467_62d0b05fb0cba8b1207e1799526c2d31.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529677467_62d0b05fb0cba8b1207e1799526c2d31.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2494-244" data-src="https://nottabelle.com/data/img/big/1529677467_62d0b05fb0cba8b1207e1799526c2d31.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever blue rose in glass dome - mini" data-img="2494-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677467_62d0b05fb0cba8b1207e1799526c2d31.jpg"  /></noscript>
+<div class="imgHover" data-img="2494-244"></div>
+<img class="imageOutput blink lazyload image2495-244" data-src="https://nottabelle.com/data/img/big/1529677467_44b028831674a911a647dc91174de086.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever blue rose - mini" data-img="2495-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677467_44b028831674a911a647dc91174de086.jpg"  /></noscript>
+<div class="imgHover" data-img="2495-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">96 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-20%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-blu/">La blu Mini Rosa</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1434" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-rosea-viva/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/mini-rosea-viva/'" class="imgContainer" aria-label="La rosea viva Mini Rosa">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529677474_c5f7ab56811adb76d477e67b2c8fd4b4.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529677474_c5f7ab56811adb76d477e67b2c8fd4b4.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529677474_c5f7ab56811adb76d477e67b2c8fd4b4.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529677474_c5f7ab56811adb76d477e67b2c8fd4b4.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2498-244" data-src="https://nottabelle.com/data/img/big/1529677474_c5f7ab56811adb76d477e67b2c8fd4b4.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever bright pink rose in glass dome - mini" data-img="2498-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677474_c5f7ab56811adb76d477e67b2c8fd4b4.jpg"  /></noscript>
+<div class="imgHover" data-img="2498-244"></div>
+<img class="imageOutput blink lazyload image2499-244" data-src="https://nottabelle.com/data/img/big/1529677475_424464b7a8f3261a5f8ea6e6c239663b.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever bright pink rose - mini" data-img="2499-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677475_424464b7a8f3261a5f8ea6e6c239663b.jpg"  /></noscript>
+<div class="imgHover" data-img="2499-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-rosea-viva/">La rosea viva Mini Rosa</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1436" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-fucsia/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/mini-fucsia/'" class="imgContainer" aria-label="La fucsia Mini Rosa">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529677591_50fdeb8afcd9541ff2ad98edd0527a0f.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529677591_50fdeb8afcd9541ff2ad98edd0527a0f.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529677591_50fdeb8afcd9541ff2ad98edd0527a0f.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529677591_50fdeb8afcd9541ff2ad98edd0527a0f.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2518-244" data-src="https://nottabelle.com/data/img/big/1529677591_50fdeb8afcd9541ff2ad98edd0527a0f.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever fuchsia rose in glass dome - mini" data-img="2518-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677591_50fdeb8afcd9541ff2ad98edd0527a0f.jpg"  /></noscript>
+<div class="imgHover" data-img="2518-244"></div>
+<img class="imageOutput blink lazyload image2519-244" data-src="https://nottabelle.com/data/img/big/1529677591_dbeb47f505b82cb4511eae89e8823fa6.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever fuchsia rose - mini" data-img="2519-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677591_dbeb47f505b82cb4511eae89e8823fa6.jpg"  /></noscript>
+<div class="imgHover" data-img="2519-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">102 €</span>
+<span class="old_price">120 €</span>
+<div class="skidka_percent">-15%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/mini-fucsia/">La fucsia Mini Rosa</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1446" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/la-nera-scatola/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/la-nera-scatola/'" class="imgContainer" aria-label="La nera scatola da regalo ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529681002_d578bce0b28df55823b9a74609f37459.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529681002_d578bce0b28df55823b9a74609f37459.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529681002_d578bce0b28df55823b9a74609f37459.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529681002_d578bce0b28df55823b9a74609f37459.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2522-244" data-src="https://nottabelle.com/data/img/big/1529681002_d578bce0b28df55823b9a74609f37459.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2522-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681002_d578bce0b28df55823b9a74609f37459.jpg"  /></noscript>
+<div class="imgHover" data-img="2522-244"></div>
+<img class="imageOutput blink lazyload image2523-244" data-src="https://nottabelle.com/data/img/big/1529681002_abca49385dc86ab34854054845ac5d92.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2523-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681002_abca49385dc86ab34854054845ac5d92.jpg"  /></noscript>
+<div class="imgHover" data-img="2523-244"></div>
+<img class="imageOutput blink lazyload image2524-244" data-src="https://nottabelle.com/data/img/big/1529681002_1b61559769769094736d5b2a3cd4c9f7.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2524-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681002_1b61559769769094736d5b2a3cd4c9f7.jpg"  /></noscript>
+<div class="imgHover" data-img="2524-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">25 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/la-nera-scatola/">La nera scatola da regalo </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1448" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/engraving/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/engraving/'" class="imgContainer" aria-label="L’intaglio individuale">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/f85aee4a323c1977e7b811ffcac2c081.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/f85aee4a323c1977e7b811ffcac2c081.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/f85aee4a323c1977e7b811ffcac2c081.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2559-244" data-src="https://nottabelle.com/data/img/big/f85aee4a323c1977e7b811ffcac2c081.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="L’intaglio individuale" data-img="2559-244">
+<noscript><img src="https://nottabelle.com/data/img/big/f85aee4a323c1977e7b811ffcac2c081.png"  /></noscript>
+<div class="imgHover" data-img="2559-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">25 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/engraving/">L’intaglio individuale</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1450" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/ti-amo/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/ti-amo/'" class="imgContainer" aria-label="L’intaglio - Ti amo">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/b19a5628be389d6226fc218b574392a5.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/b19a5628be389d6226fc218b574392a5.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/b19a5628be389d6226fc218b574392a5.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2558-244" data-src="https://nottabelle.com/data/img/big/b19a5628be389d6226fc218b574392a5.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="L’intaglio - Ti amo" data-img="2558-244">
+<noscript><img src="https://nottabelle.com/data/img/big/b19a5628be389d6226fc218b574392a5.png"  /></noscript>
+<div class="imgHover" data-img="2558-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">25 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/ti-amo/">L’intaglio - Ti amo</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1456" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/present/teaset/" onclick="window.location.href = 'https://nottabelle.com/it/present/teaset/'" class="imgContainer" aria-label="Il servizio">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529681311_50a3599001e5f388fc45f29c5b56fda8.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529681311_50a3599001e5f388fc45f29c5b56fda8.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529681311_50a3599001e5f388fc45f29c5b56fda8.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529681311_50a3599001e5f388fc45f29c5b56fda8.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2546-244" data-src="https://nottabelle.com/data/img/big/1529681311_847ebbba90e9a093656b10505bd2cc1a.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2546-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681311_847ebbba90e9a093656b10505bd2cc1a.jpg"  /></noscript>
+<div class="imgHover" data-img="2546-244"></div>
+ <img class="imageOutput blink lazyload image2547-244" data-src="https://nottabelle.com/data/img/big/1529681311_50a3599001e5f388fc45f29c5b56fda8.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2547-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681311_50a3599001e5f388fc45f29c5b56fda8.jpg"  /></noscript>
+<div class="imgHover" data-img="2547-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">100 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/present/teaset/">Il servizio</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1468" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/la-bianca-scatola/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/la-bianca-scatola/'" class="imgContainer" aria-label="La bianca scatola da regalo ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529681007_d31aa109a88ec80748bec8d2dfa5e45c.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529681007_d31aa109a88ec80748bec8d2dfa5e45c.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529681007_d31aa109a88ec80748bec8d2dfa5e45c.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529681007_d31aa109a88ec80748bec8d2dfa5e45c.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2525-244" data-src="https://nottabelle.com/data/img/big/1529681007_d31aa109a88ec80748bec8d2dfa5e45c.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Gift box white" data-img="2525-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681007_d31aa109a88ec80748bec8d2dfa5e45c.jpg"  /></noscript>
+<div class="imgHover" data-img="2525-244"></div>
+<img class="imageOutput blink lazyload image2526-244" data-src="https://nottabelle.com/data/img/big/1529681007_66950c0735d5b2ff97ea8f7e7048f92f.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2526-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681007_66950c0735d5b2ff97ea8f7e7048f92f.jpg"  /></noscript>
+<div class="imgHover" data-img="2526-244"></div>
+<img class="imageOutput blink lazyload image2527-244" data-src="https://nottabelle.com/data/img/big/1529681007_7d3a77aa4fbff3c5deb5a219972e9b99.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2527-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681007_7d3a77aa4fbff3c5deb5a219972e9b99.jpg"  /></noscript>
+<div class="imgHover" data-img="2527-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">25 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/la-bianca-scatola/">La bianca scatola da regalo </a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a data-fancybox data-src="#quick_buy" href="javascript:;" class="btn notavailability">Disponibile nel breve tempo</a>
+
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-35/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-35/'" class="imgContainer" aria-label="Orsetto di rose grigie con il cuore 35cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6364-244" data-src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 35cm" data-img="6364-244">
+<noscript><img src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png"  /></noscript>
+<div class="imgHover" data-img="6364-244"></div>
+<img class="imageOutput blink lazyload image6365-244" data-src="https://nottabelle.com/data/img/big/f5ee334c5c6939d29562dc79bdd14ecd.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 35cm" data-img="6365-244">
+<noscript><img src="https://nottabelle.com/data/img/big/f5ee334c5c6939d29562dc79bdd14ecd.png"  /></noscript>
+<div class="imgHover" data-img="6365-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-35/">Orsetto di rose grigie con il cuore 35cm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1457" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-rosee/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-rosee/'" class="imgContainer" aria-label="Orsetto di rose rosee 35cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6366-244" data-src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose rosee 35cm" data-img="6366-244">
+<noscript><img src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png"  /></noscript>
+<div class="imgHover" data-img="6366-244"></div>
+<img class="imageOutput blink lazyload image6367-244" data-src="https://nottabelle.com/data/img/big/24cc449a3e18fbbc397d74aae9810f6b.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose rosee 35cm" data-img="6367-244">
+<noscript><img src="https://nottabelle.com/data/img/big/24cc449a3e18fbbc397d74aae9810f6b.png"  /></noscript>
+<div class="imgHover" data-img="6367-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">133 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-5%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-rosee/">Orsetto di rose rosee 35cm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1459" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/regalo-orsetto/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/regalo-orsetto/'" class="imgContainer" aria-label="Scatole da regalo per l’Orsetto di rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2548-244" data-src="https://nottabelle.com/data/img/big/1529681353_31f88c1a0abca027e162cf78c4b48c2d.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2548-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681353_31f88c1a0abca027e162cf78c4b48c2d.jpg"  /></noscript>
+<div class="imgHover" data-img="2548-244"></div>
+<img class="imageOutput blink lazyload image2549-244" data-src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2549-244">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg"  /></noscript>
+<div class="imgHover" data-img="2549-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">25 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/regalo-orsetto/">Scatole da regalo per l’Orsetto di rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1469" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId244">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-55/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-55/'" class="imgContainer" aria-label="Orsetto di rose grigie con il cuore 55cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6362-244" data-src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 55cm" data-img="6362-244">
+<noscript><img src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png"  /></noscript>
+<div class="imgHover" data-img="6362-244"></div>
+<img class="imageOutput blink lazyload image6363-244" data-src="https://nottabelle.com/data/img/big/5c440df0bd4cd28166f68619ad0ccd98.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 55cm" data-img="6363-244">
+ <noscript><img src="https://nottabelle.com/data/img/big/5c440df0bd4cd28166f68619ad0ccd98.png"  /></noscript>
+<div class="imgHover" data-img="6363-244"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">215 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-55/">Orsetto di rose grigie con il cuore 55cm</a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a data-fancybox data-src="#quick_buy" href="javascript:;" class="btn notavailability">Disponibile nel breve tempo</a>
+
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId243">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rossa/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rossa/'" class="imgContainer" aria-label="La rossa Premium Rosa ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2287-243" data-src="https://nottabelle.com/data/img/big/1529356152_80f8f30e36f705fade3d6a6ea412581f.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Krasnaya roza v kolbe Premium" data-img="2287-243">
+<noscript><img src="https://nottabelle.com/data/img/big/1529356152_80f8f30e36f705fade3d6a6ea412581f.jpg"  /></noscript>
+<div class="imgHover" data-img="2287-243"></div>
+<img class="imageOutput blink lazyload image2288-243" data-src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Krasnaya roza v kolbe Premium" data-img="2288-243">
+<noscript><img src="https://nottabelle.com/data/img/big/1529356152_313cbe16a5113504337b70cdfab2ffb4.jpg"  /></noscript>
+<div class="imgHover" data-img="2288-243"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">140 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-22%</div>
+
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rossa/">La rossa Premium Rosa </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1320" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId243">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-blu/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/premium-blu/'" class="imgContainer" aria-label="La blu Premium Rosa ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529357219_premium-blue.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2293-243" data-src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Синяя роза в колбе - Premium" data-img="2293-243">
+<noscript><img src="https://nottabelle.com/data/img/big/1529357219_premium-blue.jpg"  /></noscript>
+<div class="imgHover" data-img="2293-243"></div>
+<img class="imageOutput blink lazyload image2294-243" data-src="https://nottabelle.com/data/img/big/1529357219_premium-blue-1.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Бутон синей розы в колбе - Premium" data-img="2294-243">
+<noscript><img src="https://nottabelle.com/data/img/big/1529357219_premium-blue-1.jpg"  /></noscript>
+<div class="imgHover" data-img="2294-243"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">126 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-30%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-blu/">La blu Premium Rosa </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1323" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId243">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rosea-viva/" onclick="window.location.href = 'https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rosea-viva/'" class="imgContainer" aria-label="La rosea viva Premium Rosa">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2464-243" data-src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever bright pink rose in glass dome - premium" data-img="2464-243">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677353_3d80a9973d5d3ca7518c1da2b6ba3b1e.jpg"  /></noscript>
+<div class="imgHover" data-img="2464-243"></div>
+<img class="imageOutput blink lazyload image2465-243" data-src="https://nottabelle.com/data/img/big/1529677354_608ee7f65f7e947f6f1109307c12c6e4.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="forever bright pink rose - premium" data-img="2465-243">
+<noscript><img src="https://nottabelle.com/data/img/big/1529677354_608ee7f65f7e947f6f1109307c12c6e4.jpg"  /></noscript>
+<div class="imgHover" data-img="2465-243"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">135 €</span>
+<span class="old_price">180 €</span>
+<div class="skidka_percent">-25%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/rosa-sotto-la-cupola/premium-rosea-viva/">La rosea viva Premium Rosa</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1419" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-viole/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-viole/'" class="imgContainer" aria-label="Orsetto di rose viole 35cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/3f7722918fd1a70393562c29eda21abf.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/3f7722918fd1a70393562c29eda21abf.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/3f7722918fd1a70393562c29eda21abf.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6370-241" data-src="https://nottabelle.com/data/img/big/3f7722918fd1a70393562c29eda21abf.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose viole 35cm" data-img="6370-241">
+<noscript><img src="https://nottabelle.com/data/img/big/3f7722918fd1a70393562c29eda21abf.png"  /></noscript>
+<div class="imgHover" data-img="6370-241"></div>
+<img class="imageOutput blink lazyload image6371-241" data-src="https://nottabelle.com/data/img/big/eef4c19fd550fa0583e91453ffadaaad.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose viole 35cm" data-img="6371-241">
+<noscript><img src="https://nottabelle.com/data/img/big/eef4c19fd550fa0583e91453ffadaaad.png"  /></noscript>
+<div class="imgHover" data-img="6371-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">126 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-viole/">Orsetto di rose viole 35cm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1462" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-35/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-35/'" class="imgContainer" aria-label="Orsetto di rose grigie con il cuore 35cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6364-241" data-src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 35cm" data-img="6364-241">
+<noscript><img src="https://nottabelle.com/data/img/big/478f30bb84e2353aeddfc65f534ca066.png"  /></noscript>
+<div class="imgHover" data-img="6364-241"></div>
+<img class="imageOutput blink lazyload image6365-241" data-src="https://nottabelle.com/data/img/big/f5ee334c5c6939d29562dc79bdd14ecd.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 35cm" data-img="6365-241">
+<noscript><img src="https://nottabelle.com/data/img/big/f5ee334c5c6939d29562dc79bdd14ecd.png"  /></noscript>
+<div class="imgHover" data-img="6365-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-35/">Orsetto di rose grigie con il cuore 35cm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1457" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-rosee/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-rosee/'" class="imgContainer" aria-label="Orsetto di rose rosee 35cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6366-241" data-src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose rosee 35cm" data-img="6366-241">
+<noscript><img src="https://nottabelle.com/data/img/big/6121135cb9d6d9c5b99f4b4a2c3c74e0.png"  /></noscript>
+<div class="imgHover" data-img="6366-241"></div>
+<img class="imageOutput blink lazyload image6367-241" data-src="https://nottabelle.com/data/img/big/24cc449a3e18fbbc397d74aae9810f6b.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose rosee 35cm" data-img="6367-241">
+<noscript><img src="https://nottabelle.com/data/img/big/24cc449a3e18fbbc397d74aae9810f6b.png"  /></noscript>
+<div class="imgHover" data-img="6367-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">133 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-5%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-rosee/">Orsetto di rose rosee 35cm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1459" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-rosse/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-rosse/'" class="imgContainer" aria-label="Orsetto di rose rosse 35cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/a7b31d83e14bb05b281c5cb556451706.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/a7b31d83e14bb05b281c5cb556451706.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/a7b31d83e14bb05b281c5cb556451706.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6368-241" data-src="https://nottabelle.com/data/img/big/a7b31d83e14bb05b281c5cb556451706.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose rosse 35cm" data-img="6368-241">
+<noscript><img src="https://nottabelle.com/data/img/big/a7b31d83e14bb05b281c5cb556451706.png"  /></noscript>
+<div class="imgHover" data-img="6368-241"></div>
+<img class="imageOutput blink lazyload image6369-241" data-src="https://nottabelle.com/data/img/big/4ce80475953d65950dda2bdcc2e6ae0e.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose rosse 35cm" data-img="6369-241">
+<noscript><img src="https://nottabelle.com/data/img/big/4ce80475953d65950dda2bdcc2e6ae0e.png"  /></noscript>
+<div class="imgHover" data-img="6369-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">140 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-rosse/">Orsetto di rose rosse 35cm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1461" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-turchina/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-turchina/'" class="imgContainer" aria-label="Orsetto di rose turchina 35cm ">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/8fd89743fb98e33b024e7bddcc293a82.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/8fd89743fb98e33b024e7bddcc293a82.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/8fd89743fb98e33b024e7bddcc293a82.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6372-241" data-src="https://nottabelle.com/data/img/big/8fd89743fb98e33b024e7bddcc293a82.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose turchina 35cm " data-img="6372-241">
+<noscript><img src="https://nottabelle.com/data/img/big/8fd89743fb98e33b024e7bddcc293a82.png"  /></noscript>
+<div class="imgHover" data-img="6372-241"></div>
+<img class="imageOutput blink lazyload image6373-241" data-src="https://nottabelle.com/data/img/big/bfdfd78324d75fff02bafe7c812771b7.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose turchina 35cm " data-img="6373-241">
+<noscript><img src="https://nottabelle.com/data/img/big/bfdfd78324d75fff02bafe7c812771b7.png"  /></noscript>
+<div class="imgHover" data-img="6373-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">126 €</span>
+<span class="old_price">140 €</span>
+<div class="skidka_percent">-10%</div>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-turchina/">Orsetto di rose turchina 35cm </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1463" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-biance-con-il-cuore-35/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-biance-con-il-cuore-35/'" class="imgContainer" aria-label="Orsetto di rose biance con il cuore 35cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/1c644fcc499cd3e13df3e9463a0f2eb4.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1c644fcc499cd3e13df3e9463a0f2eb4.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1c644fcc499cd3e13df3e9463a0f2eb4.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6374-241" data-src="https://nottabelle.com/data/img/big/1c644fcc499cd3e13df3e9463a0f2eb4.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose biance con il cuore 35cm" data-img="6374-241">
+<noscript><img src="https://nottabelle.com/data/img/big/1c644fcc499cd3e13df3e9463a0f2eb4.png"  /></noscript>
+<div class="imgHover" data-img="6374-241"></div>
+<img class="imageOutput blink lazyload image6375-241" data-src="https://nottabelle.com/data/img/big/c936d9b08239956a0f0e841949f8de02.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose biance con il cuore 35cm" data-img="6375-241">
+<noscript><img src="https://nottabelle.com/data/img/big/c936d9b08239956a0f0e841949f8de02.png"  /></noscript>
+<div class="imgHover" data-img="6375-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">150 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-biance-con-il-cuore-35/">Orsetto di rose biance con il cuore 35cm</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1464" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/regalo-orsetto/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/regalo-orsetto/'" class="imgContainer" aria-label="Scatole da regalo per l’Orsetto di rose">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/webp" srcset=https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.webp>
+<source type="image/jpeg" srcset=https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image2548-241" data-src="https://nottabelle.com/data/img/big/1529681353_31f88c1a0abca027e162cf78c4b48c2d.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2548-241">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681353_31f88c1a0abca027e162cf78c4b48c2d.jpg"  /></noscript>
+<div class="imgHover" data-img="2548-241"></div>
+<img class="imageOutput blink lazyload image2549-241" data-src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg" src="https://nottabelle.com/template/img/nofoto.jpg" alt="" data-img="2549-241">
+<noscript><img src="https://nottabelle.com/data/img/big/1529681353_b80e1aa14c77a58476b4aeba9c97cbab.jpg"  /></noscript>
+<div class="imgHover" data-img="2549-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">25 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/regalo-orsetto/">Scatole da regalo per l’Orsetto di rose</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1469" status="1">
+Acquistare </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId241">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-55/" onclick="window.location.href = 'https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-55/'" class="imgContainer" aria-label="Orsetto di rose grigie con il cuore 55cm">
+<div class="imgContainerFix">
+<div class="flexFix">
+<picture>
+<source type="image/png" srcset=https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png>
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png" alt="" src="https://nottabelle.com/template/img/nofoto.jpg" data-img="0">
+</picture>
+
+<noscript>
+
+
+
+
+												 <img src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png" data-index="1" />
+											 </noscript>
+<img class="imageOutput blink lazyload image6362-241" data-src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 55cm" data-img="6362-241">
+<noscript><img src="https://nottabelle.com/data/img/big/3ec658648811f173c62a0071af97cb22.png"  /></noscript>
+<div class="imgHover" data-img="6362-241"></div>
+<img class="imageOutput blink lazyload image6363-241" data-src="https://nottabelle.com/data/img/big/5c440df0bd4cd28166f68619ad0ccd98.png" src="https://nottabelle.com/template/img/nofoto.jpg" alt="Orsetto di rose grigie con il cuore 55cm" data-img="6363-241">
+<noscript><img src="https://nottabelle.com/data/img/big/5c440df0bd4cd28166f68619ad0ccd98.png"  /></noscript>
+<div class="imgHover" data-img="6363-241"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">Prezzo</span>
+<span class="regular_price">215 €</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/it/orsetti-di-rose/orsetto-grigie-con-il-cuore-55/">Orsetto di rose grigie con il cuore 55cm</a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a data-fancybox data-src="#quick_buy" href="javascript:;" class="btn notavailability">Disponibile nel breve tempo</a>
+
+</div>
+</div>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-12">
+<div class="catalog_all">
+<a href="" class="btn2x">Guardare tutti</a>
+</div>
+<div class="catalog_all_mob">
+<a href="">Guardare tutti</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="category_first_seo home_seo">
+<div class="container_big">
+<div class="row">
+</div>
+</div>
+</section>
+0
+<div class="ins_slider">
+<div class="ins_slider_ajax"> <div class="ins_slider_outer owl-carousel owl-theme owl-loaded owl-drag"> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BssmMK8lGgv/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8966199a2039faff7b59fc6a99227123/5CC0719C/t51.2885-15/sh0.08/e35/s640x640/47691554_586300675168838_7309958742781916613_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>261</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsgIVoFFy9P/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/ae0d3ec663c1d927ee6b18b8a53a64c5/5CCFCAB8/t51.2885-15/sh0.08/e35/s640x640/47692583_376457746234122_5727284949422679652_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>91</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsCzaJulDWC/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/c7fb9f48b2c8098ac25d1c869a2a5a4c/5CBC3231/t51.2885-15/sh0.08/e35/s640x640/47692970_2264599137140390_4880586076165398740_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>113</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BryOG3FlLW-/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2c47d471f05afbc50c20b7af6dc736f7/5CC30F59/t51.2885-15/sh0.08/e35/p640x640/47585173_202816140662752_8592131353444826941_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>166</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrkxoM6FXAr/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e9d8e861bdff2129e558a98a44f3baa6/5CFFF9B6/t51.2885-15/sh0.08/e35/s640x640/46194908_2045624135519482_8077894382289460532_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>139</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Brf0-k8F_Fi/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/4ebc1346378a67428cf768955f358d7d/5D00C64B/t51.2885-15/sh0.08/e35/s640x640/47023143_2298096653803734_7631874680431091353_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>155</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrTDe5OF2wx/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a42cf3197a86f787a2284946cbf81a02/5CC0AD48/t51.2885-15/sh0.08/e35/s640x640/47137609_371315913437484_1280623401876432137_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>175</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrQbjl6Fdbn/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/5b03ef3e14fa768c526082943531e480/5CFA0741/t51.2885-15/sh0.08/e35/s640x640/45932764_313069439539552_4465489449896819141_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>151</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrCtKZaF7Vl/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2d84da38ffde6e138791e4be24471f6b/5CFC160E/t51.2885-15/sh0.08/e35/s640x640/46799336_724020061311099_2309859475885835944_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>361</span><span><i class="fa fa-comments-o"></i>486</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bqubj6klR0X/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/d2eb742618fee38e0a9cb24e042561cf/5CF9600C/t51.2885-15/sh0.08/e35/s640x640/44585913_297299114238684_5018540414245072218_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>192</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqhLtGylxH7/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/9204523fce261024d16d0899d9123859/5D010B9F/t51.2885-15/sh0.08/e35/p640x640/44751386_120612545609661_7599332269045901642_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>34</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqaBsloF86O/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8ca4a7a7e0f446d4f23772d6dbb2d608/5CC34CF6/t51.2885-15/sh0.08/e35/s640x640/46401246_2159326307661358_1950508059172271053_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>235</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqIBo1qlYyq/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/19a05abe1477e6b241b6b61ef53243be/5D00CF0A/t51.2885-15/sh0.08/e35/s640x640/44779365_1094186514075192_4479276707098296786_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>281</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bp4K1tyFwSk/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e780ac1958c304c1ee539b208b8ed2c7/5CC4AAEC/t51.2885-15/sh0.08/e35/s640x640/43985043_1931446880485529_7518661978951291557_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>160</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BpkCsj2lfV0/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a859992f4f01d07d3324307d09c4a6a5/5CC5C4FB/t51.2885-15/sh0.08/e35/s640x640/44860755_1972414189513049_960754608430554106_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>126</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> </div> </div>
+<script type="651614b2496e500e477e43d5-text/javascript">
+        jQuery(function($) { 
+            $(".ins_slider_outer").owlCarousel({
+
+                autoplay: true,
+                loop:true,
+                nav:false,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:false,
+                        autoplayTimeout: 2000
+                    },
+                    568:{
+                        items:5,
+                        nav:false,
+                        autoplayTimeout: 3000
+                    },
+                    1024:{
+                        items:12,
+                        nav:false,
+                        autoplayTimeout: 5000
+                    }
+                }   
+                
+              });                
+
+        });
+    </script>
+<div class="ins_slider_inner">
+<div class="ins_slider_title">
+<a href="https://www.instagram.com/nottabelle/" target="_blank">
+<i class="fa fa-instagram"></i>
+<span>Follow @nottabelle</span>
+</a> </div>
+</div>
+</div>
+<input type="hidden" name="lang" value="it">
+<input type="hidden" name="cur" value="€">
+<div class="cart_bottom" style="display:none;">
+<div class="container_big">
+<div class="row justify-content-between align-items-center">
+<div class="col-12 col-md-6 cart_bottom_gift_wrap">
+</div>
+<div class="col-12 col-md-6 cart_bottom_links">
+<div class="cart_bottom_href">
+<a>carrello</a>
+<span class="cart_bottom_item">0</span>
+</div>
+<div class="cart_bottom_price">
+<span id="total_val_footer"></span> € </div>
+<div class="cart_bottom_checkout">
+<a class="cart_popup_href" href="/it/cart">Completare l’ordine</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cart_right"></div>
+</div>
+<footer id="footer" class="footer">
+<div class="footer_top">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-6 col-12">
+<div class="footer_textwidget">
+<img src="https://nottabelle.com/template/img/logo-fooer.png" alt="Notta & Belle" srcset="https://nottabelle.com/template/img/logo-fooer.png 1x, https://nottabelle.com/template/img/logo_footer2x.png 2x">
+<div class="footer_contact">
+<p>
+<i class="fa fa-phone mgr10"></i>
+<a href="tel:+420732106875">+420 732 106 875</a>
+</p>
+<p>
+<i class="tc fa fa-envelope-o mgr10"></i>
+<a href="/cdn-cgi/l/email-protection#bbccd4c9d7dffbd5d4cfcfdad9ded7d7de95d8d4d6"><span class="__cf_email__" data-cfemail="4e39213c222a0e20213a3a2f2c2b22222b602d2123">[email&#160;protected]</span></a>
+</p>
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/"><i class="fa fa-instagram"></i>Instagram</a></li>
+<li><a href="https://www.facebook.com/NottaBelle-525828327761640/" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Catalogo</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/it/rosa-sotto-la-cupola">Rose sotto la cupola</a></li>
+<li><a href="/it/orsetti-di-rose">Orsetti di rose</a></li>
+<li><a href="/it/servizio-da-te">Servizio da te`</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Informazioni</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/it/pagamento/">Pagamento </a></li>
+<li><a href="/it/consegna/">Consegna</a></li>
+<li><a href="/it/contatti/">Contatti</a></li>
+<li><a href="/it/partners/">Ingrosso</a></li>
+<li><a href="/it/ambassador/">Ambassador</a></li> </ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Siamo su Internet</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/"><i class="fa fa-instagram"></i>Instagram</a></li>
+<li><a href="https://www.facebook.com/NottaBelle-525828327761640/" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-12">
+<h3 class="footer_title">Patrnership</h3>
+<div class="footer_textwidget">
+Vuoi essere il partner<br> della Notta & Belle, fai la richiesta
+<a class="footer_btn" data-fancybox data-src="#partners" href="javascript:;">FARE LA RICHIESTA</a> </div>
+<div id="partners" style="display: none;">
+<form action="/it/cart/partners" method="POST" id="partners_form" novalidate>
+<input type="hidden" name="language" value="it">
+<input type="hidden" name="uri" value="nottabelle.com/it/">
+<input type="hidden" name="ref" value="">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+Vuoi essere il partner<br> della Notta & Belle, fai la richiesta </div>
+<div class="form_line">
+<div class="form_title">
+Suo nome </div>
+<div class="form_input">
+<input type="text" id="partners_form_name" class="partners_form_input" name="partners_form_name" required="">
+<div class="error-block" id="error_partners_form_name">Riempire lo spazio</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Sua e-mail </div>
+<div class="form_input">
+<input type="text" id="partners_form_mail" class="partners_form_input" name="partners_form_mail" required="">
+<div class="error-block" id="error_partners_form_mail">Riempire lo spazio</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Telefono </div>
+<div class="form_input">
+<input type="text" id="partners_form_phone" class="partners_form_input" name="partners_form_phone" required="">
+<div class="error-block" id="error_partners_form_phone">Riempire lo spazio</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="partners_form_submit btn" value="Pagare">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Con il riempimento del modulo Lei accetta <br><a href="/it/policy/" target="_blank" style="pointer-events: none"> la politica confidenziale</a>
+</div>
+</div>
+</div>
+</div>
+</form>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="651614b2496e500e477e43d5-text/javascript">
+
+jQuery(function($) { 
+
+	$("#partners_form .form_submit").click(function() {
+
+		if($("input[name='partners_form_name']").val()==''){
+			$('#error_partners_form_name').show();
+			$("input[name='partners_form_name']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_name').hide();
+			$("input[name='partners_form_name']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_mail']").val()==''){
+			$('#error_partners_form_mail').show();
+			$("input[name='partners_form_mail']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_mail').hide();
+			$("input[name='partners_form_mail']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_phone']").val()==''){
+			$('#error_partners_form_phone').show();
+			$("input[name='partners_form_phone']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_phone').hide();
+			$("input[name='partners_form_phone']").closest('.form_input').removeClass('has-error');
+		};	
+
+	    if(formresult != 'error'){
+	        $("#partners_form").submit();
+			$(this).hide();	        
+	    }	
+
+	    return false;
+	});
+
+ 
+						
+
+	$("#partners_form_phone").intlTelInput({
+		separateDialCode:true,
+		autoHideDialCode:false,
+		preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+								initialCountry: 'it',
+		hiddenInput: "partners_form_phone_full",
+		excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+		utilsScript: "/template/js/utils.js"
+	});									
+
+});									
+</script>
+<div id="quick_buy" style="display: none;">
+<form action="#" method="POST">
+<input type="hidden" name="language" value="it">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+<p>Teniamo al Suo tempo</p>
+<p>Per fare l’ordine basta lasciare il suo numero di telefono e un nostro operatore La contatta al piu` presto.</p> </div>
+<div class="form_line">
+<div class="form_title">Suo nome</div>
+<div class="form_input">
+<input type="text" id="quick_buy_name" class="partners_form_input" name="quick_buy_name" required="">
+<div class="error-block" id="error_quick_buy_name">Riempire lo spazio</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">Sua e-mail</div>
+<div class="form_input">
+<input type="text" id="quick_buy_mail" class="partners_form_input" name="quick_buy_mail" required="">
+<div class="error-block" id="error_quick_buy_mail">Riempire lo spazio</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Telefono </div>
+<div class="form_input">
+<input type="text" id="quick_buy_phone" class="quick_buy_input" name="quick_buy_phone">
+<div class="error-block" id="error_quick_buy_phone">Riempire lo spazio</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="quick_buy_submit btn" value="Completare l’ordine">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Con il riempimento del modulo Lei accetta <br><a href="/it/policy" target="_blank"> la politica confidenziale</a> </div>
+</div>
+</div>
+</div>
+</form>
+<script type="651614b2496e500e477e43d5-text/javascript">
+								jQuery(function($) { 
+
+									$("#quick_buy_phone").intlTelInput({
+										separateDialCode:true,
+										autoHideDialCode:false,
+										preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+																				                                        initialCountry: 'it',
+  										hiddenInput: "who_phonenumber_full",
+  										excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+  										utilsScript: "/template/js/utils.js"
+									});	
+
+									$("#quick_buy form input[type='submit']").click(function() {
+
+										if($("input[name='quick_buy_name']").val()==''){
+											$('#error_quick_buy_name').show();
+											$("input[name='quick_buy_name']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_name').hide();
+											$("input[name='quick_buy_name']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_mail']").val()==''){
+											$('#error_quick_buy_mail').show();
+											$("input[name='quick_buy_mail']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_mail').hide();
+											$("input[name='quick_buy_mail']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_phone']").val()==''){
+											$('#error_quick_buy_phone').show();
+											$("input[name='quick_buy_phone']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_phone').hide();
+											$("input[name='quick_buy_phone']").closest('.form_input').removeClass('has-error');
+										};										
+										if(quick_buy_error != 'error'){
+										    $("#amb_form").submit();
+										    $(this).hide();
+										}				
+									});																		
+
+								});									
+							</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer_bottom">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-md-6">
+<p>© 2015-2019 Notta & Belle.<br>Marchio brevettato. Tutti i diritti sono tutelati ♥</p> </div>
+<div class="col-md-auto">
+<img src="https://nottabelle.com/template/img/payment.svg" alt="Payment method">
+</div>
+</div>
+</div>
+</div>
+</footer>
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/jquery.fancybox.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/intlTelInput.css">
+<script src="https://nottabelle.com/template/js/imagesloaded.pkgd.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/isotope.pkgd.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.fancybox.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.nice-select.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/waypoints.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.counterup.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/intlTelInput.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.cookie.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/common.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/webpjs-0.0.2.min.js" type="651614b2496e500e477e43d5-text/javascript"></script>
+<script type="651614b2496e500e477e43d5-text/javascript">(function(){var WebP=new Image();
+        WebP.onload=WebP.onerror=function(){ if(WebP.height!=2)
+        {var sc=document.createElement('script');sc.type='text/javascript';sc.async=true;
+            var s=document.getElementsByTagName('script')[0];sc.src='js/webpjs-0.0.2.min.js';
+            s.parentNode.insertBefore(sc,s);}};
+        WebP.src='data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';})();
+</script>
+</div>
+<div class="hidden-xs hidden-sm">
+
+<script type="651614b2496e500e477e43d5-text/javascript">
+
+var isMobile = false;
+// проверка на размер экрана 
+$(document).ready( function() {
+    if ($('body').width() <= 598) {
+        isMobile = true;
+    }
+    // или для десктопа
+    if (!isMobile) {
+(function(){ var widget_id = 'WjrMB5K9sF';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+    }
+} );
+
+</script>
+</div>
+<script type="651614b2496e500e477e43d5-text/javascript">
+
+	//ЗАПУСКАЕМ ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		updateorderminiline();
+	
+	// ПОВТОРЫ С ИНТЕРВАЛОМ 1 СЕК
+		/* var timerId = setInterval(function() {
+			updateorderminiline();
+		}, 1000); */
+
+	//****************************************************************************************************
+	
+	
+	//ФУНКЦИЯ ЗАПУСКА ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		function updateorderminiline(){
+			
+			dataType: 'json',
+            $.ajax({
+                type: "POST",
+                url: "/cart/updateorderminilinenew",
+                //data:data,
+                data:{
+					language:'it',
+				},
+                success: function(result){
+					res = JSON.parse(result);
+                    delivery = res.delivery;
+                    itogo = res.itogo;
+                    goods = res.goods;
+                    goodsCount = res.goodsCount;
+					$('.site_cart_counter').html(goodsCount);
+					$('.cart_bottom_item').html(goodsCount);
+                    $('.cart_bottom_price #total_val_footer').html(itogo);
+
+					if(goodsCount > 0){
+						$('.cart_bottom').show();
+						$('.footer_bottom').addClass('cart_bottom_visible');
+						$('.gift_remember').addClass('gift_remember_withline');
+
+					} else {
+						$('.cart_bottom').hide();
+						$('.footer_bottom').removeClass('cart_bottom_visible');
+						$('.gift_remember').removeClass('gift_remember_withline');
+					}
+                }
+            });
+		}
+
+
+	//****************************************************************************************************
+	
+
+	//ДОБАВЛЕНИЕ ТОВАРОВ В КОРЗИНУ ЗАПУСК КОРЗИНЫ СПРАВА
+
+        $(".catalog_content_btn a:not(.notavailability,.availability_text_form )").on('click',function(){
+			if ($(this).attr('status')==1){
+				prodid = $(this).attr('id');
+				$(this).removeClass('in_cart');
+
+			}
+			if ($(this).attr('status')==0){
+				$.ajax({
+					type: "POST",
+					url: "/it/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header").css({"display":"none"});
+				}
+				return false;
+				/* prodid = 0; */
+			}
+			$(this).addClass('in_cart');
+
+			$(this).attr('status', 0);
+			//prodid = $(this).attr('id');
+			$(this).html('<span class="hidden-xs">Guardare il carrello</span><span class="show-xs">cart</span>');
+
+            $.ajax({
+                type: "POST",
+                url: "/it/cart/add",
+                data:{
+                    prodid:prodid,
+                },
+                success: function(result){
+					$('.cart_right').html(result); //асинхронное добавление
+                    //location.reload(); // с перезагрузкой
+					updateorderminiline();
+                }
+            });
+
+			$(".cart_right").addClass("active-cart");
+
+				$("body").addClass("fixed-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+                $("body").css({"overflow":"hidden"});
+                $("header ").css({"display":"none"});
+            }
+			updateorderminiline();
+            return false;
+            event.preventDefault();
+
+
+        });
+		
+	//****************************************************************************************************
+	
+	
+	//ОТКРЫТИЕ КОРЗИНЫ ОТПРАВЛЯЕМ ЗАПРОС ТАК КАК НУЖНА ИНИЦИАЛИЗАЦИЯ JS ЗАНОВО
+		$(".cart_bottom_href").click(function(){			
+				$.ajax({
+					type: "POST",
+					url: "/it/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header ").css({"display":"none"});
+				}
+		});
+	//****************************************************************************************************
+		
+		
+	//КЛИК ПО КОЛИЧЕСТВУ ТОВАРОВ В ШАПКЕ ЗАПУСКАЕТ КЛИК ПО ПОЛОСКЕ ВНИЗУ
+		$(".cart_popup_href").click(function(){
+			$(".cart_bottom_item").click();
+			return false;
+        });
+	//****************************************************************************************************
+
+		
+</script>
+
+<script type="651614b2496e500e477e43d5-text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter40113260 = new Ya.Metrika2({
+                    id:40113260,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/40113260" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+<script type="651614b2496e500e477e43d5-text/javascript">
+    (function() {
+        var d = document, w = window;
+        w.MgSensorData = w.MgSensorData || [];
+        w.MgSensorData.push({
+            cid:362890,
+            lng:"ru",
+            nosafari:true,
+            project: "a.marketgid.com"
+        });
+        var l = "a.marketgid.com";
+        var n = d.getElementsByTagName("script")[0];
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var dt = !Date.now?new Date().valueOf():Date.now();
+        s.src = "//" + l + "/mgsensor.js?d=" + dt;
+        n.parentNode.insertBefore(s, n);
+    })();
+</script>
+
+<script type="651614b2496e500e477e43d5-text/javascript">(function (w, d) {w.amo_pixel_token = 'p1Ip4iB8yqaEyXU9HPmcTFDXCbXyjWVjsFXnz2xKSUtoEVh22OGcP0uthUvKBG/r';var s = document.createElement('script'), f = d.getElementsByTagName('script')[0];s.id = 'amo_pixel_js';s.type = 'text/javascript';s.async = true;s.src = 'https://piper.amocrm.ru/pixel/js/tracker/pixel.js?token=' + w.amo_pixel_token;f.parentNode.insertBefore(s, f);})(window, document);</script>
+<script type="651614b2496e500e477e43d5-text/javascript">
+(function(w, d, s, h, id) {
+w.roistatProjectId = id; w.roistatHost = h;
+var p = d.location.protocol == "https:" ? "https://" : "http://";
+var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', '555354ccb14585c2707c3a3ea3355359');
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFVD3PH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="651614b2496e500e477e43d5-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5db58a519a","applicationID":"176161339","transactionName":"bgRQMkNSD0BXUhVaW1dOcwVFWg5dGXIAR1FeDkAfHloPV1NJ","queueTime":0,"applicationTime":176,"atts":"QkNTRAtIHE4=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="651614b2496e500e477e43d5-" defer=""></script></body>
+</html>

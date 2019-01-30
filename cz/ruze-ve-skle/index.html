@@ -1,0 +1,2877 @@
+
+<!DOCTYPE html>
+<html lang="cs" prefix="og: http://ogp.me/ns#">
+<head>
+<link rel="preload" href="/template/fonts/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="1054c26ab5107912af8cdb2f-text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Růže ve skle | 18 barev | rychlé doručení po ČR - Notta & Belle</title>
+<meta name="keywords" content="Růže ve skle" />
+<meta name="description" content="Růže ve skle je vynikající dárek pro dekoraci vašeho domu. Růže žije nejméně pět let. Dárkové krabičky a gravírování. K dispozici ve více než 18 barvách a 3 různých velikostech." />
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://nottabelle.com/cz/ruze-ve-skle/" />
+<link rel="manifest" href="/manifest.json">
+<link rel="shortcut icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://nottabelle.com/template/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="60x60" href="https://nottabelle.com/template/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://nottabelle.com/template/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nottabelle.com/template/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://nottabelle.com/template/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nottabelle.com/template/img/favicon/favicon-32x32.png">
+<meta name="msapplication-TileImage" content="https://nottabelle.com/template/img/favicon/ms-icon-144x144.png">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/bootstrap-grid.min.css" />
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/style_new.css?20190130">
+<script src="https://nottabelle.com/template/js/jquery.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/owl.carousel.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/lazysizes.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<style> @font-face {font-family: proximal; src: url(/template/fonts/ProximaNova-Light.eot); src: url(/template/fonts/ProximaNova-Light.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Light.woff2) format('woff2'),url(/template/fonts/ProximaNova-Light.woff) format('woff'),url(/template/fonts/ProximaNova-Light.ttf) format('truetype'),url(/template/fonts/ProximaNova-Light.svg#ProximaNova-Light) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximab; src: url(/template/fonts/ProximaNova-Bold.eot); src: url(/template/fonts/ProximaNova-Bold.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Bold.woff2) format('woff2'),url(/template/fonts/ProximaNova-Bold.woff) format('woff'),url(/template/fonts/ProximaNova-Bold.ttf) format('truetype'),url(/template/fonts/ProximaNova-Bold.svg#ProximaNova-Bold) format('svg'); font-weight: 400; font-style: normal; font-display:swap} @font-face {font-family: proximar; src: url(/template/fonts/ProximaNova-Regular.eot); src: url(/template/fonts/ProximaNova-Regular.eot?#iefix) format('embedded-opentype'),url(/template/fonts/ProximaNova-Regular.woff2) format('woff2'),url(/template/fonts/ProximaNova-Regular.woff) format('woff'),url(/template/fonts/ProximaNova-Regular.ttf) format('truetype'),url(/template/fonts/ProximaNova-Regular.svg#ProximaNova-Regular) format('svg'); font-weight: 400; font-style: normal; font-display:swap} </style>
+
+<script type="1054c26ab5107912af8cdb2f-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFVD3PH');</script>
+
+<script src="https://www.artfut.com/static/tagtag.min.js?campaign_code=ba5f83a22d" async onerror='var self = this;window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers=ADMITAD.Helpers||{},ADMITAD.Helpers.generateDomains=function(){for(var e=new Date,n=Math.floor(new Date(2020,e.getMonth(),e.getDate()).setUTCHours(0,0,0,0)/1e3),t=parseInt(1e12*(Math.sin(n)+1)).toString(30),i=["de"],o=[],a=0;a<i.length;++a)o.push({domain:t+"."+i[a],name:t});return o},ADMITAD.Helpers.findTodaysDomain=function(e){function n(){var o=new XMLHttpRequest,a=i[t].domain,D="https://"+a+"/";o.open("HEAD",D,!0),o.onload=function(){setTimeout(e,0,i[t])},o.onerror=function(){++t<i.length?setTimeout(n,0):setTimeout(e,0,void 0)},o.send()}var t=0,i=ADMITAD.Helpers.generateDomains();n()},window.ADMITAD=window.ADMITAD||{},ADMITAD.Helpers.findTodaysDomain(function(e){if(window.ADMITAD.dynamic=e,window.ADMITAD.dynamic){var n=function(){return function(){return self.src?self:""}}(),t=n(),i=(/campaign_code=([^&]+)/.exec(t.src)||[])[1]||"";t.parentNode.removeChild(t);var o=document.getElementsByTagName("head")[0],a=document.createElement("script");a.src="https://www."+window.ADMITAD.dynamic.domain+"/static/"+window.ADMITAD.dynamic.name.slice(1)+window.ADMITAD.dynamic.name.slice(0,1)+".min.js?campaign_code="+i,o.appendChild(a)}});' type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Notta & Belle",
+    "brand": "Notta & Belle",
+    "email": "world@nottabelle.com",
+    "telephone": "+420732106875",
+	"logo": "https://nottabelle.com/template/img/logo-fooer.png",
+    	"url": "https://nottabelle.com/cz/ruze-ve-skle/"
+	
+}
+</script>
+</head><body>
+<div id="clientel"></div>
+<div class="wrapper">
+<div class="content">
+<header class="header">
+<div class="delivery_mob">
+<div class="delivery">
+Doprava zdarma <div class="delivery__popup" style="display: none;">
+Bezplatné doručení po celé České republice </div>
+</div>
+<div class="delivery_lang">
+<div class="lang">
+<div class="lang_current">
+Jazyk:
+<span class="lang_switcher">cz</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/de/"><div class="lang_img"><img src="/template/img/lang/de.png" alt=""></div><div class="lang_name">DE</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/it/"><div class="lang_img"><img src="/template/img/lang/it.png" alt=""></div><div class="lang_name">IT</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header_mob">
+<div class="header_mob_menu">
+<div class="header_mob_menu_hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="header_mob_logo">
+<a href="https://nottabelle.com/cz/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+<div class="header_mob_cart">
+<a href="https://nottabelle.com/cz/cart" class="cart_popup_href"><div class="site_cart_counter">0</div></a>
+</div>
+<div class="header_mob_ul">
+<ul class="header_mob_ul_navigator">
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/cz/ruze-ve-skle/">
+<span class="menu_title">Růže ve skle</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">KATALOG</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/mini/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/premium/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">King</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">DODATEČNĚ</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/darkova-krabicka-ruze/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Dárková krabička</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/gravirovani/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Gravírování</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/cz/medvidci-z-ruzi/">
+<span class="menu_title">Medvídci z růží</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">VELIKOST MEDVÍDKŮ:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/bear-25cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Medvídek - 25 см</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/medvidek-35cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Medvídek - 35 см</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/medvidek-55cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Medvídek - 55см</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">DODATEČNĚ</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/darkova-krabicka-medvidek/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Dárková krabička</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/cz/kraska-a-zvire/">
+<span class="menu_title">Kráska a Zvíře </span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">KATALOG</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/ruze-kraska-a-zvire/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Růže ve skle Kráska a Zvíře </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/cajova-souprava-z-pohadky-kraska-a-zvire/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Čajová souprava</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li>
+<a class="menu-item-link icon-left" href="https://nottabelle.com/cz/trvanlive-kytice/">
+<span class="menu_title">Trvanlivé kytice</span>
+</a>
+<i class="icon-has-children-mob fa fa-angle-down"></i> <div class="sub-menu-wrapper-mob">
+<div class="sub-menu-inner-mob">
+<ul class="sub-menu-mob">
+<li>
+<a class="menu-item-link-mob" href="#">
+<span class="menu_title">KATALOG</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/kytice-forever/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Trvanlivé kytice «Forever»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/kytice-romantic/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Trvanlivé kytice «Romantic»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/kytice-love/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Trvanlivé kytice «Love»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link-mob icon-left " href="https://nottabelle.com/cz/kytice-princess/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title-mob">Trvanlivé kytice «Princess»</span>
+</a>
+</li>
+</ul>
+ </div>
+</div>
+</li>
+<li><a href="/cz/platba/">Platba </a></li>
+<li><a href="/cz/doruceni/">Doručení</a></li>
+<li><a href="/cz/kontakt/">Kontakt</a></li>
+<li class="mob_lang">
+<div class="mob_lang_current">Jazyk:</div>
+<div class="mob_lang_switch">
+<span>cz</span>
+<a href="https://nottabelle.com/eu/">EU</a>
+<a href="https://nottabelle.com/uk/">UK</a>
+<a href="https://nottabelle.com/fr/">FR</a>
+<a href="https://nottabelle.com/de/">DE</a>
+<a href="https://nottabelle.com/us/">US</a>
+<a href="https://nottabelle.com/it/">IT</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="header_top">
+<div class="container delivery__container">
+<div class="row align-items-center justify-content-between">
+<div class="col nopadding hidden-xs hidden-sm">
+<div class="content-text">
+<span>
+<i class="fa fa-phone mgr10"></i><a class="mgr20 newfonts" href="tel:+420732106875">+420 732 106 875</a>
+</span>
+</div>
+</div>
+<div class="col-md-auto text-center nopadding delivery__col">
+<div class="content-text">
+<div class="earn">
+<span> </span>
+<span><a style="color: #e14267;" href="#"></a></span> </div>
+<div class="delivery">
+Doprava zdarma <div class="delivery__popup">
+Bezplatné doručení po celé České republice </div>
+</div>
+</div>
+</div>
+<div class="col text-right nopadding lang__col">
+<div class="content-text flex-link">
+<span class="top_link"></span>
+<div class="lang">
+<div class="lang_current">
+Jazyk: <span class="lang_switcher">cz</span>
+</div>
+<div class="lang_select">
+<ul class="lang_items">
+<li class="lang_item"><a href="https://nottabelle.com/eu/"><div class="lang_img"><img src="/template/img/lang/eu.png" alt=""></div><div class="lang_name">EU</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/uk/"><div class="lang_img"><img src="/template/img/lang/uk.png" alt=""></div><div class="lang_name">UK</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/fr/"><div class="lang_img"><img src="/template/img/lang/fr.png" alt=""></div><div class="lang_name">FR</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/de/"><div class="lang_img"><img src="/template/img/lang/de.png" alt=""></div><div class="lang_name">DE</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/us/"><div class="lang_img"><img src="/template/img/lang/us.png" alt=""></div><div class="lang_name">US</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/es/"><div class="lang_img"><img src="/template/img/lang/es.png" alt=""></div><div class="lang_name">ES</div></a></li>
+<li class="lang_item"><a href="https://nottabelle.com/it/"><div class="lang_img"><img src="/template/img/lang/it.png" alt=""></div><div class="lang_name">IT</div></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header_middle">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-auto nopadding">
+<div class="content-logo">
+<a href="https://nottabelle.com/cz/"><img src="/template/img/logo.png" alt="Logo" srcset="/template/img/logo2x.png 2x"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+ <div class="header_bottom">
+<div class="container">
+<div class="row align-items-center justify-content-center">
+<div class="col-12">
+
+<div role="navigation">
+<div class="site_navigator_outer">
+<div class="site_navigator_inner">
+<ul class="site_navigator" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/cz/ruze-ve-skle/">
+<span class="menu_title" itemprop=name>Růže ve skle</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">KATALOG</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/mini/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Mini</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/premium/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Premium</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/premium-x/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Premium X</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/king/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">King</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">DODATEČNĚ</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/darkova-krabicka-ruze/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Dárková krabička</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/gravirovani/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Gravírování</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/cz/ruze-ve-skle/" data-img="https://nottabelle.com/data/img/menu/ce93d29f0a7125511f29eaf9a2071d1c.png">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/ce93d29f0a7125511f29eaf9a2071d1c.png" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/cz/medvidci-z-ruzi/">
+<span class="menu_title" itemprop=name>Medvídci z růží</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">VELIKOST MEDVÍDKŮ:</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/bear-25cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Medvídek - 25 см</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/medvidek-35cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Medvídek - 35 см</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/medvidek-55cm/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Medvídek - 55см</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">DODATEČNĚ</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/darkova-krabicka-medvidek/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Dárková krabička</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/cz/medvidci-z-ruzi/" data-img="https://nottabelle.com/data/img/menu/87ee286dce9587cd9c2ba711e1f05902.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/87ee286dce9587cd9c2ba711e1f05902.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/cz/kraska-a-zvire/">
+<span class="menu_title" itemprop=name>Kráska a Zvíře </span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">KATALOG</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/ruze-kraska-a-zvire/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Růže ve skle Kráska a Zvíře </span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/cajova-souprava-z-pohadky-kraska-a-zvire/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Čajová souprava</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/cz/kraska-a-zvire/" data-img="https://nottabelle.com/data/img/menu/e7b90537420bf1c3514862b147f5880e.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/e7b90537420bf1c3514862b147f5880e.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="li-has-children">
+<a itemprop=url class="menu-item-link icon-left" href="https://nottabelle.com/cz/trvanlive-kytice/">
+<span class="menu_title" itemprop=name>Trvanlivé kytice</span>
+<i class="icon-has-children fa fa-angle-down"></i> </a>
+<div class="sub-menu-wrapper">
+<div class="sub-menu-inner">
+<ul class="sub-menu">
+<li>
+<a class="menu-item-link" href="#">
+<span class="menu_title">KATALOG</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/kytice-forever/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Trvanlivé kytice «Forever»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/kytice-romantic/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Trvanlivé kytice «Romantic»</span>
+</a>
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/kytice-love/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Trvanlivé kytice «Love»</span>
+</a>
+
+</li>
+<li>
+<a itemprop=url class="menu-item-link icon-left " href="https://nottabelle.com/cz/kytice-princess/" data-img="https://nottabelle.com/data/img/menu/">
+<span itemprop=name class="menu_title">Trvanlivé kytice «Princess»</span>
+</a>
+</li>
+</ul>
+<ul class="sub-menu">
+<li>
+<a itemprop=url class="menu-item-link icon-left change_img" href="https://nottabelle.com/cz/trvanlive-kytice/" data-img="https://nottabelle.com/data/img/menu/f119c0e7468c2dfff3dc66621cb8c67a.jpg">
+<span itemprop=name class="menu_title"><img src="https://nottabelle.com/data/img/menu/f119c0e7468c2dfff3dc66621cb8c67a.jpg" alt=""></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="site_cart_outer">
+<div class="site_cart_inner"><a class="cart_popup_href" href="#">Košík</a></div>
+<div class="site_cart_counter"></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="category_first">
+<div class="category_first_bg" style="background-image: url(/template/img/c11.jpg);">
+<div class="container category_firt_info">
+<div class="row">
+<div class="col-12 col-md-6 col-xl-6">
+<h1>Růže ve skle </h1> <h3>Reálná živá růže ve skle, která vás bude těšit v průběhu 5 let.</h3> <p>Máme 3 druhů růží, od malé až po obrovskou, 16 různých barev. Vyberte si růži, která se vám líbí!</p> <div class="scroll-down"><a class="container-arrow scroll-to smoothscroll" href="#catalog_href"><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a></div>
+</div>
+</div>
+<style>
+				@media (max-width: 568px) {
+					#category_first_numbers img {display: none;}
+					.category_first_bg {background-image: url(/template/img/rozy-v-kolbe-mob.jpg)!important;background-position: center bottom; padding-bottom: 400px; margin-bottom: 0;}
+					.category_first_bg:before, .category_info:before {display: none; }
+				}
+				</style>
+</div>
+</div>
+<div class="container_big" id="category_first_numbers">
+<div class="row">
+<div class="col-md-6 col-12">
+<img src="/template/img/category_firt_img.jpg" alt="" class="category_firt_img">
+</div>
+<div class="col-md-6 col-12">
+<div class="category_firt_desk">
+<p>Růže byla vytvořena podle pohádky Kráska a zvíře. Díky naší růži si každá dívka může splnit svůj dětský sen a stát se princeznou!</p>
+<p>Používáme stabilizované růže, vypěstované na naší vlastní plantáži v Ekvádoru. Díky speciální technologii stabilizace vás růže bude těšit v průběhu 5 let.</p> </div>
+<div class="category_firt_counters">
+<div class="category_firt_counter">
+<div class="category_firt_counter_number"><span>3</span></div>
+<div class="category_firt_counter_title">roky na trhu</div> </div>
+<div class="category_firt_counter">
+<div class="category_firt_counter_number"><span>16</span></div>
+<div class="category_firt_counter_title">odstínů růží</div> </div>
+<div class="category_firt_counter">
+<div class="category_firt_counter_number"><span>50000</span>+</div>
+<div class="category_firt_counter_title">dívek a žen potěšila naše růže</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="catalog" id="catalog_href">
+<div class="container_big">
+<div class="row justify-content-center">
+<div class="col-12">
+<div class="catalog_cat">
+<ul class="catalog_cat_change">
+<li><a class="catId" data-filter=".catId128" data-href="https://nottabelle.com/cz/mini/">
+Mini</a></li> <li><a class="catId" data-filter=".catId129" data-href="https://nottabelle.com/cz/premium/">
+Premium</a></li> <li><a class="catId" data-filter=".catId473" data-href="https://nottabelle.com/cz/premium-x/">
+Premium X</a></li> <li><a class="catId" data-filter=".catId472" data-href="https://nottabelle.com/cz/king/">
+King</a></li> <li><a class="catId" data-filter=".catId130" data-href="https://nottabelle.com/cz/darkova-krabicka-ruze/">
+Dárková krabička</a></li> <li><a class="catId" data-filter=".catId131" data-href="https://nottabelle.com/cz/gravirovani/">
+Gravírování </a></li>
+</ul>
+<script type="1054c26ab5107912af8cdb2f-text/javascript"> jQuery(function($) {if($("ul.catalog_cat_change li").length == 1) {$("ul.catalog_cat_change,.hids-if-one").hide(); } }); </script>
+</div>
+</div>
+</div>
+<div class="row products_wrapper">
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-red/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-red/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/441226fd11c39bf865a15c648850cc6d.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/441226fd11c39bf865a15c648850cc6d.jpg" ></noscript>
+<img class="imageOutput blink image1264-128 lazyload" data-src="https://nottabelle.com/data/img/big/441226fd11c39bf865a15c648850cc6d.jpg" alt="" data-img="1264-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1264-128" src="https://nottabelle.com/data/img/big/441226fd11c39bf865a15c648850cc6d.jpg" alt="" data-img="1264-128" ></noscript>
+<div class="imgHover" data-img="1264-128"></div>
+<img class="imageOutput blink image1265-128 lazyload" data-src="https://nottabelle.com/data/img/big/be5acf3f4a8ece51fd66049cf18b8aa4.jpg" alt="" data-img="1265-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1265-128" src="https://nottabelle.com/data/img/big/be5acf3f4a8ece51fd66049cf18b8aa4.jpg" alt="" data-img="1265-128" ></noscript>
+<div class="imgHover" data-img="1265-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-red/">Mini červená Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="709" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-gently-pink/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-gently-pink/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/f9ab54df779ffd79f7b8767b4f956227.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/f9ab54df779ffd79f7b8767b4f956227.jpg" ></noscript>
+<img class="imageOutput blink image1267-128 lazyload" data-src="https://nottabelle.com/data/img/big/8ad74fe2215a99129ebed2ee07c69b36.jpg" alt="" data-img="1267-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1267-128" src="https://nottabelle.com/data/img/big/8ad74fe2215a99129ebed2ee07c69b36.jpg" alt="" data-img="1267-128" ></noscript>
+<div class="imgHover" data-img="1267-128"></div>
+<img class="imageOutput blink image1266-128 lazyload" data-src="https://nottabelle.com/data/img/big/f9ab54df779ffd79f7b8767b4f956227.jpg" alt="" data-img="1266-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1266-128" src="https://nottabelle.com/data/img/big/f9ab54df779ffd79f7b8767b4f956227.jpg" alt="" data-img="1266-128" ></noscript>
+<div class="imgHover" data-img="1266-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-gently-pink/">Mini jemně růžová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="710" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-champagne/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-champagne/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/99b92077800c2cc6e7185fc28655614b.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/99b92077800c2cc6e7185fc28655614b.jpg" ></noscript>
+<img class="imageOutput blink image1269-128 lazyload" data-src="https://nottabelle.com/data/img/big/deef0f47fd04cbba7b294ab13c8c488b.jpg" alt="" data-img="1269-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1269-128" src="https://nottabelle.com/data/img/big/deef0f47fd04cbba7b294ab13c8c488b.jpg" alt="" data-img="1269-128" ></noscript>
+<div class="imgHover" data-img="1269-128"></div>
+<img class="imageOutput blink image1268-128 lazyload" data-src="https://nottabelle.com/data/img/big/99b92077800c2cc6e7185fc28655614b.jpg" alt="" data-img="1268-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1268-128" src="https://nottabelle.com/data/img/big/99b92077800c2cc6e7185fc28655614b.jpg" alt="" data-img="1268-128" ></noscript>
+<div class="imgHover" data-img="1268-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 240 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-champagne/">Mini šampaňské Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="711" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-blue/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-blue/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/501b865e07a50dcc81683db03c333655.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/501b865e07a50dcc81683db03c333655.jpg" ></noscript>
+<img class="imageOutput blink image1271-128 lazyload" data-src="https://nottabelle.com/data/img/big/b789ac0df60683747342dce39285f655.jpg" alt="" data-img="1271-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1271-128" src="https://nottabelle.com/data/img/big/b789ac0df60683747342dce39285f655.jpg" alt="" data-img="1271-128" ></noscript>
+<div class="imgHover" data-img="1271-128"></div>
+<img class="imageOutput blink image1270-128 lazyload" data-src="https://nottabelle.com/data/img/big/501b865e07a50dcc81683db03c333655.jpg" alt="" data-img="1270-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1270-128" src="https://nottabelle.com/data/img/big/501b865e07a50dcc81683db03c333655.jpg" alt="" data-img="1270-128" ></noscript>
+<div class="imgHover" data-img="1270-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 520 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-blue/">Mini modrá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="712" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-bright-pink/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-bright-pink/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/e87d8400b46e4ed554b02cb2e81e6a84.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/e87d8400b46e4ed554b02cb2e81e6a84.jpg" ></noscript>
+<img class="imageOutput blink image1273-128 lazyload" data-src="https://nottabelle.com/data/img/big/29a0d88a5aaac88c4a6530d8894ec522.jpg" alt="" data-img="1273-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1273-128" src="https://nottabelle.com/data/img/big/29a0d88a5aaac88c4a6530d8894ec522.jpg" alt="" data-img="1273-128" ></noscript>
+<div class="imgHover" data-img="1273-128"></div>
+<img class="imageOutput blink image1272-128 lazyload" data-src="https://nottabelle.com/data/img/big/e87d8400b46e4ed554b02cb2e81e6a84.jpg" alt="" data-img="1272-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1272-128" src="https://nottabelle.com/data/img/big/e87d8400b46e4ed554b02cb2e81e6a84.jpg" alt="" data-img="1272-128" ></noscript>
+<div class="imgHover" data-img="1272-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 520 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-bright-pink/">Mini jasně růžová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="713" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-claret/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-claret/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/9e68b866016bdbfb8502834107984d15.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/9e68b866016bdbfb8502834107984d15.jpg" ></noscript>
+<img class="imageOutput blink image1274-128 lazyload" data-src="https://nottabelle.com/data/img/big/9e68b866016bdbfb8502834107984d15.jpg" alt="" data-img="1274-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1274-128" src="https://nottabelle.com/data/img/big/9e68b866016bdbfb8502834107984d15.jpg" alt="" data-img="1274-128" ></noscript>
+<div class="imgHover" data-img="1274-128"></div>
+<img class="imageOutput blink image1275-128 lazyload" data-src="https://nottabelle.com/data/img/big/a3969099b46c866bd4846af9198738d6.jpg" alt="" data-img="1275-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1275-128" src="https://nottabelle.com/data/img/big/a3969099b46c866bd4846af9198738d6.jpg" alt="" data-img="1275-128" ></noscript>
+<div class="imgHover" data-img="1275-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-claret/">Mini vínově červená Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="714" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-fuchsia/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-fuchsia/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/5226fe238d028789d52899a2dbf13c83.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/5226fe238d028789d52899a2dbf13c83.jpg" ></noscript>
+<img class="imageOutput blink image1277-128 lazyload" data-src="https://nottabelle.com/data/img/big/5ee475c80bc178765a71a31b8e321b21.jpg" alt="" data-img="1277-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1277-128" src="https://nottabelle.com/data/img/big/5ee475c80bc178765a71a31b8e321b21.jpg" alt="" data-img="1277-128" ></noscript>
+<div class="imgHover" data-img="1277-128"></div>
+<img class="imageOutput blink image1276-128 lazyload" data-src="https://nottabelle.com/data/img/big/5226fe238d028789d52899a2dbf13c83.jpg" alt="" data-img="1276-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1276-128" src="https://nottabelle.com/data/img/big/5226fe238d028789d52899a2dbf13c83.jpg" alt="" data-img="1276-128" ></noscript>
+<div class="imgHover" data-img="1276-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 520 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-fuchsia/">Mini fuchsie Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="715" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-orange/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-orange/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529505097_336cf71f138fdb0a9627befb68896d73.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529505097_336cf71f138fdb0a9627befb68896d73.jpg" ></noscript>
+<img class="imageOutput blink image2412-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505097_336cf71f138fdb0a9627befb68896d73.jpg" alt="forever orange rose in glass dome - mini" data-img="2412-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2412-128" src="https://nottabelle.com/data/img/big/1529505097_336cf71f138fdb0a9627befb68896d73.jpg" alt="forever orange rose in glass dome - mini" data-img="2412-128" ></noscript>
+<div class="imgHover" data-img="2412-128"></div>
+<img class="imageOutput blink image2413-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505097_84f3f26d61ff63c7fd11ef101a16c2ab.jpg" alt="forever orange rose - mini" data-img="2413-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2413-128" src="https://nottabelle.com/data/img/big/1529505097_84f3f26d61ff63c7fd11ef101a16c2ab.jpg" alt="forever orange rose - mini" data-img="2413-128" ></noscript>
+<div class="imgHover" data-img="2413-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 240 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-orange/">Mini oranžová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1390" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-lavender/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-lavender/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529505152_c41c1265d79bbbc4c134863a8803ff58.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529505152_c41c1265d79bbbc4c134863a8803ff58.jpg" ></noscript>
+<img class="imageOutput blink image2414-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505152_c41c1265d79bbbc4c134863a8803ff58.jpg" alt="forever lavender rose in glass dome - mini" data-img="2414-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2414-128" src="https://nottabelle.com/data/img/big/1529505152_c41c1265d79bbbc4c134863a8803ff58.jpg" alt="forever lavender rose in glass dome - mini" data-img="2414-128" ></noscript>
+<div class="imgHover" data-img="2414-128"></div>
+<img class="imageOutput blink image2415-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505152_2e9d8d00617a54a01d7d698d109cd709.jpg" alt="forever lavender rose - mini" data-img="2415-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2415-128" src="https://nottabelle.com/data/img/big/1529505152_2e9d8d00617a54a01d7d698d109cd709.jpg" alt="forever lavender rose - mini" data-img="2415-128" ></noscript>
+<div class="imgHover" data-img="2415-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 520 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-lavender/">Mini levandulová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1391" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-yellow/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-yellow/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529505209_1744da4c06a3fafc8d796ee463f35ed8.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529505209_1744da4c06a3fafc8d796ee463f35ed8.jpg" ></noscript>
+<img class="imageOutput blink image2424-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505209_1744da4c06a3fafc8d796ee463f35ed8.jpg" alt="forever yellow rose in glass dome - mini" data-img="2424-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2424-128" src="https://nottabelle.com/data/img/big/1529505209_1744da4c06a3fafc8d796ee463f35ed8.jpg" alt="forever yellow rose in glass dome - mini" data-img="2424-128" ></noscript>
+<div class="imgHover" data-img="2424-128"></div>
+<img class="imageOutput blink image2425-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505209_f514a5d72d752fcbcb986d5e5fe9084d.jpg" alt="forever yellow rose - mini" data-img="2425-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2425-128" src="https://nottabelle.com/data/img/big/1529505209_f514a5d72d752fcbcb986d5e5fe9084d.jpg" alt="forever yellow rose - mini" data-img="2425-128" ></noscript>
+<div class="imgHover" data-img="2425-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 240 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-yellow/">Mini žlutá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1396" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-black/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-black/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529505221_bf55e2e080bedfb357e0ae4f23adc404.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529505221_bf55e2e080bedfb357e0ae4f23adc404.jpg" ></noscript>
+<img class="imageOutput blink image2426-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505221_bf55e2e080bedfb357e0ae4f23adc404.jpg" alt="forever black rose in glass dome - mini" data-img="2426-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2426-128" src="https://nottabelle.com/data/img/big/1529505221_bf55e2e080bedfb357e0ae4f23adc404.jpg" alt="forever black rose in glass dome - mini" data-img="2426-128" ></noscript>
+<div class="imgHover" data-img="2426-128"></div>
+<img class="imageOutput blink image2427-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505221_9c8081e34981ab59d12aeca1f77007a1.jpg" alt="forever black rose - mini" data-img="2427-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2427-128" src="https://nottabelle.com/data/img/big/1529505221_9c8081e34981ab59d12aeca1f77007a1.jpg" alt="forever black rose - mini" data-img="2427-128" ></noscript>
+<div class="imgHover" data-img="2427-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 520 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-black/">Mini černá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1397" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId128">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/mini-white/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/mini-white/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529505229_f569c8ecefc84f9feb2464eda9527d5a.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529505229_f569c8ecefc84f9feb2464eda9527d5a.jpg" ></noscript>
+<img class="imageOutput blink image2428-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505229_f569c8ecefc84f9feb2464eda9527d5a.jpg" alt="forever white rose in glass dome - mini" data-img="2428-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2428-128" src="https://nottabelle.com/data/img/big/1529505229_f569c8ecefc84f9feb2464eda9527d5a.jpg" alt="forever white rose in glass dome - mini" data-img="2428-128" ></noscript>
+<div class="imgHover" data-img="2428-128"></div>
+<img class="imageOutput blink image2429-128 lazyload" data-src="https://nottabelle.com/data/img/big/1529505229_d7bd58c306a241fd400de599d9b80c3f.jpg" alt="forever white rose - mini" data-img="2429-128" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2429-128" src="https://nottabelle.com/data/img/big/1529505229_d7bd58c306a241fd400de599d9b80c3f.jpg" alt="forever white rose - mini" data-img="2429-128" ></noscript>
+<div class="imgHover" data-img="2429-128"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 240 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">2 800 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/mini-white/">Mini bílá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1398" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-red/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-red/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/cfbc63bfb4535f8df643781c98cbd562.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/cfbc63bfb4535f8df643781c98cbd562.jpg" ></noscript>
+<img class="imageOutput blink image1244-129 lazyload" data-src="https://nottabelle.com/data/img/big/cfbc63bfb4535f8df643781c98cbd562.jpg" alt="" data-img="1244-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1244-129" src="https://nottabelle.com/data/img/big/cfbc63bfb4535f8df643781c98cbd562.jpg" alt="" data-img="1244-129" ></noscript>
+<div class="imgHover" data-img="1244-129"></div>
+<img class="imageOutput blink image1245-129 lazyload" data-src="https://nottabelle.com/data/img/big/3910773d2089f166730b3536c561d28c.jpg" alt="" data-img="1245-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1245-129" src="https://nottabelle.com/data/img/big/3910773d2089f166730b3536c561d28c.jpg" alt="" data-img="1245-129" ></noscript>
+<div class="imgHover" data-img="1245-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-red/">Premium červená Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="699" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-gently-pink/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-gently-pink/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/e8028691a3479f8610d64f349c72c8e8.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/e8028691a3479f8610d64f349c72c8e8.jpg" ></noscript>
+ <img class="imageOutput blink image1247-129 lazyload" data-src="https://nottabelle.com/data/img/big/b5bb63b9be2f78769817d92f183a67dd.jpg" alt="" data-img="1247-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1247-129" src="https://nottabelle.com/data/img/big/b5bb63b9be2f78769817d92f183a67dd.jpg" alt="" data-img="1247-129" ></noscript>
+<div class="imgHover" data-img="1247-129"></div>
+<img class="imageOutput blink image1246-129 lazyload" data-src="https://nottabelle.com/data/img/big/e8028691a3479f8610d64f349c72c8e8.jpg" alt="" data-img="1246-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1246-129" src="https://nottabelle.com/data/img/big/e8028691a3479f8610d64f349c72c8e8.jpg" alt="" data-img="1246-129" ></noscript>
+<div class="imgHover" data-img="1246-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-gently-pink/">Premium jemně růžová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="700" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-champagne/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-champagne/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/406cb640910f5c2b3dd28125249bff35.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/406cb640910f5c2b3dd28125249bff35.jpg" ></noscript>
+<img class="imageOutput blink image1249-129 lazyload" data-src="https://nottabelle.com/data/img/big/cbbd633c10b642acbe690dd33e6bfe22.jpg" alt="" data-img="1249-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1249-129" src="https://nottabelle.com/data/img/big/cbbd633c10b642acbe690dd33e6bfe22.jpg" alt="" data-img="1249-129" ></noscript>
+<div class="imgHover" data-img="1249-129"></div>
+<img class="imageOutput blink image1248-129 lazyload" data-src="https://nottabelle.com/data/img/big/406cb640910f5c2b3dd28125249bff35.jpg" alt="" data-img="1248-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1248-129" src="https://nottabelle.com/data/img/big/406cb640910f5c2b3dd28125249bff35.jpg" alt="" data-img="1248-129" ></noscript>
+<div class="imgHover" data-img="1248-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 880 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-champagne/">Premium šampaňské Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="701" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-blue/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-blue/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1af913df4d1de3d7420b7ddf541940ca.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1af913df4d1de3d7420b7ddf541940ca.jpg" ></noscript>
+<img class="imageOutput blink image1251-129 lazyload" data-src="https://nottabelle.com/data/img/big/95c9bd742197b99eb42c6a1d3504fb5c.jpg" alt="" data-img="1251-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1251-129" src="https://nottabelle.com/data/img/big/95c9bd742197b99eb42c6a1d3504fb5c.jpg" alt="" data-img="1251-129" ></noscript>
+<div class="imgHover" data-img="1251-129"></div>
+<img class="imageOutput blink image1250-129 lazyload" data-src="https://nottabelle.com/data/img/big/1af913df4d1de3d7420b7ddf541940ca.jpg" alt="" data-img="1250-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1250-129" src="https://nottabelle.com/data/img/big/1af913df4d1de3d7420b7ddf541940ca.jpg" alt="" data-img="1250-129" ></noscript>
+<div class="imgHover" data-img="1250-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 240 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-blue/">Premium modrá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="702" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-bright-pink/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-bright-pink/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/03433ba2a49c966ae8ebb8ac6c20acc5.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/03433ba2a49c966ae8ebb8ac6c20acc5.jpg" ></noscript>
+<img class="imageOutput blink image1253-129 lazyload" data-src="https://nottabelle.com/data/img/big/f02b29bd4db4bf19fc37bf48d5314833.jpg" alt="" data-img="1253-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1253-129" src="https://nottabelle.com/data/img/big/f02b29bd4db4bf19fc37bf48d5314833.jpg" alt="" data-img="1253-129" ></noscript>
+<div class="imgHover" data-img="1253-129"></div>
+<img class="imageOutput blink image1252-129 lazyload" data-src="https://nottabelle.com/data/img/big/03433ba2a49c966ae8ebb8ac6c20acc5.jpg" alt="" data-img="1252-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1252-129" src="https://nottabelle.com/data/img/big/03433ba2a49c966ae8ebb8ac6c20acc5.jpg" alt="" data-img="1252-129" ></noscript>
+<div class="imgHover" data-img="1252-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 240 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-bright-pink/">Premium jasně růžová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="704" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-purple/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-purple/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/d8fe1e18cdbe28c974dc2d77b17b8716.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/d8fe1e18cdbe28c974dc2d77b17b8716.jpg" ></noscript>
+<img class="imageOutput blink image1263-129 lazyload" data-src="https://nottabelle.com/data/img/big/286500481cb3ed2fdf9646a16eb8a9fa.jpg" alt="" data-img="1263-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1263-129" src="https://nottabelle.com/data/img/big/286500481cb3ed2fdf9646a16eb8a9fa.jpg" alt="" data-img="1263-129" ></noscript>
+<div class="imgHover" data-img="1263-129"></div>
+<img class="imageOutput blink image1262-129 lazyload" data-src="https://nottabelle.com/data/img/big/d8fe1e18cdbe28c974dc2d77b17b8716.jpg" alt="" data-img="1262-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1262-129" src="https://nottabelle.com/data/img/big/d8fe1e18cdbe28c974dc2d77b17b8716.jpg" alt="" data-img="1262-129" ></noscript>
+<div class="imgHover" data-img="1262-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 240 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-purple/">Premium fialová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="707" status="1">
+Koupit </a>
+ </div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-lavender/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-lavender/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/5dbacb3352015ebe7cc3f4242b27be36.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/5dbacb3352015ebe7cc3f4242b27be36.jpg" ></noscript>
+<img class="imageOutput blink image1259-129 lazyload" data-src="https://nottabelle.com/data/img/big/bec51cda3c7798bb2e2f6c929b4cbac5.jpg" alt="" data-img="1259-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1259-129" src="https://nottabelle.com/data/img/big/bec51cda3c7798bb2e2f6c929b4cbac5.jpg" alt="" data-img="1259-129" ></noscript>
+<div class="imgHover" data-img="1259-129"></div>
+<img class="imageOutput blink image1258-129 lazyload" data-src="https://nottabelle.com/data/img/big/5dbacb3352015ebe7cc3f4242b27be36.jpg" alt="" data-img="1258-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1258-129" src="https://nottabelle.com/data/img/big/5dbacb3352015ebe7cc3f4242b27be36.jpg" alt="" data-img="1258-129" ></noscript>
+<div class="imgHover" data-img="1258-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 240 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-lavender/">Premium levandulová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="708" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-turquoise/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-turquoise/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504386_c873ceaa2f61a15024bd201f850fdb8b.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504386_c873ceaa2f61a15024bd201f850fdb8b.jpg" ></noscript>
+<img class="imageOutput blink image2390-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504386_c873ceaa2f61a15024bd201f850fdb8b.jpg" alt="forever turquoise rose in glass dome - premium" data-img="2390-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2390-129" src="https://nottabelle.com/data/img/big/1529504386_c873ceaa2f61a15024bd201f850fdb8b.jpg" alt="forever turquoise rose in glass dome - premium" data-img="2390-129" ></noscript>
+<div class="imgHover" data-img="2390-129"></div>
+<img class="imageOutput blink image2391-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504386_842ee5d36fa047dcf6e9941a3b5adab1.jpg" alt="forever turquoise rose - premium" data-img="2391-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2391-129" src="https://nottabelle.com/data/img/big/1529504386_842ee5d36fa047dcf6e9941a3b5adab1.jpg" alt="forever turquoise rose - premium" data-img="2391-129" ></noscript>
+<div class="imgHover" data-img="2391-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-turquoise/">Premium tyrkysová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1379" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-orange/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-orange/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504435_0f7cd62b3911716b6af509dbf8bc356a.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504435_0f7cd62b3911716b6af509dbf8bc356a.jpg" ></noscript>
+<img class="imageOutput blink image2392-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504435_0f7cd62b3911716b6af509dbf8bc356a.jpg" alt="forever orange rose in glass dome - premium" data-img="2392-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2392-129" src="https://nottabelle.com/data/img/big/1529504435_0f7cd62b3911716b6af509dbf8bc356a.jpg" alt="forever orange rose in glass dome - premium" data-img="2392-129" ></noscript>
+<div class="imgHover" data-img="2392-129"></div>
+<img class="imageOutput blink image2393-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504435_d9557f489b5ede2c16a78d338db7e7a5.jpg" alt="forever orange rose - premium" data-img="2393-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2393-129" src="https://nottabelle.com/data/img/big/1529504435_d9557f489b5ede2c16a78d338db7e7a5.jpg" alt="forever orange rose - premium" data-img="2393-129" ></noscript>
+<div class="imgHover" data-img="2393-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 880 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-orange/">Premium oranžová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1380" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz//premium-lavender/" onclick="window.location.href = 'https://nottabelle.com/cz//premium-lavender/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504446_4cb354c9bf4b7eb2ff455df563e54ea7.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504446_4cb354c9bf4b7eb2ff455df563e54ea7.jpg" ></noscript>
+<img class="imageOutput blink image2394-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504446_4cb354c9bf4b7eb2ff455df563e54ea7.jpg" alt="forever lavender rose in glass dome - premium" data-img="2394-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2394-129" src="https://nottabelle.com/data/img/big/1529504446_4cb354c9bf4b7eb2ff455df563e54ea7.jpg" alt="forever lavender rose in glass dome - premium" data-img="2394-129" ></noscript>
+<div class="imgHover" data-img="2394-129"></div>
+<img class="imageOutput blink image2395-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504446_d240e3610cfa643178cfef6b975e7d48.jpg" alt="forever lavender rose - premium" data-img="2395-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2395-129" src="https://nottabelle.com/data/img/big/1529504446_d240e3610cfa643178cfef6b975e7d48.jpg" alt="forever lavender rose - premium" data-img="2395-129" ></noscript>
+<div class="imgHover" data-img="2395-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 240 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz//premium-lavender/">Premium levandulová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1381" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-light-blue/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-light-blue/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504455_39f97dbd47108b7e21757fc7153b435e.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504455_39f97dbd47108b7e21757fc7153b435e.jpg" ></noscript>
+<img class="imageOutput blink image2396-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504455_39f97dbd47108b7e21757fc7153b435e.jpg" alt="forever light blue rose in glass dome - premium" data-img="2396-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2396-129" src="https://nottabelle.com/data/img/big/1529504455_39f97dbd47108b7e21757fc7153b435e.jpg" alt="forever light blue rose in glass dome - premium" data-img="2396-129" ></noscript>
+<div class="imgHover" data-img="2396-129"></div>
+<img class="imageOutput blink image2397-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504455_ead7fe8318a0c44ae3bbad9e99ca734d.jpg" alt="forever light blue rose - premium" data-img="2397-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2397-129" src="https://nottabelle.com/data/img/big/1529504455_ead7fe8318a0c44ae3bbad9e99ca734d.jpg" alt="forever light blue rose - premium" data-img="2397-129" ></noscript>
+<div class="imgHover" data-img="2397-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 880 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-light-blue/">Premium světle modrá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1382" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-peach/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-peach/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504466_69c75697cfdbb242cb36b65d287df197.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504466_69c75697cfdbb242cb36b65d287df197.jpg" ></noscript>
+<img class="imageOutput blink image2398-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504466_69c75697cfdbb242cb36b65d287df197.jpg" alt="forever peach rose in glass dome - premium" data-img="2398-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2398-129" src="https://nottabelle.com/data/img/big/1529504466_69c75697cfdbb242cb36b65d287df197.jpg" alt="forever peach rose in glass dome - premium" data-img="2398-129" ></noscript>
+<div class="imgHover" data-img="2398-129"></div>
+<img class="imageOutput blink image2399-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504466_6645a89e9b44db0308e2160aa09b0cba.jpg" alt="forever peach rose - premium" data-img="2399-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2399-129" src="https://nottabelle.com/data/img/big/1529504466_6645a89e9b44db0308e2160aa09b0cba.jpg" alt="forever peach rose - premium" data-img="2399-129" ></noscript>
+<div class="imgHover" data-img="2399-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 880 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-peach/">Premium broskvová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1383" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz//premium-burgundy/" onclick="window.location.href = 'https://nottabelle.com/cz//premium-burgundy/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504505_f82a91ee88ea58897d600fc17d492830.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504505_f82a91ee88ea58897d600fc17d492830.jpg" ></noscript>
+<img class="imageOutput blink image2402-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504505_f82a91ee88ea58897d600fc17d492830.jpg" alt="forever burgundy rose in glass dome - premium" data-img="2402-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2402-129" src="https://nottabelle.com/data/img/big/1529504505_f82a91ee88ea58897d600fc17d492830.jpg" alt="forever burgundy rose in glass dome - premium" data-img="2402-129" ></noscript>
+<div class="imgHover" data-img="2402-129"></div>
+<img class="imageOutput blink image2403-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504505_3660cf18288ec4f131807b8dee786bee.jpg" alt="forever burgundy rose - premium" data-img="2403-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2403-129" src="https://nottabelle.com/data/img/big/1529504505_3660cf18288ec4f131807b8dee786bee.jpg" alt="forever burgundy rose - premium" data-img="2403-129" ></noscript>
+<div class="imgHover" data-img="2403-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz//premium-burgundy/">Premium vínově červená Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1385" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-yellow/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-yellow/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504514_77172a19fa11b7c96dd1309188bbafdf.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504514_77172a19fa11b7c96dd1309188bbafdf.jpg" ></noscript>
+<img class="imageOutput blink image2404-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504514_77172a19fa11b7c96dd1309188bbafdf.jpg" alt="forever yellow rose in glass dome - premium" data-img="2404-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2404-129" src="https://nottabelle.com/data/img/big/1529504514_77172a19fa11b7c96dd1309188bbafdf.jpg" alt="forever yellow rose in glass dome - premium" data-img="2404-129" ></noscript>
+<div class="imgHover" data-img="2404-129"></div>
+<img class="imageOutput blink image2405-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504514_376e292f102876f8b9b61b5d93164ce8.jpg" alt="forever yellow rose - premium" data-img="2405-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2405-129" src="https://nottabelle.com/data/img/big/1529504514_376e292f102876f8b9b61b5d93164ce8.jpg" alt="forever yellow rose - premium" data-img="2405-129" ></noscript>
+<div class="imgHover" data-img="2405-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">2 880 &#75;&#269;</span>
+<div class="skidka_percent">-20%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-yellow/">Premium žlutá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1386" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-black/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-black/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504542_f7b722408edc43b558afc9db506aacce.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504542_f7b722408edc43b558afc9db506aacce.jpg" ></noscript>
+<img class="imageOutput blink image2406-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504542_f7b722408edc43b558afc9db506aacce.jpg" alt="forever black rose in glass dome - premium" data-img="2406-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2406-129" src="https://nottabelle.com/data/img/big/1529504542_f7b722408edc43b558afc9db506aacce.jpg" alt="forever black rose in glass dome - premium" data-img="2406-129" ></noscript>
+<div class="imgHover" data-img="2406-129"></div>
+<img class="imageOutput blink image2407-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504542_2f7f0344fb8fd7f655768c20e76947fb.jpg" alt="forever black rose - premium" data-img="2407-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2407-129" src="https://nottabelle.com/data/img/big/1529504542_2f7f0344fb8fd7f655768c20e76947fb.jpg" alt="forever black rose - premium" data-img="2407-129" ></noscript>
+<div class="imgHover" data-img="2407-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 240 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-black/">Premium černá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1387" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-fuchsia/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-fuchsia/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504548_3bb52c1cf30283db3f5064c59b349d8c.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504548_3bb52c1cf30283db3f5064c59b349d8c.jpg" ></noscript>
+<img class="imageOutput blink image2408-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504548_3bb52c1cf30283db3f5064c59b349d8c.jpg" alt="forever fuchsia rose in glass dome - premium" data-img="2408-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2408-129" src="https://nottabelle.com/data/img/big/1529504548_3bb52c1cf30283db3f5064c59b349d8c.jpg" alt="forever fuchsia rose in glass dome - premium" data-img="2408-129" ></noscript>
+<div class="imgHover" data-img="2408-129"></div>
+<img class="imageOutput blink image2409-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504548_3fd836d2dfb860a806d381d6677cf472.jpg" alt="forever fuchsia rose - premium" data-img="2409-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2409-129" src="https://nottabelle.com/data/img/big/1529504548_3fd836d2dfb860a806d381d6677cf472.jpg" alt="forever fuchsia rose - premium" data-img="2409-129" ></noscript>
+<div class="imgHover" data-img="2409-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 240 &#75;&#269;</span>
+<div class="skidka_percent">-10%</div>
+<span class="old_price">3 600 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-fuchsia/">Premium fuchsie Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="1388" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId129">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-white/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-white/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1529504554_e67f17137dc07720636eb7e0afe18ee9.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1529504554_e67f17137dc07720636eb7e0afe18ee9.jpg" ></noscript>
+<img class="imageOutput blink image2410-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504554_e67f17137dc07720636eb7e0afe18ee9.jpg" alt="forever white rose in glass dome - premium" data-img="2410-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2410-129" src="https://nottabelle.com/data/img/big/1529504554_e67f17137dc07720636eb7e0afe18ee9.jpg" alt="forever white rose in glass dome - premium" data-img="2410-129" ></noscript>
+<div class="imgHover" data-img="2410-129"></div>
+<img class="imageOutput blink image2411-129 lazyload" data-src="https://nottabelle.com/data/img/big/1529504554_d4e7d5946b9a0d6357d85f59f7eda884.jpg" alt="forever white rose - premium" data-img="2411-129" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image2411-129" src="https://nottabelle.com/data/img/big/1529504554_d4e7d5946b9a0d6357d85f59f7eda884.jpg" alt="forever white rose - premium" data-img="2411-129" ></noscript>
+<div class="imgHover" data-img="2411-129"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">3 200 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-white/">Premium bílá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a class="btn notavailability" data-fancybox data-src="#quick_buy" href="javascript:;">brzy se objeví</a>
+
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId473">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-x-blue/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-x-blue/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548592487_1526473877_premium-x-blue.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1548592487_1526473877_premium-x-blue.jpg" ></noscript>
+<img class="imageOutput blink image6209-473 lazyload" data-src="https://nottabelle.com/data/img/big/1548592487_1526473877_premium-x-blue.jpg" alt="Premium X modrá Růže ve skle" data-img="6209-473" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6209-473" src="https://nottabelle.com/data/img/big/1548592487_1526473877_premium-x-blue.jpg" alt="Premium X modrá Růže ve skle" data-img="6209-473" ></noscript>
+<div class="imgHover" data-img="6209-473"></div>
+<img class="imageOutput blink image6210-473 lazyload" data-src="https://nottabelle.com/data/img/big/1548592487_1526473877_premium-x-blue-1.jpg" alt="Premium X modrá Růže ve skle" data-img="6210-473" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6210-473" src="https://nottabelle.com/data/img/big/1548592487_1526473877_premium-x-blue-1.jpg" alt="Premium X modrá Růže ve skle" data-img="6210-473" ></noscript>
+<div class="imgHover" data-img="6210-473"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">4 000 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-x-blue/">Premium X modrá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2762" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId473">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-x-yellow/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-x-yellow/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548592507_1542897497_premium-x-yellow.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1548592507_1542897497_premium-x-yellow.jpg" ></noscript>
+<img class="imageOutput blink image6211-473 lazyload" data-src="https://nottabelle.com/data/img/big/1548592507_1542897497_premium-x-yellow.jpg" alt="Premium X žlutá Růže ve skle" data-img="6211-473" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6211-473" src="https://nottabelle.com/data/img/big/1548592507_1542897497_premium-x-yellow.jpg" alt="Premium X žlutá Růže ve skle" data-img="6211-473" ></noscript>
+<div class="imgHover" data-img="6211-473"></div>
+<img class="imageOutput blink image6212-473 lazyload" data-src="https://nottabelle.com/data/img/big/1548592507_1542897497_premium-x-yellow-1.jpg" alt="Premium X žlutá Růže ve skle" data-img="6212-473" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6212-473" src="https://nottabelle.com/data/img/big/1548592507_1542897497_premium-x-yellow-1.jpg" alt="Premium X žlutá Růže ve skle" data-img="6212-473" ></noscript>
+<div class="imgHover" data-img="6212-473"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">4 000 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-x-yellow/">Premium X žlutá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2763" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId473">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/premium-x-black/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/premium-x-black/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548592515_1542897528_premium-x-black.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1548592515_1542897528_premium-x-black.jpg" ></noscript>
+<img class="imageOutput blink image6213-473 lazyload" data-src="https://nottabelle.com/data/img/big/1548592515_1542897528_premium-x-black.jpg" alt="Premium X černá Růže ve skle" data-img="6213-473" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6213-473" src="https://nottabelle.com/data/img/big/1548592515_1542897528_premium-x-black.jpg" alt="Premium X černá Růže ve skle" data-img="6213-473" ></noscript>
+<div class="imgHover" data-img="6213-473"></div>
+<img class="imageOutput blink image6214-473 lazyload" data-src="https://nottabelle.com/data/img/big/1548592515_1542897528_premium-x-black-1.jpg" alt="Premium X černá Růže ve skle" data-img="6214-473" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6214-473" src="https://nottabelle.com/data/img/big/1548592515_1542897528_premium-x-black-1.jpg" alt="Premium X černá Růže ve skle" data-img="6214-473" ></noscript>
+<div class="imgHover" data-img="6214-473"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">4 000 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/premium-x-black/">Premium X černá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2764" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId472">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/king-red/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/king-red/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548592459_1547645726_king-red.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1548592459_1547645726_king-red.jpg" ></noscript>
+<img class="imageOutput blink image6203-472 lazyload" data-src="https://nottabelle.com/data/img/big/1548592459_1547645726_king-red.jpg" alt="King červená Růže ve skle" data-img="6203-472" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6203-472" src="https://nottabelle.com/data/img/big/1548592459_1547645726_king-red.jpg" alt="King červená Růže ve skle" data-img="6203-472" ></noscript>
+<div class="imgHover" data-img="6203-472"></div>
+<img class="imageOutput blink image6204-472 lazyload" data-src="https://nottabelle.com/data/img/big/1548592459_1547645726_king-red-1.jpg" alt="King červená Růže ve skle" data-img="6204-472" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6204-472" src="https://nottabelle.com/data/img/big/1548592459_1547645726_king-red-1.jpg" alt="King červená Růže ve skle" data-img="6204-472" ></noscript> 
+<div class="imgHover" data-img="6204-472"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">4 250 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/king-red/">King červená Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2759" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId472">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/king-gently-pink/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/king-gently-pink/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548592468_1547645731_king-gently-pink.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1548592468_1547645731_king-gently-pink.jpg" ></noscript>
+<img class="imageOutput blink image6205-472 lazyload" data-src="https://nottabelle.com/data/img/big/1548592468_1547645731_king-gently-pink.jpg" alt="King jemně růžová Růže ve skle" data-img="6205-472" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6205-472" src="https://nottabelle.com/data/img/big/1548592468_1547645731_king-gently-pink.jpg" alt="King jemně růžová Růže ve skle" data-img="6205-472" ></noscript>
+<div class="imgHover" data-img="6205-472"></div>
+<img class="imageOutput blink image6206-472 lazyload" data-src="https://nottabelle.com/data/img/big/1548592468_1547645731_king-gently-pink-1.jpg" alt="King jemně růžová Růže ve skle" data-img="6206-472" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6206-472" src="https://nottabelle.com/data/img/big/1548592468_1547645731_king-gently-pink-1.jpg" alt="King jemně růžová Růže ve skle" data-img="6206-472" ></noscript>
+<div class="imgHover" data-img="6206-472"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">4 250 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/king-gently-pink/">King jemně růžová Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2760" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId472">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/king-blue/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/king-blue/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1548592475_1547645735_king-blue.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1548592475_1547645735_king-blue.jpg" ></noscript>
+<img class="imageOutput blink image6207-472 lazyload" data-src="https://nottabelle.com/data/img/big/1548592475_1547645735_king-blue.jpg" alt="King modrá Růže ve skle" data-img="6207-472" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6207-472" src="https://nottabelle.com/data/img/big/1548592475_1547645735_king-blue.jpg" alt="King modrá Růže ve skle" data-img="6207-472" ></noscript>
+<div class="imgHover" data-img="6207-472"></div>
+<img class="imageOutput blink image6208-472 lazyload" data-src="https://nottabelle.com/data/img/big/1548592475_1547645735_king-blue-1.jpg" alt="King modrá Růže ve skle" data-img="6208-472" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image6208-472" src="https://nottabelle.com/data/img/big/1548592475_1547645735_king-blue-1.jpg" alt="King modrá Růže ve skle" data-img="6208-472" ></noscript>
+<div class="imgHover" data-img="6208-472"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">4 250 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/king-blue/">King modrá Růže ve skle</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="2761" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId130">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/black-box/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/black-box/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/1d4370b0ba64bc66d849780772cd013d.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/1d4370b0ba64bc66d849780772cd013d.jpg" ></noscript>
+<img class="imageOutput blink image1280-130 lazyload" data-src="https://nottabelle.com/data/img/big/057eaa293916b3a8bf437fbcb03e56e2.jpg" alt="" data-img="1280-130" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1280-130" src="https://nottabelle.com/data/img/big/057eaa293916b3a8bf437fbcb03e56e2.jpg" alt="" data-img="1280-130" ></noscript>
+<div class="imgHover" data-img="1280-130"></div>
+<img class="imageOutput blink image1279-130 lazyload" data-src="https://nottabelle.com/data/img/big/e4aea9adec94b336e08c974512d10a11.jpg" alt="" data-img="1279-130" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1279-130" src="https://nottabelle.com/data/img/big/e4aea9adec94b336e08c974512d10a11.jpg" alt="" data-img="1279-130" ></noscript>
+<div class="imgHover" data-img="1279-130"></div>
+<img class="imageOutput blink image1278-130 lazyload" data-src="https://nottabelle.com/data/img/big/1d4370b0ba64bc66d849780772cd013d.jpg" alt="" data-img="1278-130" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1278-130" src="https://nottabelle.com/data/img/big/1d4370b0ba64bc66d849780772cd013d.jpg" alt="" data-img="1278-130" ></noscript>
+<div class="imgHover" data-img="1278-130"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">650 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/black-box/">Černá dárková krabička</a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="716" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-6 productId catId130">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/white-box/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/white-box/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/7952346245f2f2cdc0362e353e7656ca.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/7952346245f2f2cdc0362e353e7656ca.jpg" ></noscript>
+<img class="imageOutput blink image1283-130 lazyload" data-src="https://nottabelle.com/data/img/big/5008a30ef16635d59bbcda255070ee14.jpg" alt="" data-img="1283-130" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1283-130" src="https://nottabelle.com/data/img/big/5008a30ef16635d59bbcda255070ee14.jpg" alt="" data-img="1283-130" ></noscript>
+<div class="imgHover" data-img="1283-130"></div>
+<img class="imageOutput blink image1282-130 lazyload" data-src="https://nottabelle.com/data/img/big/cd0d3ccc47f6b8a6aca7998911c7f9ee.jpg" alt="" data-img="1282-130" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1282-130" src="https://nottabelle.com/data/img/big/cd0d3ccc47f6b8a6aca7998911c7f9ee.jpg" alt="" data-img="1282-130" ></noscript>
+<div class="imgHover" data-img="1282-130"></div>
+<img class="imageOutput blink image1281-130 lazyload" data-src="https://nottabelle.com/data/img/big/7952346245f2f2cdc0362e353e7656ca.jpg" alt="" data-img="1281-130" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1281-130" src="https://nottabelle.com/data/img/big/7952346245f2f2cdc0362e353e7656ca.jpg" alt="" data-img="1281-130" ></noscript>
+<div class="imgHover" data-img="1281-130"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">650 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/white-box/">Bílá dárková krabička</a></h4></div>
+</div>
+<div class="catalog_content_btn" style="text-align: center;">
+<a class="btn notavailability" data-fancybox data-src="#quick_buy" href="javascript:;">brzy se objeví</a>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-4 col-6 productId catId131">
+<div class="catalog_inner">
+<div class="catalog_imgs">
+<a href="https://nottabelle.com/cz/ruze-ve-skle/individualni-gravirovani/" onclick="window.location.href = 'https://nottabelle.com/cz/ruze-ve-skle/individualni-gravirovani/'" class="imgContainer">
+<div class="imgContainerFix">
+<div class="flexFix">
+<img class="imageOutput image1 lazyload" data-src="https://nottabelle.com/data/img/big/47f2033bf6b2ef6ba6a832e306ed96c2.jpg" alt="" data-img="0" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput image1" alt="" data-img="0"  src="https://nottabelle.com/data/img/big/47f2033bf6b2ef6ba6a832e306ed96c2.jpg" ></noscript>
+<img class="imageOutput blink image1285-131 lazyload" data-src="https://nottabelle.com/data/img/big/47f2033bf6b2ef6ba6a832e306ed96c2.jpg" alt="" data-img="1285-131" src="/template/img/nofoto.jpg">
+<noscript><img class="imageOutput blink image1285-131" src="https://nottabelle.com/data/img/big/47f2033bf6b2ef6ba6a832e306ed96c2.jpg" alt="" data-img="1285-131" ></noscript>
+<div class="imgHover" data-img="1285-131"></div>
+</div>
+</div>
+</a>
+</div>
+<div class="catalog_content">
+<div class="catalog_content_price">
+<span class="catalog_content_price-text">cena</span>
+<span class="regular_price">650 &#75;&#269;</span>
+</div>
+<div class="catalog_content_title"><h4><a href="https://nottabelle.com/cz/ruze-ve-skle/individualni-gravirovani/">Individuální gravírování </a></h4></div>
+</div>
+<div class="catalog_content_btn">
+<a class="btn not_in_cart" id="719" status="1">
+Koupit </a>
+</div>
+</div>
+</div>
+</div>
+<div class="row justify-content-center hids-if-one">
+<div class="col-12">
+<div class="catalog_all">
+<a href="" class="btn2x">Zobrazit vše</a>
+</div>
+<div class="catalog_all_mob">
+<a href="">Zobrazit vše</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container category_first_imgs_block">
+<div class="row  align-items-center">
+<div class="col-lg-7 col-md-6 col-12 category_first_img_block">
+<img class="category_first_img" src="/template/img/img1.jpg" alt="">
+</div>
+<div class="col-lg-5 col-md-6 col-12 category_first_text_block">
+<div class="category_first_text_block_title">
+<h4>Nevyžaduje žádnou péči</h4>
+<p>O naší růži není potřeba se starat, jednoduše dodržujte 2 pravidla: </p>
+<p>- Nezalívejte růži</p>
+<p>- Nevystavujte růži přímému slunečnímu záření</p> </div>
+</div>
+</div>
+<div class="row category_first_imgs_block_left  align-items-center">
+<div class="col-lg-5 col-md-6 col-12 category_first_text_block">
+<div class="category_first_text_block_title">
+<h4>Dodáváme po celém světě</h4>
+<p>Velice pečlivě naší růži před odesláním zabalíme, proto se k vám určitě dostane nepoškozená. Ve mnohých městech dodáváme v den objednávky nebo je možný osobní odběr. A do nejvzdálenějších míst dodáváme zpravidla nejdéle do 5-7 dnů.</p> </div>
+</div>
+<div class="col-lg-7 col-md-6 col-12 category_first_img_block">
+<img class="category_first_img" src="/template/img/img2.jpg" alt="">
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-lg-7 col-md-6 col-12 category_first_img_block">
+<img class="category_first_img" src="/template/img/img3.jpg" alt="">
+</div>
+<div class="col-lg-5 col-md-6 col-12 category_first_text_block">
+<div class="category_first_text_block_title">
+<h4>PLANTÁŽ v Ekvádoru</h4>
+<p>Naše růže pěstujeme na vlastní plantáži Notta&Belle v Ekvádoru. Růže jsou ošetřeny speciálním roztokem, který je absolutně bezpečný. Díky němu růže tak dlouho vypadá čerstvě.</p> </div>
+</div>
+</div>
+</div>
+</section>
+<section class="category_first_seo">
+<div class="container_big">
+<div class="row">
+<div class="col-md-6 col-12"><h2>Rose unter glas – KOUZLO NEVADNOUCÍCH KVĚTŮ</h2>
+<p>Pro nikoho není tajemstvím, že čím bližší a milovanější člověk je, tím více se snažíme pro něho vybrat vhodný dárek, protože chceme, aby se tento dárek nejen líbil, ale aby vyvolal nával pozitivních emocí a obdarovaný si ho na dlouho zapamatoval. A co může být lepší, než cítit se jako kouzelník, který daroval opravdovou pohádku? Aby bylo možné něco vykouzlit, není nutné mít kouzelnou hůlku. Stačí koupit růži ve skle a věnovat ji jako dárek.</p>
+<h2>PŘEKVAPTE SVOJÍ POZORNOSTÍ:</h2>
+<p>Můžete vybrat nejen individuální barvu a styl růže, ale také objednat gravírování. Nabízíme již hotové fráze/výrazy, z nichž si můžete vybrat, anebo můžete napsat vlastní slovo nebo dokonce celou větu, kterou pro vás vygravírujeme.</p>
+<h2>DÁREK, NA KTERÝ SE BUDE DLOUHO VZPOMÍNAT:</h2>
+<p>Živé čerstvě řezané květiny jsou právem považovány za univerzální dárek, protože jsou všemi oblíbené, bez ohledu na věk, záliby nebo společenské postavení a jejich nádherný atraktivní vzhled dodává estetické potěšení. Ale obyčejné živé květiny z obchodu nemohou dlouho vydržet a zachovat si svůj vzhled. Neuběhne ani týden od chvíle, kdy byly seříznuty, a po mládí a čerstvosti květinového poupěte nezůstane ani stopa.</p>
+</div><div class="col-md-6 col-12">
+<p>Právě proto se k vytvoření květinové kompozice Růže ve skle používají růže, které byly ošetřeny stabilizační metodou, která jim dovoluje zachovat si svůj vzhled po tak dlouhou dobu a právem se jim říká Věčně kvetoucí růže - růže, které vydrží 3 až 5 let.</p>
+<h2>JAKÉ PŘEDNOSTI MAJÍ RŮŽE VE SKLE OD Notta&Belle?</h2>
+<ul>
+<p><li>Jsme přesvědčeni, že kouzlo květin, vytvořených přírodou, nemůže být napodobeno uměle, proto používáme pouze čerstvé květiny.</li></p>
+<p><li>Nejvyšší kvalita našich květin, která na trhu nemá obdoby, protože spolupracujeme s globálními dodavateli - Ekvádorem a Španělskem.</li></p>
+<p><li>Všechny naše výrobky jsou před odesláním pečlivě vybírány, proto naši zákazníci dostávají jen ty nejlepší růže, které si zaslouží titul královna květin. Růže ve skle – to je jednoduchý způsob, jak vyzdobit svůj interiér květinami, které nevyžadují žádnou péči.</li></p>
+<p><li>Při předávání takového daru si můžete si být jisti jeho originálností a neopakovatelností.</li></p>
+<p><li>Jakákoli slova budou nadbytečná, pokud existují upřímné a vroucné city, které mohou být vyjádřeny pomocí věnované růže ve skle od Notta&Belle.</li></p>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="ins_slider">
+<div class="ins_slider_ajax"> <div class="ins_slider_outer owl-carousel owl-theme owl-loaded owl-drag"> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BssmMK8lGgv/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8966199a2039faff7b59fc6a99227123/5CC0719C/t51.2885-15/sh0.08/e35/s640x640/47691554_586300675168838_7309958742781916613_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>261</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsgIVoFFy9P/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/ae0d3ec663c1d927ee6b18b8a53a64c5/5CCFCAB8/t51.2885-15/sh0.08/e35/s640x640/47692583_376457746234122_5727284949422679652_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>91</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BsCzaJulDWC/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/c7fb9f48b2c8098ac25d1c869a2a5a4c/5CBC3231/t51.2885-15/sh0.08/e35/s640x640/47692970_2264599137140390_4880586076165398740_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>113</span><span><i class="fa fa-comments-o"></i>6</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BryOG3FlLW-/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2c47d471f05afbc50c20b7af6dc736f7/5CC30F59/t51.2885-15/sh0.08/e35/p640x640/47585173_202816140662752_8592131353444826941_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>166</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrkxoM6FXAr/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e9d8e861bdff2129e558a98a44f3baa6/5CFFF9B6/t51.2885-15/sh0.08/e35/s640x640/46194908_2045624135519482_8077894382289460532_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>139</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Brf0-k8F_Fi/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/4ebc1346378a67428cf768955f358d7d/5D00C64B/t51.2885-15/sh0.08/e35/s640x640/47023143_2298096653803734_7631874680431091353_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>155</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrTDe5OF2wx/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a42cf3197a86f787a2284946cbf81a02/5CC0AD48/t51.2885-15/sh0.08/e35/s640x640/47137609_371315913437484_1280623401876432137_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>175</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrQbjl6Fdbn/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/5b03ef3e14fa768c526082943531e480/5CFA0741/t51.2885-15/sh0.08/e35/s640x640/45932764_313069439539552_4465489449896819141_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>151</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BrCtKZaF7Vl/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/2d84da38ffde6e138791e4be24471f6b/5CFC160E/t51.2885-15/sh0.08/e35/s640x640/46799336_724020061311099_2309859475885835944_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>361</span><span><i class="fa fa-comments-o"></i>486</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bqubj6klR0X/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/d2eb742618fee38e0a9cb24e042561cf/5CF9600C/t51.2885-15/sh0.08/e35/s640x640/44585913_297299114238684_5018540414245072218_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>192</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqhLtGylxH7/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/9204523fce261024d16d0899d9123859/5D010B9F/t51.2885-15/sh0.08/e35/p640x640/44751386_120612545609661_7599332269045901642_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>34</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqaBsloF86O/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/8ca4a7a7e0f446d4f23772d6dbb2d608/5CC34CF6/t51.2885-15/sh0.08/e35/s640x640/46401246_2159326307661358_1950508059172271053_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>235</span><span><i class="fa fa-comments-o"></i>2</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BqIBo1qlYyq/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/19a05abe1477e6b241b6b61ef53243be/5D00CF0A/t51.2885-15/sh0.08/e35/s640x640/44779365_1094186514075192_4479276707098296786_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>281</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/Bp4K1tyFwSk/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/e780ac1958c304c1ee539b208b8ed2c7/5CC4AAEC/t51.2885-15/sh0.08/e35/s640x640/43985043_1931446880485529_7518661978951291557_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>160</span><span><i class="fa fa-comments-o"></i>1</span></div></div></a></div> <div class="item"> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/p/BpkCsj2lfV0/"> <div class="item_img" style="background-image:url(https://scontent.cdninstagram.com/vp/a859992f4f01d07d3324307d09c4a6a5/5CC5C4FB/t51.2885-15/sh0.08/e35/s640x640/44860755_1972414189513049_960754608430554106_n.jpg?_nc_ht=scontent.cdninstagram.com);"><img src="/template/img/blank.png" alt=""></div><div class="item_info"><div class="item_info_count"><span class="mgr10"><i class="fa fa-heart-o"></i>126</span><span><i class="fa fa-comments-o"></i>0</span></div></div></a></div> </div> </div>
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+        jQuery(function($) { 
+            $(".ins_slider_outer").owlCarousel({
+
+                autoplay: true,
+                loop:true,
+                nav:false,
+                responsive:{
+                    0:{
+                        items:2,
+                        nav:false,
+                        autoplayTimeout: 2000
+                    },
+                    568:{
+                        items:5,
+                        nav:false,
+                        autoplayTimeout: 3000
+                    },
+                    1024:{
+                        items:12,
+                        nav:false,
+                        autoplayTimeout: 5000
+                    }
+                }   
+                
+              });                
+
+        });
+    </script>
+<div class="ins_slider_inner">
+<div class="ins_slider_title">
+<div class="ins_slider_title">
+<a href="https://www.instagram.com/nottabelle/" target="_blank">
+<i class="fa fa-instagram"></i>
+<span>Follow @nottabelle</span>
+</a> </div> </div>
+</div>
+</div>
+<input type="hidden" name="lang" value="cz">
+<input type="hidden" name="cur" value="&#75;&#269;">
+<div class="cart_bottom" style="display:none;">
+<div class="container_big">
+<div class="row justify-content-between align-items-center">
+<div class="col-12 col-md-6 cart_bottom_gift_wrap">
+</div>
+<div class="col-12 col-md-6 cart_bottom_links">
+<div class="cart_bottom_href">
+<a>Košík</a>
+<span class="cart_bottom_item">0</span>
+</div>
+<div class="cart_bottom_price">
+<span id="total_val_footer"></span> &#75;&#269; </div>
+<div class="cart_bottom_checkout">
+<a class="cart_popup_href" href="/cz/cart">Odeslat objednávku </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cart_right"></div>
+</div>
+<footer id="footer" class="footer">
+<div class="footer_top">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-6 col-12">
+<div class="footer_textwidget">
+<img src="https://nottabelle.com/template/img/logo-fooer.png" alt="Notta & Belle" srcset="https://nottabelle.com/template/img/logo-fooer.png 1x, https://nottabelle.com/template/img/logo_footer2x.png 2x">
+<div class="footer_contact">
+<p>
+<i class="fa fa-phone mgr10"></i>
+<a href="tel:+420732106875">+420 732 106 875</a>
+</p>
+<p>
+<i class="tc fa fa-envelope-o mgr10"></i>
+<a href="/cdn-cgi/l/email-protection#e79088958b83a7898893938685828b8b82c984888a"><span class="__cf_email__" data-cfemail="1c6b736e70785c727368687d7e79707079327f7371">[email&#160;protected]</span></a>
+</p>
+<p>
+<i class="tc fa fa-home mgr10"></i>
+/
+</p>
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>Instagram</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Katalog</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/cz/ruze-ve-skle">Růže ve skle</a></li>
+<li><a href="/cz/medvidci-z-ruzi">Medvídci z růží</a></li>
+<li><a href="/cz/cajova-souprava">Soupravy</a></li>
+<li><a href="/cz/trvanlive-kytice">Trvanlivé kytice</a></li> </ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">Info</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="/cz/platba/">Platba </a></li>
+<li><a href="/cz/doruceni/">Doručení</a></li>
+<li><a href="/cz/kontakt/">Kontakt</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-12 hidden-xs">
+<h3 class="footer_title">My v síti</h3>
+<div class="footer_menu">
+<ul class="footer_menu_ul">
+<li><a href="https://www.instagram.com/nottabelle/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>Instagram</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-12">
+<h3 class="footer_title">Partnerství</h3>
+<div class="footer_textwidget">
+Chceš se stát oficiálním partnerem<br>Notta & Belle, vyplň formulář.
+<a class="footer_btn" data-fancybox data-src="#partners" href="javascript:;">Vyplnit formulář</a> </div>
+<div id="partners" style="display: none;">
+<form action="/cz/cart/partners" method="POST" id="partners_form" novalidate>
+<input type="hidden" name="language" value="cz">
+<input type="hidden" name="uri" value="nottabelle.com/cz/ruze-ve-skle/">
+<input type="hidden" name="ref" value="">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+Chceš se stát oficiálním partnerem<br>Notta & Belle, Vyplň formulář. </div>
+<div class="form_line">
+<div class="form_title">
+Vaše jméno </div>
+<div class="form_input">
+<input type="text" id="partners_form_name" class="partners_form_input" name="partners_form_name" required="">
+<div class="error-block" id="error_partners_form_name">Vyplňte prosím pole</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+email </div>
+<div class="form_input">
+<input type="text" id="partners_form_mail" class="partners_form_input" name="partners_form_mail" required="">
+<div class="error-block" id="error_partners_form_mail">Vyplňte prosím pole</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Číslo telefonu </div>
+<div class="form_input">
+<input type="text" id="partners_form_phone" class="partners_form_input" name="partners_form_phone" required="">
+<div class="error-block" id="error_partners_form_phone">Vyplňte prosím pole</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="partners_form_submit btn" value="Odeslat">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Vyplněním formuláře souhlasíte se <br><a href="/cz/policy" target="_blank" style="pointer-events: none">Zásadami ochrany osobních údajů</a>
+</div>
+</div>
+</div>
+</div>
+</form>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="1054c26ab5107912af8cdb2f-text/javascript">
+
+jQuery(function($) { 
+
+	$("#partners_form .form_submit").click(function() {
+
+		if($("input[name='partners_form_name']").val()==''){
+			$('#error_partners_form_name').show();
+			$("input[name='partners_form_name']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_name').hide();
+			$("input[name='partners_form_name']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_mail']").val()==''){
+			$('#error_partners_form_mail').show();
+			$("input[name='partners_form_mail']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_mail').hide();
+			$("input[name='partners_form_mail']").closest('.form_input').removeClass('has-error');
+		};
+		if($("input[name='partners_form_phone']").val()==''){
+			$('#error_partners_form_phone').show();
+			$("input[name='partners_form_phone']").closest('.form_input').addClass('has-error');
+			var formresult='error';
+		} else {
+			$('#error_partners_form_phone').hide();
+			$("input[name='partners_form_phone']").closest('.form_input').removeClass('has-error');
+		};	
+
+	    if(formresult != 'error'){
+	        $("#partners_form").submit();
+			$(this).hide();	        
+	    }	
+
+	    return false;
+	});
+
+ 
+						
+
+	$("#partners_form_phone").intlTelInput({
+		separateDialCode:true,
+		autoHideDialCode:false,
+		preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+								initialCountry: 'cz',
+		hiddenInput: "partners_form_phone_full",
+		excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+		utilsScript: "/template/js/utils.js"
+	});									
+
+});									
+</script>
+<div id="quick_buy" style="display: none;">
+<form action="#" method="POST">
+<input type="hidden" name="language" value="cz">
+<div class="form_wrapper">
+<div class="form_inner">
+<div class="form_close" data-fancybox-close></div>
+<div class="form_img">
+<img src="/template/img/time.png" alt="">
+</div>
+<div class="form_text">
+<p>Vážíme si vašeho času</p>
+<p>Pro objednání zanechte telefonní číslo a my se s vámi v nejbližší době spojíme </p> </div>
+<div class="form_line">
+<div class="form_title">Vaše jméno </div>
+<div class="form_input">
+<input type="text" id="quick_buy_name" class="partners_form_input" name="quick_buy_name" required="">
+<div class="error-block" id="error_quick_buy_name">Vyplňte prosím pole</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">email</div>
+<div class="form_input">
+<input type="text" id="quick_buy_mail" class="partners_form_input" name="quick_buy_mail" required="">
+<div class="error-block" id="error_quick_buy_mail">Vyplňte prosím pole</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_title">
+Číslo telefonu </div>
+<div class="form_input">
+<input type="text" id="quick_buy_phone" class="quick_buy_input" name="quick_buy_phone">
+<div class="error-block" id="error_quick_buy_phone">Vyplňte prosím pole</div>
+</div>
+</div>
+<div class="form_line">
+<div class="form_submit">
+<input type="submit" class="quick_buy_submit btn" value="Odeslat objednávku ">
+</div>
+</div>
+<div class="form_line">
+<div class="form_policy">
+Vyplněním formuláře souhlasíte se <br><a href="/cz/policy" target="_blank">Zásadami ochrany osobních údajů</a>
+</div>
+</div>
+</div>
+</div>
+</form>
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+								jQuery(function($) { 
+
+									$("#quick_buy_phone").intlTelInput({
+										separateDialCode:true,
+										autoHideDialCode:false,
+										preferredCountries: ["us", "gb", "fr", "de", "ru", "cz","es","fi","hu","it","no","pl","pt"],
+																				                                        initialCountry: 'cz',
+  										hiddenInput: "who_phonenumber_full",
+  										excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+  										utilsScript: "/template/js/utils.js"
+									});	
+
+									$("#quick_buy form input[type='submit']").click(function() {
+
+										if($("input[name='quick_buy_name']").val()==''){
+											$('#error_quick_buy_name').show();
+											$("input[name='quick_buy_name']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_name').hide();
+											$("input[name='quick_buy_name']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_mail']").val()==''){
+											$('#error_quick_buy_mail').show();
+											$("input[name='quick_buy_mail']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_mail').hide();
+											$("input[name='quick_buy_mail']").closest('.form_input').removeClass('has-error');
+										};
+										if($("input[name='quick_buy_phone']").val()==''){
+											$('#error_quick_buy_phone').show();
+											$("input[name='quick_buy_phone']").closest('.form_input').addClass('has-error');
+											var quick_buy_error='error';
+										} else {
+											$('#error_quick_buy_phone').hide();
+											$("input[name='quick_buy_phone']").closest('.form_input').removeClass('has-error');
+										};										
+										if(quick_buy_error != 'error'){
+										    $("#amb_form").submit();
+										    $(this).hide();
+										}				
+									});																		
+
+								});									
+							</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer_bottom">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-md-6">
+<p>© 2015-2019 Notta & Belle.<br>Patentovaná Značka. Všechna práva vyhrazena ♥</p> </div>
+<div class="col-md-auto">
+<img src="https://nottabelle.com/template/img/payment.svg" alt="Payment method">
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="cookie_footer" style="display: none;">
+<div class="container-fluid">
+<div class="row align-items-center justify-content-between">
+<div class="col-9">
+<div class="cookie_footer_text">
+Tento web používá k poskytování služeb, personalizaci reklam a analýze návštěvnosti soubory cookie. Používáním tohoto webu s tím souhlasíte. <a href="">Informace.</a>
+</div>
+</div>
+<div class="col-3">
+<div class="cookie_footer_close">
+<a>Zavřít</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/jquery.fancybox.min.css">
+<link rel="stylesheet" type="text/css" href="https://nottabelle.com/template/css/intlTelInput.css">
+<script src="https://nottabelle.com/template/js/imagesloaded.pkgd.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/isotope.pkgd.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.fancybox.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.nice-select.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/waypoints.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.counterup.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/intlTelInput.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/jquery.cookie.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/common.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="https://nottabelle.com/template/js/webpjs-0.0.2.min.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<div class="gift_remember" style="display: none;">
+<div class="gift_remember_item gift_remember_item_open">
+<div class="gift_remember_text">
+Je Vám k dispozici dárek! <div class="gift_remember_item_close"></div>
+</div>
+</div>
+</div>
+
+<div id="gift" style="display: none;">
+<div class="form_close" data-fancybox-close></div>
+<div class="gift_wrapper">
+<div class="gift_left"><img src="/template/img/gift.png" alt="gift"><img src="/template/img/gift_mob.jpg" alt="gift" class="gift_left_mob" style="display:none;"></div>
+<div class="gift_right">
+<form id="gift_form">
+<div class="gift_section0 gift_section3 gift_section5">
+<div class="gift_title">Ahoj! :)<br><br><br class="mob_br"><br class="mob_br">Získej slevu 250 Kč <br class="mob_br"><br>na první nákup.</b></div>
+
+<div class="gift_input_wrapper">
+<input type="text" name="gift_name" id="gift_name" placeholder="jméno" required>
+<div class="error-block" id="error_gift_name">Zadejte, prosím, jméno</div>
+</div>
+
+<div class="gift_input_wrapper">
+<input type="email" name="gift_email" id="gift_email" placeholder="email@gmail.com" required>
+<div class="error-block" id="error_gift_email">Vyplňte políčko</div>
+</div>
+<span class="gift_btn_blue btn" id="to_gift_section5">Získat dárek</span>
+</div>
+<input type="hidden" id="gift_update" name="update" value="1">
+<input type="hidden" id="gift_product" name="gift_product" value="">
+<input type="hidden" id="gift_roistat" name="gift_roistat" value="">
+<input type="hidden" id="gift_promocode" name="gift_promocode" value="">
+</form>
+<div class="gift_section6" style="display: none;">
+<div class="gift_title">Výborně!</div>
+<div class="gift_text"> můžete využít dárek!</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Dobře, děkujeme</span>
+</div>
+<div class="gift_section7" style="display: none;">
+<div class="gift_title">Výborně!</div>
+<div class="gift_text">Budete přesměrováni<br> na stránku WhatsApp</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Dobře, děkujeme</span>
+</div>
+<div class="gift_section8" style="display: none;">
+<div class="gift_title">Výborně!</div>
+<div class="gift_text"> Vaše adresa je již zaregistrována</div>
+<span class="gift_btn_full_red btn" data-fancybox-close>Dobře, děkujeme</span>
+</div>
+</div>
+</div>
+</div> 
+<link rel="stylesheet" type="text/css" href="/template/css/classic.date.css">
+<link rel="stylesheet" type="text/css" href="/template/css/classic.css">
+<script src="/template/js/picker.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="/template/js/picker.date.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script src="/template/js/pickadate/cs_CZ.js" type="1054c26ab5107912af8cdb2f-text/javascript"></script>
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+					
+																													
+						jQuery(function($) {
+                            function validateEmail($email) {
+                                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                                return emailReg.test( $email );
+                            }
+
+
+
+                            $('#set_name_popup').click(function(){
+
+                                if($("#gift_name").val()==''){
+                                    $('#error_gift_name').show();
+                                    $('#gift_name').addClass('has-error');
+                                    var result='error';
+                                } else {
+                                    $('#error_gift_name').hide();
+                                    $('#gift_name').removeClass('has-error');
+                                    Cookies.set('gift_name', $("#gift_name").val(), { expires: 7, path: '/'  });
+                                    $('.gift_section0').hide();
+                                    $('.gift_section3').show();
+                                }
+                            });
+                            $('#type_whatsapp').click(function(){
+                               //  $('.gift_section3').hide();
+                               //  $('.gift_section7').show();
+                               // var name=$("#gift_name").val();
+                               //  setTimeout(function () {
+                                    location="https://nottabelle.com/cz/whatsapp?referrer=https://nottabelle.com/cz/whatsapp2&name="+name+"/";
+                                // }, 2000); // время в мс
+
+                            });
+
+                            $('#type_email').click(function(){
+                                $('.gift_section3').hide();
+                                $('.gift_section5').show();
+                            });
+
+							$('#to_gift_section1').click(function(){
+								$('.gift_section0').hide();
+								$('.gift_section1').show();
+							});	
+							$('.gift_section1 .btn').click(function(){
+								$('.gift_section1').hide();
+								$('.gift_section2').show();
+								Cookies.set('after_gift_addcart2', '1', { expires: 7, path: '/'  });
+							});	
+							// $('.gift_section3').click(function(){
+							// 	$('.gift_section3').hide();
+							// 	$('.gift_section5').show();
+							// });
+							// $('.gift_section0 .btn').click(function(){
+							// 	$('.gift_section0').hide();
+							// 	$('.gift_section3').show();
+							// });
+							$('#to_gift_section5').click(function(){
+
+								if($("#gift_name").val()==''){
+									$('#error_gift_name').show();
+									$('#gift_name').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_name').hide();
+									$('#gift_name').removeClass('has-error');
+								}
+
+
+							    var email= $("#gift_email").val();
+								if(email=='' || validateEmail(email)==false){
+									$('#error_gift_email').show();
+									$('#gift_email').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_email').hide();
+									$('#gift_email').removeClass('has-error');
+									// $('.gift_section4').hide();
+									// $('.gift_section6').show();
+								}
+									if(result != 'error'){
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/cz/whatsapp2/email",
+                                        data: { language: 'cz',mail:$("#gift_email").val(),name:$("#gift_name").val() },
+                                        success: function(result){
+                                            $('.gift_section5').hide();
+                                            if (result=='duble') {
+                                                $('.gift_section8').show();
+                                            }
+                                            else{
+                                                $('.gift_section6').show();
+                                            }
+
+                                            console.log(result);
+                                        },
+                                        error: function (result) {
+                                            console.log(result);
+                                        }
+                                    });
+								}
+
+								// if($("#gift_name").val()==''){
+								// 	$('#error_gift_name').show();
+								// 	$('#gift_name').addClass('has-error');
+								// 	var result='error';
+								// } else {
+								// 	$('#error_gift_name').hide();
+								// 	$('#gift_name').removeClass('has-error');
+								// }
+								// if($("#gift_city").val()==''){
+								// 	$('#error_gift_city').show();
+								// 	$('#gift_city').addClass('has-error');
+								// 	var result='error';
+								// } else {
+								// 	$('#error_gift_city').hide();
+								// 	$('#gift_city').removeClass('has-error');
+								// }
+								//
+								// if(result != 'error'){
+								// 	$('#gift_email').removeClass('has-error');
+								// 	$('.gift_section4').hide();
+								// 	// $('.gift_section6').show()
+								// }
+
+
+
+
+
+
+
+							});	
+							$('#to_gift_section6').click(function(){
+								if($("#gift_phone").val()==''){
+									$('#error_gift_phone').show();
+									$('#gift_phone').addClass('has-error');
+									var result='error';
+								} else {
+									$("#gift_phonefull").val($("#gift_phone").intlTelInput("getNumber"));
+									$('#error_gift_phone').hide();
+									$('#gift_phone').removeClass('has-error');
+								}
+/*								if($("#gift_name").val()==''){
+									$('#error_gift_name').show();
+									$('#gift_name').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_name').hide();
+									$('#gift_name').removeClass('has-error');
+								}*/								
+/*								if($("#gift_city").val()==''){
+									$('#error_gift_city').show();
+									$('#gift_city').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_city').hide();
+									$('#gift_city').removeClass('has-error');
+								}*/								
+								if($("#gift_date").val()==''){
+									$('#error_gift_date').show();
+									$('#gift_date').addClass('has-error');
+									var result='error';
+								} else {
+									$('#error_gift_date').hide();
+									$('#gift_date').removeClass('has-error');
+								}	
+								
+								if(result != 'error'){
+									Cookies.set('after_gift_addcart2', '1', { expires: 7, path: '/'  });
+									$('.gift_section5').hide();
+									$('.gift_section4').show();
+								}	            	            	
+							});										
+				
+							
+							$('.gift_section3 .gift_btn_full_grey').click(function(){
+								var gift_product = $(this).attr('value');
+								var gift_product_podarokid = $(this).attr('podarokid');
+								
+								if(typeof gift_product == "undefined" && !gift_product){
+									
+								} else {
+									$('#gift_product').val(gift_product);
+								}
+								
+								if(typeof gift_product_podarokid == "undefined" && !gift_product_podarokid){
+									
+								} else {
+									Cookies.set('gift_product_podarokid2', gift_product_podarokid, { expires: 7, path: '/'  });
+								}
+								
+								
+							});
+							
+							$('#gift_form .gift_btn_full_grey').click(function(){
+								sendBooking();
+							});										
+				
+							$('.gift_section6 .gift_btn_full_red, .gift_section2 .gift_btn_full_red').click(function(){
+							//data = 'cz';
+							//	$('#gift').click(function(){
+								$.ajax({
+									type: "POST",
+									url: "/cart/addpodarok",
+									data: { language: 'cz' },
+									success: function(result){
+										$('.gift_section6 .gift_btn_full_red').hide();
+										location.reload();
+										return false;
+										//console.log(result);
+									}
+								});
+							//	sendBooking();
+							});	
+							
+							 	
+							function sendBooking() {
+								/* $('#gift_roistat').val('');
+								$('#gift_promocode').val(''); */
+								
+								if($("#gift_phone").val() !==''){
+									Cookies.set('gift_phone', $("#gift_phone").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_email").val() !==''){
+									Cookies.set('gift_email', $("#gift_email").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_name").val() !==''){
+									Cookies.set('gift_name', $("#gift_name").val(), { expires: 7, path: '/'  });
+								}
+								if($("#gift_city").val() !==''){
+									Cookies.set('gift_city', $("#gift_city").val(), { expires: 7, path: '/'  });
+								}
+								
+								var windowWidth = screen.width;
+								var windowHeight = screen.height;
+
+
+								data = $('#gift form').serialize()+'&language=' + 'cz' + '&windowWidth=' + windowWidth + '&windowHeight=' + windowHeight + '&request_uri=' + '/cz/ruze-ve-skle/';
+							
+								/* alert(data);
+								console.log(data);
+								return false; */
+								
+								 $.ajax({
+									type: "POST",
+									url: "/booking/update",
+									data:data,
+									success: function(result){
+										console.log(result);
+									}
+								});
+								
+							}			
+
+							$("#gift_phone").intlTelInput({
+								separateDialCode:true,
+								autoHideDialCode:false,
+																	                            initialCountry: 'cz',
+								preferredCountries: ["us", "gb", "fr", "de", "ru", "cz"],
+								// hiddenInput: "gift_phonefull",
+								excludeCountries: ["ba", "cf", "cd", "cg", "do", "pm", "mf", "st"],
+								utilsScript: "/template/js/utils.js"
+							});	
+
+							$('#gift_date').pickadate({
+						    firstDay: 1,
+						    format: 'd mmmm yyyy г.',
+						    formatSubmit: 'yyyy/mm/dd',								
+							  today: '',
+							  clear: '',
+							  close: '',
+							  min: true
+							})               								
+						});
+					</script>
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+			jQuery(function($) { 
+
+													
+				
+				$('.form_close').click(function(){
+					$.fancybox.close();
+				});
+
+				$('.gift_section6 .btn,.gift_section2 .btn').click(function(){
+					Cookies.set('viewed_cookie_gift_success2', '1', { expires: 7, path: '/'  });
+				});
+
+				if (Cookies.get('viewed_cookie_gift_success2') != '1') {
+					$('.gift_remember').click(function(){
+						if ($(window).width() > 767) { $('.gift_remember_item').addClass('gift_remember_item_open'); }
+						$('.gift_remember').removeClass('gift_remember_item_viewed_close');
+						setTimeout(function () {
+							$.fancybox.open({
+								src  : '#gift',
+								type : 'inline',
+								touch: false
+							});
+						}, 400);
+						Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+					});
+					$('.gift_remember').addClass('gift_remember_active');						
+				} else {
+					$('.gift_remember').hide();
+				};
+
+				$('.gift_remember_item_close').click(function(e){
+					Cookies.set('viewed_cookie_gift2', '1', { expires: 7, path: '/'  });
+					$('.gift_remember_item').removeClass('gift_remember_item_open');
+					// $('.gift_remember').addClass('gift_remember_item_viewed_close').delay(2000).queue(function(){
+    	// 				$('.gift_remember').removeClass("gift_remember_item_viewed_close").dequeue();
+					// });					
+					$('.gift_remember').addClass('gift_remember_item_viewed_close');
+					Cookies.set('gift_remember_item_viewed2', '1', { expires: 7, path: '/'  });
+					e.stopPropagation();
+
+				});
+
+				if (Cookies.get('gift_remember_item_viewed2') == '1') {
+					$('.gift_remember_item').removeClass('gift_remember_item_open');
+				};
+
+			});				
+			</script>
+<script type="1054c26ab5107912af8cdb2f-text/javascript">(function(){var WebP=new Image();
+        WebP.onload=WebP.onerror=function(){ if(WebP.height!=2)
+        {var sc=document.createElement('script');sc.type='text/javascript';sc.async=true;
+            var s=document.getElementsByTagName('script')[0];sc.src='js/webpjs-0.0.2.min.js';
+            s.parentNode.insertBefore(sc,s);}};
+        WebP.src='data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';})();
+</script>
+</div>
+<div class="hidden-xs hidden-sm">
+
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+
+var isMobile = false;
+// проверка на размер экрана 
+$(document).ready( function() {
+    if ($('body').width() <= 598) {
+        isMobile = true;
+    }
+    // или для десктопа
+    if (!isMobile) {
+(function(){ var widget_id = 'GPG6S2Eo5T';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();		
+   }
+} );
+
+</script>
+</div>
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+
+	//ЗАПУСКАЕМ ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		updateorderminiline();
+	
+	// ПОВТОРЫ С ИНТЕРВАЛОМ 1 СЕК
+		/* var timerId = setInterval(function() {
+			updateorderminiline();
+		}, 1000); */
+
+	//****************************************************************************************************
+	
+	
+	//ФУНКЦИЯ ЗАПУСКА ОБНОВЛЕНИЕ ПОЛОСКИ + КОЛИЧЕСТВО В ШАПКЕ
+		function updateorderminiline(){
+			
+			dataType: 'json',
+            $.ajax({
+                type: "POST",
+                url: "/cart/updateorderminilinenew",
+                //data:data,
+                data:{
+					language:'cz',
+				},
+                success: function(result){
+					res = JSON.parse(result);
+                    delivery = res.delivery;
+                    itogo = res.itogo;
+                    goods = res.goods;
+                    goodsCount = res.goodsCount;
+					$('.site_cart_counter').html(goodsCount);
+					$('.cart_bottom_item').html(goodsCount);
+                    $('.cart_bottom_price #total_val_footer').html(itogo);
+
+					if(goodsCount > 0){
+						$('.cart_bottom').show();
+						$('.footer_bottom').addClass('cart_bottom_visible');
+						$('.gift_remember').addClass('gift_remember_withline');
+
+					} else {
+						$('.cart_bottom').hide();
+						$('.footer_bottom').removeClass('cart_bottom_visible');
+						$('.gift_remember').removeClass('gift_remember_withline');
+					}
+                }
+            });
+		}
+
+
+	//****************************************************************************************************
+	
+
+	//ДОБАВЛЕНИЕ ТОВАРОВ В КОРЗИНУ ЗАПУСК КОРЗИНЫ СПРАВА
+
+        $(".catalog_content_btn a:not(.notavailability,.availability_text_form )").on('click',function(){
+			if ($(this).attr('status')==1){
+				prodid = $(this).attr('id');
+				$(this).removeClass('in_cart');
+
+			}
+			if ($(this).attr('status')==0){
+				$.ajax({
+					type: "POST",
+					url: "/cz/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header").css({"display":"none"});
+				}
+				return false;
+				/* prodid = 0; */
+			}
+			$(this).addClass('in_cart');
+
+			$(this).attr('status', 0);
+			//prodid = $(this).attr('id');
+			$(this).html('<span class="hidden-xs">Přejít do košíku</span><span class="show-xs">cart</span>');
+
+            $.ajax({
+                type: "POST",
+                url: "/cz/cart/add",
+                data:{
+                    prodid:prodid,
+                },
+                success: function(result){
+					$('.cart_right').html(result); //асинхронное добавление
+                    //location.reload(); // с перезагрузкой
+					updateorderminiline();
+                }
+            });
+
+			$(".cart_right").addClass("active-cart");
+
+				$("body").addClass("fixed-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+                $("body").css({"overflow":"hidden"});
+                $("header ").css({"display":"none"});
+            }
+			updateorderminiline();
+            return false;
+            event.preventDefault();
+
+
+        });
+		
+	//****************************************************************************************************
+	
+	
+	//ОТКРЫТИЕ КОРЗИНЫ ОТПРАВЛЯЕМ ЗАПРОС ТАК КАК НУЖНА ИНИЦИАЛИЗАЦИЯ JS ЗАНОВО
+		$(".cart_bottom_href").click(function(){			
+				$.ajax({
+					type: "POST",
+					url: "/cz/cart/add",
+					success: function(result){
+						$('.cart_right').html(result); //асинхронное добавление
+						//location.reload(); // с перезагрузкой
+					}
+				});
+
+				$(".cart_right").addClass("active-cart");
+				if(window.matchMedia('(max-width: 767px)').matches) {
+					$("body").css({"overflow":"hidden"});
+					$("header ").css({"display":"none"});
+				}
+		});
+	//****************************************************************************************************
+		
+		
+	//КЛИК ПО КОЛИЧЕСТВУ ТОВАРОВ В ШАПКЕ ЗАПУСКАЕТ КЛИК ПО ПОЛОСКЕ ВНИЗУ
+		$(".cart_popup_href").click(function(){
+			$(".cart_bottom_item").click();
+			return false;
+        });
+	//****************************************************************************************************
+
+		
+</script>
+
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter40113260 = new Ya.Metrika2({
+                    id:40113260,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/40113260" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+    (function() {
+        var d = document, w = window;
+        w.MgSensorData = w.MgSensorData || [];
+        w.MgSensorData.push({
+            cid:362890,
+            lng:"ru",
+            nosafari:true,
+            project: "a.marketgid.com"
+        });
+        var l = "a.marketgid.com";
+        var n = d.getElementsByTagName("script")[0];
+        var s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        var dt = !Date.now?new Date().valueOf():Date.now();
+        s.src = "//" + l + "/mgsensor.js?d=" + dt;
+        n.parentNode.insertBefore(s, n);
+    })();
+</script>
+
+<script type="1054c26ab5107912af8cdb2f-text/javascript">(function (w, d) {w.amo_pixel_token = 'p1Ip4iB8yqaEyXU9HPmcTFDXCbXyjWVjsFXnz2xKSUtoEVh22OGcP0uthUvKBG/r';var s = document.createElement('script'), f = d.getElementsByTagName('script')[0];s.id = 'amo_pixel_js';s.type = 'text/javascript';s.async = true;s.src = 'https://piper.amocrm.ru/pixel/js/tracker/pixel.js?token=' + w.amo_pixel_token;f.parentNode.insertBefore(s, f);})(window, document);</script>
+<script type="1054c26ab5107912af8cdb2f-text/javascript">
+(function(w, d, s, h, id) {
+w.roistatProjectId = id; w.roistatHost = h;
+var p = d.location.protocol == "https:" ? "https://" : "http://";
+var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', '555354ccb14585c2707c3a3ea3355359');
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFVD3PH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="1054c26ab5107912af8cdb2f-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5db58a519a","applicationID":"176161339","transactionName":"bgRQMkNSD0BXUhVaW1dOcwVFWg5dGXIAR1FeDkAfHloPV1NJ","queueTime":0,"applicationTime":186,"atts":"QkNTRAtIHE4=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="1054c26ab5107912af8cdb2f-" defer=""></script></body>
+</html>
